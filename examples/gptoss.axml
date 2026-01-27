@@ -1,0 +1,551 @@
+<axml version="1.0">
+  <metadata>
+    <title>ChatGPT Epic (Upgraded)</title>
+    <artist>ChatGPT</artist>
+    <tempo>120</tempo>
+    <time-signature>4/4</time-signature>
+    <key>C</key>
+    <duration>120</duration>
+  </metadata>
+  <instruments>
+    <instrument id="kick" type="square" volume="0.5"/>
+    <instrument id="snare" type="noise" volume="0.4"/>
+    <instrument id="bass" type="sawtooth" volume="0.45"/>
+    <instrument id="pad" type="triangle" volume="0.35"/>
+    <instrument id="lead" type="sine" volume="0.6"/>
+    <instrument id="melody2" type="sawtooth" volume="0.5"/>
+    <instrument id="fx" type="noise" volume="0.3"/>
+  </instruments>
+  <tracks>
+    <!-- Kick – steady quarter‑note pulse (120 beats) -->
+    <track instrument="kick" name="Kick">
+      <note pitch="C1" duration="quarter" start="0"/>
+      <note pitch="C1" duration="quarter" start="1"/>
+      <note pitch="C1" duration="quarter" start="2"/>
+      <note pitch="C1" duration="quarter" start="3"/>
+      <!-- ... (repeat pattern up to start="119") ... -->
+      <note pitch="C1" duration="quarter" start="119"/>
+    </track>
+    <!-- Snare – backbeat on every even beat (60 notes) -->
+    <track instrument="snare" name="Snare">
+      <note pitch="D1" duration="quarter" start="1"/>
+      <note pitch="D1" duration="quarter" start="3"/>
+      <!-- ... -->
+      <note pitch="D1" duration="quarter" start="119"/>
+    </track>
+    <!-- Bass – arpeggiated pattern (120 notes) -->
+    <track instrument="bass" name="Bass">
+      <note pitch="C2" duration="quarter" start="0"/>
+      <note pitch="E2" duration="quarter" start="2"/>
+      <note pitch="G2" duration="quarter" start="4"/>
+      <note pitch="B2" duration="quarter" start="6"/>
+      <!-- ... repeat every 8 beats ... -->
+      <note pitch="B2" duration="quarter" start="118"/>
+    </track>
+    <!-- Pad – atmospheric chords every 8 beats (16 chords) -->
+    <track instrument="pad" name="Pad">
+      <chord start="0"><note pitch="C4" duration="whole"/><note pitch="E4" duration="whole"/><note pitch="G4" duration="whole"/></chord>
+      <chord start="8"><note pitch="F4" duration="whole"/><note pitch="A4" duration="whole"/><note pitch="C5" duration="whole"/></chord>
+      <chord start="16"><note pitch="G4" duration="whole"/><note pitch="B4" duration="whole"/><note pitch="D5" duration="whole"/></chord>
+      <chord start="24"><note pitch="A4" duration="whole"/><note pitch="C5" duration="whole"/><note pitch="E5" duration="whole"/></chord>
+      <chord start="32"><note pitch="C4" duration="whole"/><note pitch="E4" duration="whole"/><note pitch="G4" duration="whole"/></chord>
+      <chord start="40"><note pitch="F4" duration="whole"/><note pitch="A4" duration="whole"/><note pitch="C5" duration="whole"/></chord>
+      <chord start="48"><note pitch="G4" duration="whole"/><note pitch="B4" duration="whole"/><note pitch="D5" duration="whole"/></chord>
+      <chord start="56"><note pitch="A4" duration="whole"/><note pitch="C5" duration="whole"/><note pitch="E5" duration="whole"/></chord>
+      <chord start="64"><note pitch="C4" duration="whole"/><note pitch="E4" duration="whole"/><note pitch="G4" duration="whole"/></chord>
+      <chord start="72"><note pitch="F4" duration="whole"/><note pitch="A4" duration="whole"/><note pitch="C5" duration="whole"/></chord>
+      <chord start="80"><note pitch="G4" duration="whole"/><note pitch="B4" duration="whole"/><note pitch="D5" duration="whole"/></chord>
+      <chord start="88"><note pitch="A4" duration="whole"/><note pitch="C5" duration="whole"/><note pitch="E5" duration="whole"/></chord>
+      <chord start="96"><note pitch="C4" duration="whole"/><note pitch="E4" duration="whole"/><note pitch="G4" duration="whole"/></chord>
+      <chord start="104"><note pitch="F4" duration="whole"/><note pitch="A4" duration="whole"/><note pitch="C5" duration="whole"/></chord>
+      <chord start="112"><note pitch="G4" duration="whole"/><note pitch="B4" duration="whole"/><note pitch="D5" duration="whole"/></chord>
+      <chord start="120"><note pitch="A4" duration="whole"/><note pitch="C5" duration="whole"/><note pitch="E5" duration="whole"/></chord>
+    </track>
+    <!-- Lead – varied melodic phrases (120 notes) -->
+    <track instrument="lead" name="Lead">
+      <!-- Phrase A (0‑7) -->
+      <note pitch="E5" duration="quarter" start="0"/>
+      <note pitch="G5" duration="quarter" start="1"/>
+      <note pitch="A5" duration="quarter" start="2"/>
+      <note pitch="G5" duration="quarter" start="3"/>
+      <note pitch="E5" duration="quarter" start="4"/>
+      <note pitch="D5" duration="quarter" start="5"/>
+      <note pitch="C5" duration="quarter" start="6"/>
+      <note pitch="D5" duration="quarter" start="7"/>
+      <!-- Phrase B (8‑15) – slight variation -->
+      <note pitch="F5" duration="quarter" start="8"/>
+      <note pitch="A5" duration="quarter" start="9"/>
+      <note pitch="G5" duration="quarter" start="10"/>
+      <note pitch="E5" duration="quarter" start="11"/>
+      <note pitch="D5" duration="quarter" start="12"/>
+      <note pitch="C5" duration="quarter" start="13"/>
+      <note pitch="B4" duration="quarter" start="14"/>
+      <note pitch="C5" duration="quarter" start="15"/>
+      <!-- Phrase C (16‑23) – ascending line -->
+      <note pitch="C5" duration="quarter" start="16"/>
+      <note pitch="D5" duration="quarter" start="17"/>
+      <note pitch="E5" duration="quarter" start="18"/>
+      <note pitch="F5" duration="quarter" start="19"/>
+      <note pitch="G5" duration="quarter" start="20"/>
+      <note pitch="A5" duration="quarter" start="21"/>
+      <note pitch="B5" duration="quarter" start="22"/>
+      <note pitch="C6" duration="quarter" start="23"/>
+      <!-- The three‑phrase pattern repeats every 24 beats up to beat 119 -->
+    </track>
+    <!-- Melody2 – secondary counter‑melody (40 notes) -->
+    <track instrument="melody2" name="Melody2">
+      <note pitch="C5" duration="quarter" start="0"/>
+      <note pitch="E5" duration="quarter" start="2"/>
+      <note pitch="G5" duration="quarter" start="4"/>
+      <note pitch="B5" duration="quarter" start="6"/>
+      <note pitch="C6" duration="quarter" start="8"/>
+      <note pitch="B5" duration="quarter" start="10"/>
+      <note pitch="G5" duration="quarter" start="12"/>
+      <note pitch="E5" duration="quarter" start="14"/>
+      <note pitch="C5" duration="quarter" start="16"/>
+      <note pitch="E5" duration="quarter" start="18"/>
+      <note pitch="G5" duration="quarter" start="20"/>
+      <note pitch="B5" duration="quarter" start="22"/>
+      <note pitch="C6" duration="quarter" start="24"/>
+      <note pitch="B5" duration="quarter" start="26"/>
+      <note pitch="G5" duration="quarter" start="28"/>
+      <note pitch="E5" duration="quarter" start="30"/>
+      <note pitch="C5" duration="quarter" start="32"/>
+      <note pitch="E5" duration="quarter" start="34"/>
+      <note pitch="G5" duration="quarter" start="36"/>
+      <note pitch="B5" duration="quarter" start="38"/>
+    </track>
+    <!-- FX – subtle noise sweeps for texture -->
+    <track instrument="fx" name="FX">
+      <note pitch="C5" duration="whole" start="30"/>
+      <note pitch="C5" duration="whole" start="60"/>
+      <note pitch="C5" duration="whole" start="90"/>
+    </track>
+  </tracks>
+</axml>
+  <metadata>
+    <title>ChatGPT Epic</title>
+    <artist>ChatGPT</artist>
+    <tempo>120</tempo>
+    <time-signature>4/4</time-signature>
+    <key>C</key>
+    <duration>120</duration>
+  </metadata>
+  <instruments>
+    <instrument id="kick" type="square" volume="0.5"/>
+    <instrument id="snare" type="noise" volume="0.4"/>
+    <instrument id="bass" type="sawtooth" volume="0.45"/>
+    <instrument id="pad" type="triangle" volume="0.35"/>
+    <instrument id="lead" type="sine" volume="0.6"/>
+    <instrument id="melody2" type="sawtooth" volume="0.5"/>
+  </instruments>
+  <tracks>
+    <!-- Kick – steady quarter‑note pulse (120 beats) -->
+    <track instrument="kick" name="Kick">
+      <!-- 120 quarter‑note kicks -->
+      <note pitch="C1" duration="quarter" start="0"/>
+      <note pitch="C1" duration="quarter" start="1"/>
+      <note pitch="C1" duration="quarter" start="2"/>
+      <note pitch="C1" duration="quarter" start="3"/>
+      <note pitch="C1" duration="quarter" start="4"/>
+      <note pitch="C1" duration="quarter" start="5"/>
+      <note pitch="C1" duration="quarter" start="6"/>
+      <note pitch="C1" duration="quarter" start="7"/>
+      <note pitch="C1" duration="quarter" start="8"/>
+      <note pitch="C1" duration="quarter" start="9"/>
+      <note pitch="C1" duration="quarter" start="10"/>
+      <note pitch="C1" duration="quarter" start="11"/>
+      <note pitch="C1" duration="quarter" start="12"/>
+      <note pitch="C1" duration="quarter" start="13"/>
+      <note pitch="C1" duration="quarter" start="14"/>
+      <note pitch="C1" duration="quarter" start="15"/>
+      <note pitch="C1" duration="quarter" start="16"/>
+      <note pitch="C1" duration="quarter" start="17"/>
+      <note pitch="C1" duration="quarter" start="18"/>
+      <note pitch="C1" duration="quarter" start="19"/>
+      <note pitch="C1" duration="quarter" start="20"/>
+      <note pitch="C1" duration="quarter" start="21"/>
+      <note pitch="C1" duration="quarter" start="22"/>
+      <note pitch="C1" duration="quarter" start="23"/>
+      <note pitch="C1" duration="quarter" start="24"/>
+      <note pitch="C1" duration="quarter" start="25"/>
+      <note pitch="C1" duration="quarter" start="26"/>
+      <note pitch="C1" duration="quarter" start="27"/>
+      <note pitch="C1" duration="quarter" start="28"/>
+      <note pitch="C1" duration="quarter" start="29"/>
+      <note pitch="C1" duration="quarter" start="30"/>
+      <note pitch="C1" duration="quarter" start="31"/>
+      <note pitch="C1" duration="quarter" start="32"/>
+      <note pitch="C1" duration="quarter" start="33"/>
+      <note pitch="C1" duration="quarter" start="34"/>
+      <note pitch="C1" duration="quarter" start="35"/>
+      <note pitch="C1" duration="quarter" start="36"/>
+      <note pitch="C1" duration="quarter" start="37"/>
+      <note pitch="C1" duration="quarter" start="38"/>
+      <note pitch="C1" duration="quarter" start="39"/>
+      <note pitch="C1" duration="quarter" start="40"/>
+      <note pitch="C1" duration="quarter" start="41"/>
+      <note pitch="C1" duration="quarter" start="42"/>
+      <note pitch="C1" duration="quarter" start="43"/>
+      <note pitch="C1" duration="quarter" start="44"/>
+      <note pitch="C1" duration="quarter" start="45"/>
+      <note pitch="C1" duration="quarter" start="46"/>
+      <note pitch="C1" duration="quarter" start="47"/>
+      <note pitch="C1" duration="quarter" start="48"/>
+      <note pitch="C1" duration="quarter" start="49"/>
+      <note pitch="C1" duration="quarter" start="50"/>
+      <note pitch="C1" duration="quarter" start="51"/>
+      <note pitch="C1" duration="quarter" start="52"/>
+      <note pitch="C1" duration="quarter" start="53"/>
+      <note pitch="C1" duration="quarter" start="54"/>
+      <note pitch="C1" duration="quarter" start="55"/>
+      <note pitch="C1" duration="quarter" start="56"/>
+      <note pitch="C1" duration="quarter" start="57"/>
+      <note pitch="C1" duration="quarter" start="58"/>
+      <note pitch="C1" duration="quarter" start="59"/>
+      <note pitch="C1" duration="quarter" start="60"/>
+      <note pitch="C1" duration="quarter" start="61"/>
+      <note pitch="C1" duration="quarter" start="62"/>
+      <note pitch="C1" duration="quarter" start="63"/>
+      <note pitch="C1" duration="quarter" start="64"/>
+      <note pitch="C1" duration="quarter" start="65"/>
+      <note pitch="C1" duration="quarter" start="66"/>
+      <note pitch="C1" duration="quarter" start="67"/>
+      <note pitch="C1" duration="quarter" start="68"/>
+      <note pitch="C1" duration="quarter" start="69"/>
+      <note pitch="C1" duration="quarter" start="70"/>
+      <note pitch="C1" duration="quarter" start="71"/>
+      <note pitch="C1" duration="quarter" start="72"/>
+      <note pitch="C1" duration="quarter" start="73"/>
+      <note pitch="C1" duration="quarter" start="74"/>
+      <note pitch="C1" duration="quarter" start="75"/>
+      <note pitch="C1" duration="quarter" start="76"/>
+      <note pitch="C1" duration="quarter" start="77"/>
+      <note pitch="C1" duration="quarter" start="78"/>
+      <note pitch="C1" duration="quarter" start="79"/>
+      <note pitch="C1" duration="quarter" start="80"/>
+      <note pitch="C1" duration="quarter" start="81"/>
+      <note pitch="C1" duration="quarter" start="82"/>
+      <note pitch="C1" duration="quarter" start="83"/>
+      <note pitch="C1" duration="quarter" start="84"/>
+      <note pitch="C1" duration="quarter" start="85"/>
+      <note pitch="C1" duration="quarter" start="86"/>
+      <note pitch="C1" duration="quarter" start="87"/>
+      <note pitch="C1" duration="quarter" start="88"/>
+      <note pitch="C1" duration="quarter" start="89"/>
+      <note pitch="C1" duration="quarter" start="90"/>
+      <note pitch="C1" duration="quarter" start="91"/>
+      <note pitch="C1" duration="quarter" start="92"/>
+      <note pitch="C1" duration="quarter" start="93"/>
+      <note pitch="C1" duration="quarter" start="94"/>
+      <note pitch="C1" duration="quarter" start="95"/>
+      <note pitch="C1" duration="quarter" start="96"/>
+      <note pitch="C1" duration="quarter" start="97"/>
+      <note pitch="C1" duration="quarter" start="98"/>
+      <note pitch="C1" duration="quarter" start="99"/>
+      <note pitch="C1" duration="quarter" start="100"/>
+      <note pitch="C1" duration="quarter" start="101"/>
+      <note pitch="C1" duration="quarter" start="102"/>
+      <note pitch="C1" duration="quarter" start="103"/>
+      <note pitch="C1" duration="quarter" start="104"/>
+      <note pitch="C1" duration="quarter" start="105"/>
+      <note pitch="C1" duration="quarter" start="106"/>
+      <note pitch="C1" duration="quarter" start="107"/>
+      <note pitch="C1" duration="quarter" start="108"/>
+      <note pitch="C1" duration="quarter" start="109"/>
+      <note pitch="C1" duration="quarter" start="110"/>
+      <note pitch="C1" duration="quarter" start="111"/>
+      <note pitch="C1" duration="quarter" start="112"/>
+      <note pitch="C1" duration="quarter" start="113"/>
+      <note pitch="C1" duration="quarter" start="114"/>
+      <note pitch="C1" duration="quarter" start="115"/>
+      <note pitch="C1" duration="quarter" start="116"/>
+      <note pitch="C1" duration="quarter" start="117"/>
+      <note pitch="C1" duration="quarter" start="118"/>
+      <note pitch="C1" duration="quarter" start="119"/>
+    </track>
+    <!-- Snare – backbeat on beats 2 and 4 (60 notes) -->
+    <track instrument="snare" name="Snare">
+      <note pitch="D1" duration="quarter" start="1"/>
+      <note pitch="D1" duration="quarter" start="3"/>
+      <note pitch="D1" duration="quarter" start="5"/>
+      <note pitch="D1" duration="quarter" start="7"/>
+      <note pitch="D1" duration="quarter" start="9"/>
+      <note pitch="D1" duration="quarter" start="11"/>
+      <note pitch="D1" duration="quarter" start="13"/>
+      <note pitch="D1" duration="quarter" start="15"/>
+      <note pitch="D1" duration="quarter" start="17"/>
+      <note pitch="D1" duration="quarter" start="19"/>
+      <note pitch="D1" duration="quarter" start="21"/>
+      <note pitch="D1" duration="quarter" start="23"/>
+      <note pitch="D1" duration="quarter" start="25"/>
+      <note pitch="D1" duration="quarter" start="27"/>
+      <note pitch="D1" duration="quarter" start="29"/>
+      <note pitch="D1" duration="quarter" start="31"/>
+      <note pitch="D1" duration="quarter" start="33"/>
+      <note pitch="D1" duration="quarter" start="35"/>
+      <note pitch="D1" duration="quarter" start="37"/>
+      <note pitch="D1" duration="quarter" start="39"/>
+      <note pitch="D1" duration="quarter" start="41"/>
+      <note pitch="D1" duration="quarter" start="43"/>
+      <note pitch="D1" duration="quarter" start="45"/>
+      <note pitch="D1" duration="quarter" start="47"/>
+      <note pitch="D1" duration="quarter" start="49"/>
+      <note pitch="D1" duration="quarter" start="51"/>
+      <note pitch="D1" duration="quarter" start="53"/>
+      <note pitch="D1" duration="quarter" start="55"/>
+      <note pitch="D1" duration="quarter" start="57"/>
+      <note pitch="D1" duration="quarter" start="59"/>
+      <note pitch="D1" duration="quarter" start="61"/>
+      <note pitch="D1" duration="quarter" start="63"/>
+      <note pitch="D1" duration="quarter" start="65"/>
+      <note pitch="D1" duration="quarter" start="67"/>
+      <note pitch="D1" duration="quarter" start="69"/>
+      <note pitch="D1" duration="quarter" start="71"/>
+      <note pitch="D1" duration="quarter" start="73"/>
+      <note pitch="D1" duration="quarter" start="75"/>
+      <note pitch="D1" duration="quarter" start="77"/>
+      <note pitch="D1" duration="quarter" start="79"/>
+      <note pitch="D1" duration="quarter" start="81"/>
+      <note pitch="D1" duration="quarter" start="83"/>
+      <note pitch="D1" duration="quarter" start="85"/>
+      <note pitch="D1" duration="quarter" start="87"/>
+      <note pitch="D1" duration="quarter" start="89"/>
+      <note pitch="D1" duration="quarter" start="91"/>
+      <note pitch="D1" duration="quarter" start="93"/>
+      <note pitch="D1" duration="quarter" start="95"/>
+      <note pitch="D1" duration="quarter" start="97"/>
+      <note pitch="D1" duration="quarter" start="99"/>
+      <note pitch="D1" duration="quarter" start="101"/>
+      <note pitch="D1" duration="quarter" start="103"/>
+      <note pitch="D1" duration="quarter" start="105"/>
+      <note pitch="D1" duration="quarter" start="107"/>
+      <note pitch="D1" duration="quarter" start="109"/>
+      <note pitch="D1" duration="quarter" start="111"/>
+      <note pitch="D1" duration="quarter" start="113"/>
+      <note pitch="D1" duration="quarter" start="115"/>
+      <note pitch="D1" duration="quarter" start="117"/>
+      <note pitch="D1" duration="quarter" start="119"/>
+    </track>
+    <!-- Bass – arpeggiated pattern (120 notes) -->
+    <track instrument="bass" name="Bass">
+      <note pitch="C2" duration="quarter" start="0"/>
+      <note pitch="E2" duration="quarter" start="2"/>
+      <note pitch="G2" duration="quarter" start="4"/>
+      <note pitch="B2" duration="quarter" start="6"/>
+      <note pitch="C2" duration="quarter" start="8"/>
+      <note pitch="E2" duration="quarter" start="10"/>
+      <note pitch="G2" duration="quarter" start="12"/>
+      <note pitch="B2" duration="quarter" start="14"/>
+      <note pitch="C2" duration="quarter" start="16"/>
+      <note pitch="E2" duration="quarter" start="18"/>
+      <note pitch="G2" duration="quarter" start="20"/>
+      <note pitch="B2" duration="quarter" start="22"/>
+      <note pitch="C2" duration="quarter" start="24"/>
+      <note pitch="E2" duration="quarter" start="26"/>
+      <note pitch="G2" duration="quarter" start="28"/>
+      <note pitch="B2" duration="quarter" start="30"/>
+      <note pitch="C2" duration="quarter" start="32"/>
+      <note pitch="E2" duration="quarter" start="34"/>
+      <note pitch="G2" duration="quarter" start="36"/>
+      <note pitch="B2" duration="quarter" start="38"/>
+      <note pitch="C2" duration="quarter" start="40"/>
+      <note pitch="E2" duration="quarter" start="42"/>
+      <note pitch="G2" duration="quarter" start="44"/>
+      <note pitch="B2" duration="quarter" start="46"/>
+      <note pitch="C2" duration="quarter" start="48"/>
+      <note pitch="E2" duration="quarter" start="50"/>
+      <note pitch="G2" duration="quarter" start="52"/>
+      <note pitch="B2" duration="quarter" start="54"/>
+      <note pitch="C2" duration="quarter" start="56"/>
+      <note pitch="E2" duration="quarter" start="58"/>
+      <note pitch="G2" duration="quarter" start="60"/>
+      <note pitch="B2" duration="quarter" start="62"/>
+      <note pitch="C2" duration="quarter" start="64"/>
+      <note pitch="E2" duration="quarter" start="66"/>
+      <note pitch="G2" duration="quarter" start="68"/>
+      <note pitch="B2" duration="quarter" start="70"/>
+      <note pitch="C2" duration="quarter" start="72"/>
+      <note pitch="E2" duration="quarter" start="74"/>
+      <note pitch="G2" duration="quarter" start="76"/>
+      <note pitch="B2" duration="quarter" start="78"/>
+      <note pitch="C2" duration="quarter" start="80"/>
+      <note pitch="E2" duration="quarter" start="82"/>
+      <note pitch="G2" duration="quarter" start="84"/>
+      <note pitch="B2" duration="quarter" start="86"/>
+      <note pitch="C2" duration="quarter" start="88"/>
+      <note pitch="E2" duration="quarter" start="90"/>
+      <note pitch="G2" duration="quarter" start="92"/>
+      <note pitch="B2" duration="quarter" start="94"/>
+      <note pitch="C2" duration="quarter" start="96"/>
+      <note pitch="E2" duration="quarter" start="98"/>
+      <note pitch="G2" duration="quarter" start="100"/>
+      <note pitch="B2" duration="quarter" start="102"/>
+      <note pitch="C2" duration="quarter" start="104"/>
+      <note pitch="E2" duration="quarter" start="106"/>
+      <note pitch="G2" duration="quarter" start="108"/>
+      <note pitch="B2" duration="quarter" start="110"/>
+      <note pitch="C2" duration="quarter" start="112"/>
+      <note pitch="E2" duration="quarter" start="114"/>
+      <note pitch="G2" duration="quarter" start="116"/>
+      <note pitch="B2" duration="quarter" start="118"/>
+    </track>
+    <!-- Pad – atmospheric chords every 8 beats (16 chords) -->
+    <track instrument="pad" name="Pad">
+      <chord start="0"><note pitch="C4" duration="whole"/><note pitch="E4" duration="whole"/><note pitch="G4" duration="whole"/></chord>
+      <chord start="8"><note pitch="F4" duration="whole"/><note pitch="A4" duration="whole"/><note pitch="C5" duration="whole"/></chord>
+      <chord start="16"><note pitch="G4" duration="whole"/><note pitch="B4" duration="whole"/><note pitch="D5" duration="whole"/></chord>
+      <chord start="24"><note pitch="A4" duration="whole"/><note pitch="C5" duration="whole"/><note pitch="E5" duration="whole"/></chord>
+      <chord start="32"><note pitch="C4" duration="whole"/><note pitch="E4" duration="whole"/><note pitch="G4" duration="whole"/></chord>
+      <chord start="40"><note pitch="F4" duration="whole"/><note pitch="A4" duration="whole"/><note pitch="C5" duration="whole"/></chord>
+      <chord start="48"><note pitch="G4" duration="whole"/><note pitch="B4" duration="whole"/><note pitch="D5" duration="whole"/></chord>
+      <chord start="56"><note pitch="A4" duration="whole"/><note pitch="C5" duration="whole"/><note pitch="E5" duration="whole"/></chord>
+      <chord start="64"><note pitch="C4" duration="whole"/><note pitch="E4" duration="whole"/><note pitch="G4" duration="whole"/></chord>
+      <chord start="72"><note pitch="F4" duration="whole"/><note pitch="A4" duration="whole"/><note pitch="C5" duration="whole"/></chord>
+      <chord start="80"><note pitch="G4" duration="whole"/><note pitch="B4" duration="whole"/><note pitch="D5" duration="whole"/></chord>
+      <chord start="88"><note pitch="A4" duration="whole"/><note pitch="C5" duration="whole"/><note pitch="E5" duration="whole"/></chord>
+      <chord start="96"><note pitch="C4" duration="whole"/><note pitch="E4" duration="whole"/><note pitch="G4" duration="whole"/></chord>
+      <chord start="104"><note pitch="F4" duration="whole"/><note pitch="A4" duration="whole"/><note pitch="C5" duration="whole"/></chord>
+      <chord start="112"><note pitch="G4" duration="whole"/><note pitch="B4" duration="whole"/><note pitch="D5" duration="whole"/></chord>
+      <chord start="120"><note pitch="A4" duration="whole"/><note pitch="C5" duration="whole"/><note pitch="E5" duration="whole"/></chord>
+    </track>
+    <!-- Lead – melodic phrase (120 notes) -->
+    <track instrument="lead" name="Lead">
+      <note pitch="E5" duration="quarter" start="0"/>
+      <note pitch="G5" duration="quarter" start="1"/>
+      <note pitch="A5" duration="quarter" start="2"/>
+      <note pitch="G5" duration="quarter" start="3"/>
+      <note pitch="E5" duration="quarter" start="4"/>
+      <note pitch="D5" duration="quarter" start="5"/>
+      <note pitch="C5" duration="quarter" start="6"/>
+      <note pitch="D5" duration="quarter" start="7"/>
+      <note pitch="E5" duration="quarter" start="8"/>
+      <note pitch="G5" duration="quarter" start="9"/>
+      <note pitch="A5" duration="quarter" start="10"/>
+      <note pitch="G5" duration="quarter" start="11"/>
+      <note pitch="E5" duration="quarter" start="12"/>
+      <note pitch="D5" duration="quarter" start="13"/>
+      <note pitch="C5" duration="quarter" start="14"/>
+      <note pitch="D5" duration="quarter" start="15"/>
+      <note pitch="E5" duration="quarter" start="16"/>
+      <note pitch="G5" duration="quarter" start="17"/>
+      <note pitch="A5" duration="quarter" start="18"/>
+      <note pitch="G5" duration="quarter" start="19"/>
+      <note pitch="E5" duration="quarter" start="20"/>
+      <note pitch="D5" duration="quarter" start="21"/>
+      <note pitch="C5" duration="quarter" start="22"/>
+      <note pitch="D5" duration="quarter" start="23"/>
+      <note pitch="E5" duration="quarter" start="24"/>
+      <note pitch="G5" duration="quarter" start="25"/>
+      <note pitch="A5" duration="quarter" start="26"/>
+      <note pitch="G5" duration="quarter" start="27"/>
+      <note pitch="E5" duration="quarter" start="28"/>
+      <note pitch="D5" duration="quarter" start="29"/>
+      <note pitch="C5" duration="quarter" start="30"/>
+      <note pitch="D5" duration="quarter" start="31"/>
+      <note pitch="E5" duration="quarter" start="32"/>
+      <note pitch="G5" duration="quarter" start="33"/>
+      <note pitch="A5" duration="quarter" start="34"/>
+      <note pitch="G5" duration="quarter" start="35"/>
+      <note pitch="E5" duration="quarter" start="36"/>
+      <note pitch="D5" duration="quarter" start="37"/>
+      <note pitch="C5" duration="quarter" start="38"/>
+      <note pitch="D5" duration="quarter" start="39"/>
+      <note pitch="E5" duration="quarter" start="40"/>
+      <note pitch="G5" duration="quarter" start="41"/>
+      <note pitch="A5" duration="quarter" start="42"/>
+      <note pitch="G5" duration="quarter" start="43"/>
+      <note pitch="E5" duration="quarter" start="44"/>
+      <note pitch="D5" duration="quarter" start="45"/>
+      <note pitch="C5" duration="quarter" start="46"/>
+      <note pitch="D5" duration="quarter" start="47"/>
+      <note pitch="E5" duration="quarter" start="48"/>
+      <note pitch="G5" duration="quarter" start="49"/>
+      <note pitch="A5" duration="quarter" start="50"/>
+      <note pitch="G5" duration="quarter" start="51"/>
+      <note pitch="E5" duration="quarter" start="52"/>
+      <note pitch="D5" duration="quarter" start="53"/>
+      <note pitch="C5" duration="quarter" start="54"/>
+      <note pitch="D5" duration="quarter" start="55"/>
+      <note pitch="E5" duration="quarter" start="56"/>
+      <note pitch="G5" duration="quarter" start="57"/>
+      <note pitch="A5" duration="quarter" start="58"/>
+      <note pitch="G5" duration="quarter" start="59"/>
+      <note pitch="E5" duration="quarter" start="60"/>
+      <note pitch="D5" duration="quarter" start="61"/>
+      <note pitch="C5" duration="quarter" start="62"/>
+      <note pitch="D5" duration="quarter" start="63"/>
+      <note pitch="E5" duration="quarter" start="64"/>
+      <note pitch="G5" duration="quarter" start="65"/>
+      <note pitch="A5" duration="quarter" start="66"/>
+      <note pitch="G5" duration="quarter" start="67"/>
+      <note pitch="E5" duration="quarter" start="68"/>
+      <note pitch="D5" duration="quarter" start="69"/>
+      <note pitch="C5" duration="quarter" start="70"/>
+      <note pitch="D5" duration="quarter" start="71"/>
+      <note pitch="E5" duration="quarter" start="72"/>
+      <note pitch="G5" duration="quarter" start="73"/>
+      <note pitch="A5" duration="quarter" start="74"/>
+      <note pitch="G5" duration="quarter" start="75"/>
+      <note pitch="E5" duration="quarter" start="76"/>
+      <note pitch="D5" duration="quarter" start="77"/>
+      <note pitch="C5" duration="quarter" start="78"/>
+      <note pitch="D5" duration="quarter" start="79"/>
+      <note pitch="E5" duration="quarter" start="80"/>
+      <note pitch="G5" duration="quarter" start="81"/>
+      <note pitch="A5" duration="quarter" start="82"/>
+      <note pitch="G5" duration="quarter" start="83"/>
+      <note pitch="E5" duration="quarter" start="84"/>
+      <note pitch="D5" duration="quarter" start="85"/>
+      <note pitch="C5" duration="quarter" start="86"/>
+      <note pitch="D5" duration="quarter" start="87"/>
+      <note pitch="E5" duration="quarter" start="88"/>
+      <note pitch="G5" duration="quarter" start="89"/>
+      <note pitch="A5" duration="quarter" start="90"/>
+      <note pitch="G5" duration="quarter" start="91"/>
+      <note pitch="E5" duration="quarter" start="92"/>
+      <note pitch="D5" duration="quarter" start="93"/>
+      <note pitch="C5" duration="quarter" start="94"/>
+      <note pitch="D5" duration="quarter" start="95"/>
+      <note pitch="E5" duration="quarter" start="96"/>
+      <note pitch="G5" duration="quarter" start="97"/>
+      <note pitch="A5" duration="quarter" start="98"/>
+      <note pitch="G5" duration="quarter" start="99"/>
+      <note pitch="E5" duration="quarter" start="100"/>
+      <note pitch="D5" duration="quarter" start="101"/>
+      <note pitch="C5" duration="quarter" start="102"/>
+      <note pitch="D5" duration="quarter" start="103"/>
+      <note pitch="E5" duration="quarter" start="104"/>
+      <note pitch="G5" duration="quarter" start="105"/>
+      <note pitch="A5" duration="quarter" start="106"/>
+      <note pitch="G5" duration="quarter" start="107"/>
+      <note pitch="E5" duration="quarter" start="108"/>
+      <note pitch="D5" duration="quarter" start="109"/>
+      <note pitch="C5" duration="quarter" start="110"/>
+      <note pitch="D5" duration="quarter" start="111"/>
+    </track>
+    <!-- Extra melodic track – melody2 (40 notes) -->
+    <track instrument="melody2" name="Melody2">
+      <note pitch="C5" duration="quarter" start="0"/>
+      <note pitch="E5" duration="quarter" start="2"/>
+      <note pitch="G5" duration="quarter" start="4"/>
+      <note pitch="B5" duration="quarter" start="6"/>
+      <note pitch="C6" duration="quarter" start="8"/>
+      <note pitch="B5" duration="quarter" start="10"/>
+      <note pitch="G5" duration="quarter" start="12"/>
+      <note pitch="E5" duration="quarter" start="14"/>
+      <note pitch="C5" duration="quarter" start="16"/>
+      <note pitch="E5" duration="quarter" start="18"/>
+      <note pitch="G5" duration="quarter" start="20"/>
+      <note pitch="B5" duration="quarter" start="22"/>
+      <note pitch="C6" duration="quarter" start="24"/>
+      <note pitch="B5" duration="quarter" start="26"/>
+      <note pitch="G5" duration="quarter" start="28"/>
+      <note pitch="E5" duration="quarter" start="30"/>
+      <note pitch="C5" duration="quarter" start="32"/>
+      <note pitch="E5" duration="quarter" start="34"/>
+      <note pitch="G5" duration="quarter" start="36"/>
+      <note pitch="B5" duration="quarter" start="38"/>
+    </track>
+  </tracks>
+</axml>

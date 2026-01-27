@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<axml version="1.0">
+  <metadata>
+    <title>Cyberpunk City</title>
+    <artist>AXML Master</artist>
+    <tempo>128</tempo>
+    <key>Am</key>
+    <time-signature>4/4</time-signature>
+  </metadata>
+
+  <instruments>
+    <instrument id="kick" type="kick" volume="1.0" attack="0.01" release="0.1" distortion="0.2" />
+    <instrument id="snare" type="snare" volume="0.8" attack="0.01" release="0.1" cutoff="1500" />
+    <instrument id="hihat" type="hihat" volume="0.4" attack="0.01" release="0.05" cutoff="8000" />
+    
+    <instrument id="cyberbass" type="sawtooth" volume="0.7" attack="0.01" decay="0.1" sustain="0.6" release="0.2" 
+                cutoff="600" resonance="15" distortion="0.5" lfoRate="4" lfoAmount="0.3" lfoTarget="cutoff" />
+    
+    <instrument id="lead" type="square" volume="0.5" attack="0.05" decay="0.2" sustain="0.4" release="0.4" 
+                cutoff="2500" resonance="8" chorus="0.6" reverb="0.4" lfoRate="6" lfoAmount="0.1" lfoTarget="pan" />
+    
+    <instrument id="pad" type="sine" volume="0.4" attack="2.0" decay="1.0" sustain="0.8" release="2.5" 
+                cutoff="1200" resonance="2" chorus="0.8" reverb="0.9" />
+  </instruments>
+
+  <patterns>
+    <pattern id="drum_loop">
+      <note pitch="C2" start="0" duration="q" /> <!-- Kick -->
+      <note pitch="rest" start="1" duration="q" />
+      <note pitch="C2" start="2" duration="q" />
+      <note pitch="rest" start="3" duration="q" />
+      
+      <note pitch="D4" start="1" duration="q" /> <!-- Snare -->
+      <note pitch="D4" start="3" duration="q" />
+      
+      <note pitch="G6" start="0" duration="e" /> <!-- Hihat -->
+      <note pitch="G6" start="0.5" duration="e" />
+      <note pitch="G6" start="1" duration="e" />
+      <note pitch="G6" start="1.5" duration="e" />
+      <note pitch="G6" start="2" duration="e" />
+      <note pitch="G6" start="2.5" duration="e" />
+      <note pitch="G6" start="3" duration="e" />
+      <note pitch="G6" start="3.5" duration="e" />
+    </pattern>
+    
+    <pattern id="bass_loop">
+      <note pitch="A1" start="0" duration="q" />
+      <note pitch="A1" start="0.75" duration="e" />
+      <note pitch="A1" start="1.5" duration="q" />
+      <note pitch="G1" start="2.5" duration="q" />
+      <note pitch="F1" start="3.5" duration="e" />
+    </pattern>
+  </patterns>
+
+  <tracks>
+    <track instrument="kick" name="Drums">
+      <play pattern="drum_loop" start="0" />
+      <play pattern="drum_loop" start="4" />
+      <play pattern="drum_loop" start="8" />
+      <play pattern="drum_loop" start="12" />
+    </track>
+    
+    <track instrument="cyberbass" name="Bass">
+      <play pattern="bass_loop" start="0" />
+      <play pattern="bass_loop" start="4" />
+      <play pattern="bass_loop" start="8" />
+      <play pattern="bass_loop" start="12" />
+    </track>
+    
+    <track instrument="lead" name="Main Lead">
+      <note pitch="A4" start="4" duration="h" />
+      <note pitch="C5" start="6" duration="h" />
+      <note pitch="E5" start="8" duration="w" />
+      <note pitch="D5" start="12" duration="h" />
+      <note pitch="B4" start="14" duration="h" />
+    </track>
+    
+    <track instrument="pad" name="Ambient">
+      <chord start="0" duration="16">
+        <note pitch="A3" />
+        <note pitch="C4" />
+        <note pitch="E4" />
+      </chord>
+    </track>
+  </tracks>
+</axml>

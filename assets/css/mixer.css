@@ -1,0 +1,70 @@
+.mixer-area {
+    height: 320px;
+    border-top: 1px solid var(--glass-border);
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.mixer-grid {
+    padding: 16px;
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    flex: 1;
+    align-items: flex-end;
+    min-height: 180px;
+}
+
+.mixer-channel {
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    border-radius: 8px;
+    transition: var(--transition);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.mixer-channel:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.fader-track {
+    width: 6px;
+    height: 120px;
+    background: #111;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.fader-cap {
+    width: 20px;
+    height: 12px;
+    background: linear-gradient(to bottom, #444, #222);
+    border: 1px solid #555;
+    border-radius: 3px;
+    position: absolute;
+    left: -7px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: border-color 0.2s;
+}
+
+.mixer-channel[data-track="master"] .fader-cap {
+    background: linear-gradient(to bottom, var(--primary), #00a2aa);
+    border-color: var(--primary-glow);
+}
+
+.fader-cap:hover {
+    border-color: var(--primary);
+}
+
+.mixer-channel span {
+    font-size: 8px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}

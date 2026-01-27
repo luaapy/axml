@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+  <!-- Root Element -->
+  <xs:element name="axml">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="metadata" type="MetadataType"/>
+        <xs:element name="instruments" type="InstrumentsType"/>
+        <xs:element name="patterns" type="PatternsType" minOccurs="0"/>
+        <xs:element name="tracks" type="TracksType"/>
+      </xs:sequence>
+      <xs:attribute name="version" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Metadata -->
+  <xs:complexType name="MetadataType">
+    <xs:all>
+      <xs:element name="title" type="xs:string"/>
+      <xs:element name="artist" type="xs:string"/>
+      <xs:element name="tempo" type="xs:integer"/>
+      <xs:element name="time-signature" type="xs:string" minOccurs="0"/>
+      <xs:element name="key" type="xs:string" minOccurs="0"/>
+      <xs:element name="duration" type="xs:string" minOccurs="0"/>
+    </xs:all>
+  </xs:complexType>
+
+  <!-- Instruments -->
+  <xs:complexType name="InstrumentsType">
+    <xs:sequence>
+      <xs:element name="instrument" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:attribute name="id" type="xs:ID" use="required"/>
+          <xs:attribute name="type" type="xs:string" use="required"/>
+          <xs:attribute name="volume" type="xs:decimal" default="0.7"/>
+          <xs:attribute name="attack" type="xs:decimal"/>
+          <xs:attribute name="decay" type="xs:decimal"/>
+          <xs:attribute name="sustain" type="xs:decimal"/>
+          <xs:attribute name="release" type="xs:decimal"/>
+          <xs:attribute name="cutoff" type="xs:decimal"/>
+          <xs:attribute name="resonance" type="xs:decimal"/>
+          <xs:attribute name="reverb" type="xs:decimal"/>
+          <xs:attribute name="delay" type="xs:decimal"/>
+          <xs:attribute name="pan" type="xs:decimal"/>
+          <xs:attribute name="distortion" type="xs:decimal"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Patterns -->
+  <xs:complexType name="PatternsType">
+    <xs:sequence>
+      <xs:element name="pattern" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:choice maxOccurs="unbounded">
+            <xs:element name="note" type="NoteType"/>
+            <xs:element name="chord" type="ChordType"/>
+            <xs:element name="play" type="PlayType"/>
+          </xs:choice>
+          <xs:attribute name="id" type="xs:ID" use="required"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Tracks -->
+  <xs:complexType name="TracksType">
+    <xs:sequence>
+      <xs:element name="track" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:choice maxOccurs="unbounded">
+            <xs:element name="note" type="NoteType"/>
+            <xs:element name="chord" type="ChordType"/>
+            <xs:element name="play" type="PlayType"/>
+          </xs:choice>
+          <xs:attribute name="instrument" type="xs:IDREF" use="required"/>
+          <xs:attribute name="name" type="xs:string"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Note -->
+  <xs:complexType name="NoteType">
+    <xs:attribute name="pitch" type="xs:string" use="required"/>
+    <xs:attribute name="duration" type="xs:string" use="required"/>
+    <xs:attribute name="velocity" type="xs:decimal" default="0.7"/>
+    <xs:attribute name="start" type="xs:decimal"/>
+  </xs:complexType>
+
+  <!-- Chord -->
+  <xs:complexType name="ChordType">
+    <xs:sequence>
+      <xs:element name="note" type="NoteType" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="start" type="xs:decimal"/>
+  </xs:complexType>
+
+  <!-- Play -->
+  <xs:complexType name="PlayType">
+    <xs:attribute name="pattern" type="xs:IDREF" use="required"/>
+    <xs:attribute name="start" type="xs:decimal"/>
+  </xs:complexType>
+
+</xs:schema>

@@ -1,0 +1,197 @@
+/* Tabs */
+.tabs-header {
+    display: flex;
+    border-bottom: 1px solid var(--glass-border);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 0.65rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+    letter-spacing: 1px;
+}
+
+.tab-btn.active {
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.tab-content {
+    flex: 1;
+    display: none;
+    overflow-y: auto;
+}
+
+.tab-content.active {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Documentation */
+.documentation {
+    padding: 16px !important;
+}
+
+.doc-section {
+    margin-bottom: 16px;
+}
+
+.doc-section h3 {
+    font-size: 0.8rem;
+    color: var(--primary);
+    margin-bottom: 8px;
+    border-bottom: 1px solid var(--primary-glow);
+    padding-bottom: 4px;
+}
+
+.doc-section p {
+    font-size: 0.75rem;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    color: var(--text-main);
+}
+
+.doc-tag {
+    font-family: var(--font-code);
+    background: rgba(0, 242, 255, 0.1);
+    color: var(--primary);
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+}
+
+.doc-item {
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.doc-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.preset-item {
+    border-left: 2px solid transparent;
+}
+
+.preset-item:hover {
+    background: rgba(0, 242, 255, 0.05) !important;
+    border-left-color: var(--primary);
+}
+
+.doc-tag {
+    font-size: 0.6rem !important;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* FX Dashboard */
+.fx-grid {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 10px;
+    flex: 1;
+}
+
+.fx-knob-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.fx-knob-container label {
+    font-size: 0.6rem;
+    font-weight: 800;
+    color: var(--text-muted);
+}
+
+.header-tools {
+    display: flex;
+    gap: 10px;
+}
+
+.header-tools i {
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.header-tools i:hover {
+    color: var(--primary);
+}
+
+.v-slider {
+    -webkit-appearance: slider-vertical;
+    width: 20px;
+    height: 120px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.project-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-main);
+}
+
+.project-item.active {
+    background: rgba(0, 242, 255, 0.1);
+    color: var(--primary);
+    border-left: 2px solid var(--primary);
+}
+
+/* Editor */
+.editor-main {
+    grid-column: 2;
+    position: relative;
+}
+
+.editor-wrapper {
+    flex: 1;
+    display: flex;
+}
+
+#code-editor {
+    flex: 1;
+    background: rgba(0, 0, 0, 0.2);
+    border: none;
+    color: var(--text-main);
+    font-family: var(--font-code);
+    font-size: 14px;
+    padding: 24px;
+    resize: none;
+    outline: none;
+    line-height: 1.6;
+    border-left: 2px solid var(--primary-glow);
+    transition: var(--transition);
+}
+
+#code-editor:focus {
+    background: rgba(0, 0, 0, 0.3);
+    border-left-color: var(--primary);
+}
+
+.light-theme #code-editor {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.editor-footer {
+    padding: 8px 16px;
+    background: rgba(0, 0, 0, 0.1);
+    border-top: 1px solid var(--glass-border);
+    display: flex;
+    gap: 12px;
+    font-size: 0.65rem;
+    color: var(--text-muted);
+}

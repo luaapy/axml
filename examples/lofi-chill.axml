@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<axml version="1.0">
+  <metadata>
+    <title>Lofi Chill Night</title>
+    <artist>AXML Pro</artist>
+    <tempo>85</tempo>
+    <key>Gm</key>
+  </metadata>
+  
+  <instruments>
+    <instrument id="rhodes" type="triangle" volume="0.5" attack="0.1" decay="0.3" sustain="0.6" release="0.8" cutoff="1500" reverb="0.6" />
+    <instrument id="sub_bass" type="sine" volume="0.6" attack="0.1" release="0.4" cutoff="300" />
+    <instrument id="beat" type="kick" volume="0.7" attack="0.01" release="0.1" />
+    <instrument id="hat" type="hihat" volume="0.3" attack="0.01" release="0.05" />
+  </instruments>
+  
+  <patterns>
+    <pattern id="drums">
+      <note pitch="C2" duration="q" start="0" />
+      <note pitch="rest" duration="q" start="1" />
+      <note pitch="C2" duration="q" start="2" />
+      <note pitch="rest" duration="q" start="3" />
+    </pattern>
+    <pattern id="hats">
+      <note pitch="C4" duration="e" start="0" />
+      <note pitch="C4" duration="e" start="0.5" />
+      <note pitch="C4" duration="e" start="1" />
+      <note pitch="C4" duration="e" start="1.5" />
+    </pattern>
+  </patterns>
+
+  <tracks>
+    <track instrument="rhodes" name="Chords">
+      <!-- Gm7 -->
+      <chord start="0" duration="w">
+        <note pitch="G3" /><note pitch="Bb3" /><note pitch="D4" /><note pitch="F4" />
+      </chord>
+      <!-- Cm7 -->
+      <chord start="4" duration="w">
+        <note pitch="C3" /><note pitch="Eb3" /><note pitch="G3" /><note pitch="Bb3" />
+      </chord>
+    </track>
+    
+    <track instrument="sub_bass" name="Sub Bass">
+      <note pitch="G1" duration="w" start="0" />
+      <note pitch="C2" duration="w" start="4" />
+    </track>
+
+    <track instrument="beat" name="Kick">
+      <play pattern="drums" start="0" />
+      <play pattern="drums" start="4" />
+    </track>
+
+    <track instrument="hat" name="Hi-Hats">
+      <play pattern="hats" start="0" />
+      <play pattern="hats" start="2" />
+      <play pattern="hats" start="4" />
+      <play pattern="hats" start="6" />
+    </track>
+  </tracks>
+</axml>

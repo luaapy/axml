@@ -1,0 +1,19 @@
+{
+  "name": "axml-studio",
+  "version": "1.0.0",
+  "description": "Audio XML Framework and Studio - A declarative way to code music.",
+  "main": "axml.js",
+  "scripts": {
+    "start": "npx serve .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "audio",
+    "xml",
+    "music-coding",
+    "web-audio-api",
+    "synthesis"
+  ],
+  "author": "nsn",
+  "license": "MIT"
+}

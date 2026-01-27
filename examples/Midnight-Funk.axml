@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<axml version="1.0">
+  <metadata>
+    <title>Midnight Funk Groove</title>
+    <artist>AXML Funk Master</artist>
+    <tempo>110</tempo>
+    <key>Em</key>
+  </metadata>
+
+  <instruments>
+    <!-- Solid Funk Kick -->
+    <instrument id="funk_kick" type="kick" volume="1.0" attack="0.005" release="0.1" distortion="0.1" />
+    
+    <!-- Snappy Snare -->
+    <instrument id="funk_snare" type="snare" volume="0.8" attack="0.005" release="0.08" cutoff="2000" resonance="2" />
+    
+    <!-- Crisp Hi-Hats -->
+    <instrument id="funk_hat" type="hihat" volume="0.4" attack="0.005" release="0.05" cutoff="8000" />
+    
+    <!-- The Slap Bass -->
+    <instrument id="slap_bass" type="sawtooth" volume="0.8" attack="0.01" decay="0.15" sustain="0.4" release="0.15" 
+                cutoff="800" resonance="8" distortion="0.3" lfoRate="3" lfoAmount="0.1" lfoTarget="cutoff" />
+    
+    <!-- Funky Clavinet -->
+    <instrument id="clav" type="square" volume="0.5" attack="0.01" decay="0.1" sustain="0" release="0.1" 
+                cutoff="1500" resonance="12" chorus="0.4" />
+    
+    <!-- Warm Pad/Chorus -->
+    <instrument id="rhodes" type="triangle" volume="0.4" attack="0.2" decay="0.5" sustain="0.8" release="1.2" 
+                cutoff="1200" chorus="0.6" reverb="0.5" />
+    
+    <!-- Brass Section (Stabs) -->
+    <instrument id="horns" type="sawtooth" volume="0.6" attack="0.05" decay="0.1" sustain="0.3" release="0.2" 
+                cutoff="3000" resonance="4" reverb="0.3" />
+  </instruments>
+
+  <patterns>
+    <!-- 1 Bar Drum Loop -->
+    <pattern id="drum_loop">
+      <note pitch="C2" start="0" duration="q" /> <!-- Kick -->
+      <note pitch="D2" start="1" duration="q" /> <!-- Snare -->
+      <note pitch="C2" start="2" duration="q" /> <!-- Kick -->
+      <note pitch="D2" start="3" duration="q" /> <!-- Snare -->
+      <note pitch="F#2" start="0.5" duration="e" /> <!-- Hat -->
+      <note pitch="F#2" start="1.5" duration="e" />
+      <note pitch="F#2" start="2.5" duration="e" />
+      <note pitch="F#2" start="3.5" duration="e" />
+    </pattern>
+
+    <!-- Funk Bassline Pattern -->
+    <pattern id="bass_groove">
+      <note pitch="E1" start="0" duration="e" />
+      <note pitch="E1" start="0.75" duration="s" />
+      <note pitch="G1" start="1.25" duration="e" />
+      <note pitch="A1" start="1.5" duration="e" />
+      <note pitch="E1" start="2" duration="e" />
+      <note pitch="D2" start="2.5" duration="e" />
+      <note pitch="B1" start="3.25" duration="s" />
+    </pattern>
+
+    <!-- Clavinet Chops -->
+    <pattern id="clav_chops">
+      <note pitch="G3" start="0.25" duration="s" />
+      <note pitch="A3" start="0.5" duration="s" />
+      <note pitch="B3" start="1.25" duration="s" />
+      <note pitch="D4" start="2.25" duration="s" />
+      <note pitch="E4" start="3.25" duration="s" />
+    </pattern>
+    
+    <!-- Brass Hit -->
+    <pattern id="brass_hit">
+      <chord start="0" duration="q">
+        <note pitch="E4" /><note pitch="G4" /><note pitch="B4" />
+      </chord>
+    </pattern>
+  </patterns>
+
+  <tracks>
+    <track instrument="funk_kick" name="Drums">
+      <play pattern="drum_loop" start="0" /><play pattern="drum_loop" start="4" />
+      <play pattern="drum_loop" start="8" /><play pattern="drum_loop" start="12" />
+      <play pattern="drum_loop" start="16" /><play pattern="drum_loop" start="20" />
+      <play pattern="drum_loop" start="24" /><play pattern="drum_loop" start="28" />
+      <play pattern="drum_loop" start="32" /><play pattern="drum_loop" start="36" />
+      <play pattern="drum_loop" start="40" /><play pattern="drum_loop" start="44" />
+      <play pattern="drum_loop" start="48" /><play pattern="drum_loop" start="52" />
+      <play pattern="drum_loop" start="56" /><play pattern="drum_loop" start="60" />
+    </track>
+
+    <track instrument="slap_bass" name="Bass">
+      <play pattern="bass_groove" start="4" /><play pattern="bass_groove" start="8" />
+      <play pattern="bass_groove" start="12" /><play pattern="bass_groove" start="16" />
+      <play pattern="bass_groove" start="20" /><play pattern="bass_groove" start="24" />
+      <play pattern="bass_groove" start="28" /><play pattern="bass_groove" start="32" />
+      <play pattern="bass_groove" start="36" /><play pattern="bass_groove" start="40" />
+      <play pattern="bass_groove" start="44" /><play pattern="bass_groove" start="48" />
+      <play pattern="bass_groove" start="52" /><play pattern="bass_groove" start="56" />
+      <note pitch="E1" start="60" duration="w" />
+    </track>
+
+    <track instrument="clav" name="Clavinet">
+      <play pattern="clav_chops" start="8" /><play pattern="clav_chops" start="12" />
+      <play pattern="clav_chops" start="16" /><play pattern="clav_chops" start="20" />
+      <play pattern="clav_chops" start="24" /><play pattern="clav_chops" start="32" />
+      <play pattern="clav_chops" start="36" /><play pattern="clav_chops" start="40" />
+      <play pattern="clav_chops" start="48" /><play pattern="clav_chops" start="52" />
+    </track>
+
+    <track instrument="rhodes" name="Backing">
+      <note pitch="E4" start="0" duration="w" />
+      <note pitch="A4" start="4" duration="w" />
+      <note pitch="E4" start="24" duration="w" />
+      <note pitch="A4" start="28" duration="w" />
+    </track>
+
+    <track instrument="horns" name="Brass">
+      <play pattern="brass_hit" start="7.75" />
+      <play pattern="brass_hit" start="15.75" />
+      <play pattern="brass_hit" start="23.75" />
+      <play pattern="brass_hit" start="31.75" />
+      <play pattern="brass_hit" start="39.75" />
+      <play pattern="brass_hit" start="47.75" />
+      <play pattern="brass_hit" start="55.75" />
+    </track>
+  </tracks>
+
+</axml>

@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AXML Ultimate Documentation | Standard v2.0</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;500&family=Orbitron:wght@600;800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <style>
+        body {
+            margin: 0;
+            background: var(--bg-dark);
+            color: var(--text-main);
+            font-family: var(--font-ui);
+            display: flex;
+            scroll-behavior: smooth;
+        }
+
+        .side-nav {
+            width: 320px;
+            height: 100vh;
+            background: var(--bg-panel);
+            border-right: 1px solid var(--glass-border);
+            position: fixed;
+            padding: 40px 24px;
+            box-sizing: border-box;
+            overflow-y: auto;
+            z-index: 100;
+        }
+
+        .side-nav h2 {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-group {
+            margin-bottom: 32px;
+        }
+
+        .nav-group h4 {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            margin-bottom: 12px;
+            border-left: 2px solid var(--primary);
+            padding-left: 10px;
+        }
+
+        .nav-group ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-group li a {
+            color: var(--text-main);
+            text-decoration: none;
+            display: block;
+            padding: 10px 0;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            opacity: 0.75;
+        }
+
+        .nav-group li a:hover {
+            color: var(--primary);
+            padding-left: 8px;
+            opacity: 1;
+        }
+
+        main {
+            margin-left: 320px;
+            padding: 80px 120px;
+            max-width: 1000px;
+            box-sizing: border-box;
+            flex: 1;
+        }
+
+        .doc-section {
+            margin-bottom: 120px;
+            animation: fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes fade-up {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-family: var(--font-display);
+            font-size: 4rem;
+            margin-bottom: 24px;
+            background: linear-gradient(to right, var(--primary), var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h2 {
+            font-family: var(--font-display);
+            font-size: 2.2rem;
+            margin: 60px 0 24px;
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        h2 i {
+            color: var(--primary);
+        }
+
+        h3 {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-top: 40px;
+            margin-bottom: 16px;
+        }
+
+        p {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: var(--text-main);
+            opacity: 0.9;
+        }
+
+        pre {
+            background: #000;
+            padding: 24px;
+            border-radius: 12px;
+            border: 1px solid var(--glass-border);
+            overflow-x: auto;
+            font-family: var(--font-code);
+            line-height: 1.6;
+            color: #d1d5db;
+            margin: 20px 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        .attr-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 32px 0;
+            background: var(--bg-panel);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+        }
+
+        .attr-table th,
+        .attr-table td {
+            text-align: left;
+            padding: 16px;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .attr-table th {
+            color: var(--primary);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        code {
+            background: rgba(0, 242, 255, 0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: var(--font-code);
+            color: var(--primary);
+            font-size: 0.95em;
+        }
+
+        .back-btn {
+            position: fixed;
+            top: 30px;
+            right: 40px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            color: var(--text-main);
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            border: 1px solid var(--glass-border);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: var(--transition);
+            z-index: 1001;
+            font-weight: 600;
+        }
+
+        .back-btn:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px var(--primary-glow);
+        }
+
+        .tip-box {
+            background: rgba(189, 0, 255, 0.05);
+            border-left: 4px solid var(--secondary);
+            padding: 24px;
+            margin: 40px 0;
+            border-radius: 4px 16px 16px 4px;
+        }
+
+        .kbd {
+            background: #333;
+            border: 1px solid #555;
+            border-bottom: 3px solid #111;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-family: var(--font-code);
+            color: white;
+            margin: 0 4px;
+        }
+
+        .version-badge {
+            background: var(--accent);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.html" class="back-btn"><i class="material-icons">keyboard_return</i> Launch Studio</a>
+
+    <aside class="side-nav">
+        <h2><i class="material-icons">menu_book</i> AXML GUIDE</h2>
+
+        <div class="nav-group">
+            <h4>Fundamental</h4>
+            <ul>
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#hierarchy">AXML Structure</a></li>
+                <li><a href="#metadata">Global Metadata</a></li>
+            </ul>
+        </div>
+
+        <div class="nav-group">
+            <h4>Sound Source</h4>
+            <ul>
+                <li><a href="#instrument-types">Oscillator Types</a></li>
+                <li><a href="#samples">Audio Samples</a></li>
+                <li><a href="#adsr">ADSR Envelopes</a></li>
+            </ul>
+        </div>
+
+        <div class="nav-group">
+            <h4>DSP & Modulation</h4>
+            <ul>
+                <li><a href="#filters">Logic Filters</a></li>
+                <li><a href="#effects">The FX Rack</a></li>
+                <li><a href="#lfo">LFO System</a></li>
+            </ul>
+        </div>
+
+        <div class="nav-group">
+            <h4>Composition</h4>
+            <ul>
+                <li><a href="#notation">Scientific Notation</a></li>
+                <li><a href="#tempo">Duration & Beats</a></li>
+                <li><a href="#chords">Chords & Polyphony</a></li>
+                <li><a href="#patterns">Patterns & Macros</a></li>
+            </ul>
+        </div>
+
+        <div class="nav-group">
+            <h4>Workflow</h4>
+            <ul>
+                <li><a href="#shortcuts">Keyboard Shortcuts</a></li>
+                <li><a href="#mastering">Master Chain</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <main>
+        <section id="intro" class="doc-section">
+            <h1>The Complete Reference <span class="version-badge">v2.0</span></h1>
+            <p>Welcome to the ultimate guide for <strong>Audio XML (AXML)</strong>. This specification defines a robust,
+                text-based format for music synthesis and composition on the web.</p>
+            <p>Whether you are a sound designer code-sculpting a lead synth or a composer building a complex
+                arrangement, AXML gives you precise control over every frequency and beat.</p>
+        </section>
+
+        <section id="hierarchy" class="doc-section">
+            <h2><i class="material-icons">account_tree</i> Root Hierarchy</h2>
+            <p>A valid AXML file must follow this exact order of elements. The engine parses them sequentially to build
+                the audio graph.</p>
+            <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;axml version="1.0"&gt;
+  &lt;metadata&gt; ... &lt;/metadata&gt;
+  &lt;instruments&gt; ... &lt;/instruments&gt;
+  &lt;patterns&gt; ... &lt;/patterns&gt;
+  &lt;tracks&gt; ... &lt;/tracks&gt;
+&lt;/axml&gt;
+</code></pre>
+        </section>
+
+        <section id="metadata" class="doc-section">
+            <h2><i class="material-icons">info</i> Global Metadata</h2>
+            <p>Metadata defines the project context. <code>tempo</code> is critical as it defines how beats translate to
+                seconds.</p>
+            <table class="attr-table">
+                <thead>
+                    <tr>
+                        <th>Element</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>&lt;title&gt;</code></td>
+                        <td>Display name of the project.</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;artist&gt;</code></td>
+                        <td>Project creator or sound designer.</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;tempo&gt;</code></td>
+                        <td>Beats Per Minute (60.0 - 250.0). Average: 120.</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;key&gt;</code></td>
+                        <td>Musical key signature (e.g., C, Am, F#m).</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;time-signature&gt;</code></td>
+                        <td>Rhythm structure (e.g., 4/4, 3/4).</td>
+                    </tr>
+                </tbody>
+            </table>
+            <pre><code>&lt;metadata&gt;
+  &lt;title&gt;Cyberpunk City&lt;/title&gt;
+  &lt;artist&gt;AXML Master&lt;/artist&gt;
+  &lt;tempo&gt;128&lt;/tempo&gt;
+  &lt;key&gt;Am&lt;/key&gt;
+&lt;/metadata&gt;</code></pre>
+        </section>
+
+        <section id="instrument-types" class="doc-section">
+            <h2><i class="material-icons">waves</i> Oscillator Types</h2>
+            <p>The <code>type</code> attribute on <code>&lt;instrument&gt;</code> determines the basic waveform. AXML
+                currently supports 11 distinct types:</p>
+            <table class="attr-table">
+                <thead>
+                    <tr>
+                        <th>Type Name</th>
+                        <th>Mathematical Waveform / Physical Model</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>sine</code></td>
+                        <td>Pure sine wave (Fundamental frequency only).</td>
+                    </tr>
+                    <tr>
+                        <td><code>square</code></td>
+                        <td>Square wave (Rich odd harmonics).</td>
+                    </tr>
+                    <tr>
+                        <td><code>sawtooth</code></td>
+                        <td>Sawtooth wave (All harmonics, very bright).</td>
+                    </tr>
+                    <tr>
+                        <td><code>triangle</code></td>
+                        <td>Triangle wave (Mellow harmonics).</td>
+                    </tr>
+                    <tr>
+                        <td><code>kick</code></td>
+                        <td>Physical model: Sine sweep + Fast exponential decay.</td>
+                    </tr>
+                    <tr>
+                        <td><code>snare</code></td>
+                        <td>Physical model: White noise + Lowpass filter at 1.2kHz.</td>
+                    </tr>
+                    <tr>
+                        <td><code>hihat</code></td>
+                        <td>Physical model: White noise + Highpass filter at 8kHz.</td>
+                    </tr>
+                    <li><code>synth</code></td>
+                        <td>Alias for Sawtooth wave.</td>
+                        </tr>
+                    <li><code>piano</code></td>
+                        <td>Alias for Triangle wave.</td>
+                        </tr>
+                        <tr>
+                            <td><code>sample</code></td>
+                            <td>Plays an external audio file (requires <code>src</code>).</td>
+                        </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="samples" class="doc-section">
+            <h2><i class="material-icons">library_music</i> Audio Samples</h2>
+            <p>You can use external WAV, MP3, or OGG files as instruments. The engine will automatically decode and
+                pitch-shift them based on the <code>note pitch</code>.</p>
+            <pre><code>&lt;instrument id="vox" type="sample" 
+    src="https://example.com/voice.wav" 
+    volume="0.8" /&gt;</code></pre>
+            <div class="tip-box">
+                <strong>Note:</strong> Samples are pitched relative to <strong>C4</strong> (261.63Hz). If you play C4,
+                the sample plays at original speed. C5 will play it at double speed.
+            </div>
+        </section>
+
+        <section id="adsr" class="doc-section">
+            <h2><i class="material-icons">gesture</i> ADSR Envelopes</h2>
+            <p>The volume envelope is critical for defining the "shape" of a sound. All values are in
+                <strong>seconds</strong>, except sustain (0.0 to 1.0).
+            </p>
+            <table class="attr-table">
+                <thead>
+                    <tr>
+                        <th>Attribute</th>
+                        <th>Full Name</th>
+                        <th>Behavior</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>attack</code></td>
+                        <td>Attack Time</td>
+                        <td>Seconds to reach peak volume.</td>
+                    </tr>
+                    <tr>
+                        <td><code>decay</code></td>
+                        <td>Decay Time</td>
+                        <td>Seconds to drop to sustain level.</td>
+                    </tr>
+                    <tr>
+                        <td><code>sustain</code></td>
+                        <td>Sustain Level</td>
+                        <td>Volume factor (0-1) held while note is active.</td>
+                    </tr>
+                    <tr>
+                        <td><code>release</code></td>
+                        <td>Release Time</td>
+                        <td>Seconds to fade to silence after note ends.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="filters" class="doc-section">
+            <h2><i class="material-icons">filter_list</i> Logic Filters</h2>
+            <p>Every instrument passes through a resonant Biquad Filter. This is essential for subtractive synthesis.
+            </p>
+            <table class="attr-table">
+                <thead>
+                    <tr>
+                        <th>Attribute</th>
+                        <th>Description</th>
+                        <th>Range</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>cutoff</code></td>
+                        <td>The frequency above which sound is attenuated.</td>
+                        <td>20Hz - 20,000Hz</td>
+                    </tr>
+                    <tr>
+                        <td><code>resonance</code></td>
+                        <td>Boosts the frequencies around the cutoff point.</td>
+                        <td>0.1 - 20.0</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="tip-box">
+                <strong>Subtractive Synthesis:</strong> Start with a rich waveform like <code>sawtooth</code> and use a
+                low <code>cutoff</code> (e.g. 500) with high <code>resonance</code> to create a classic synth growl.
+            </div>
+        </section>
+
+        <section id="effects" class="doc-section">
+            <h2><i class="material-icons">auto_fix_high</i> The FX Rack</h2>
+            <p>AXML Studio v2.0 features a complex chainable effects rack for every instrument.</p>
+            <table class="attr-table">
+                <thead>
+                    <tr>
+                        <th>Effect</th>
+                        <th>Attribute</th>
+                        <th>Range</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Pan</strong></td>
+                        <td><code>pan</code></td>
+                        <td>-1.0 to 1.0</td>
+                        <td>-1.0 (Full Left) | 1.0 (Full Right)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Distortion</strong></td>
+                        <td><code>distortion</code></td>
+                        <td>0.0 to 1.0</td>
+                        <td>Soft-clipping saturation.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Chorus</strong></td>
+                        <td><code>chorus</code></td>
+                        <td>0.0 to 1.0</td>
+                        <td>Stereo widening and detune layering.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bitcrush</strong></td>
+                        <td><code>bitcrush</code></td>
+                        <td>0.0 to 1.0</td>
+                        <td>Reduces bit-depth (16-bit to 2-bit lo-fi).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Reverb</strong></td>
+                        <td><code>reverb</code></td>
+                        <td>0.0 to 1.0</td>
+                        <td>Convolution-based spatial reverb.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Delay</strong></td>
+                        <td><code>delay</code></td>
+                        <td>0.0 to 1.0</td>
+                        <td>Wet amount for the echo delay.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Delay also supports <code>delayTime</code> (seconds) and <code>delayFeedback</code> (repetition decay).
+            </p>
+        </section>
+
+        <section id="lfo" class="doc-section">
+            <h2><i class="material-icons">vibration</i> LFO System</h2>
+            <p>The Low Frequency Oscillator (LFO) automates parameter changes over time, creating movement and "wobble".
+            </p>
+            <table class="attr-table">
+                <thead>
+                    <tr>
+                        <th>Attribute</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>lfoRate</code></td>
+                        <td>Speed of the oscillation in Hz.</td>
+                    </tr>
+                    <tr>
+                        <td><code>lfoAmount</code></td>
+                        <td>Intensity of the modulation.</td>
+                    </tr>
+                    <tr>
+                        <td><code>lfoType</code></td>
+                        <td>Shape of LFO (sine, square, sawtooth, triangle).</td>
+                    </tr>
+                    <tr>
+                        <td><code>lfoTarget</code></td>
+                        <td>Parameter to modulate (cutoff, volume, pan).</td>
+                    </tr>
+                </tbody>
+            </table>
+            <pre><code>&lt;!-- A classic Dubstep wobble --&gt;
+&lt;instrument id="sub" type="sawtooth" 
+    lfoRate="6" lfoAmount="0.8" lfoTarget="cutoff" /&gt;</code></pre>
+        </section>
+
+        <section id="notation" class="doc-section">
+            <h2><i class="material-icons">music_note</i> Musical Notation</h2>
+            <p>AXML supports three types of pitch notation in the <code>pitch</code> attribute:</p>
+            <ul>
+                <li><strong>Scientific Notation:</strong> Use <code>Letter + Accidental + Octave</code> (e.g.,
+                    <code>C4</code>, <code>Eb5</code>, <code>G#3</code>).
+                </li>
+                <li><strong>MIDI Note Numbers:</strong> Use integers (e.g., <code>60</code> for C4, <code>69</code> for
+                    A4).</li>
+                <li><strong>Rests:</strong> Use the keyword <code>rest</code> for silence.</li>
+            </ul>
+        </section>
+
+        <section id="tempo" class="doc-section">
+            <h2><i class="material-icons">timer</i> Timing & Durations</h2>
+            <p>The time system in AXML is based on <strong>Beats</strong>, not seconds. 1 Beat = 1 Quarter Note.</p>
+            <h3>Duration Shortcuts</h3>
+            <div class="tag-list">
+                <span class="tag-pill"><code>w</code> = 4 beats</span>
+                <span class="tag-pill"><code>h</code> = 2 beats</span>
+                <span class="tag-pill"><code>q</code> = 1 beat</span>
+                <span class="tag-pill"><code>e</code> = 0.5 beat</span>
+                <span class="tag-pill"><code>s</code> = 0.25 beat</span>
+            </div>
+            <p>You can also use decimal values like <code>duration="1.33"</code> for custom timings.</p>
+        </section>
+
+        <section id="chords" class="doc-section">
+            <h2><i class="material-icons">layers</i> Chords & Polyphony</h2>
+            <p>There are two ways to play multiple notes simultaneously:</p>
+            <h3>1. The Chord Wrapper</h3>
+            <pre><code>&lt;chord start="0" duration="w"&gt;
+  &lt;note pitch="C4" /&gt;
+  &lt;note pitch="E4" /&gt;
+  &lt;note pitch="G4" /&gt;
+&lt;/chord&gt;</code></pre>
+
+            <h3>2. Manual Start Timing</h3>
+            <pre><code>&lt;note pitch="C4" start="0" duration="w" /&gt;
+&lt;note pitch="E4" start="0" duration="w" /&gt;</code></pre>
+        </section>
+
+        <section id="patterns" class="doc-section">
+            <h2><i class="material-icons">reorder</i> Patterns & Macros</h2>
+            <p>AXML is designed for modularity. <strong>Patterns</strong> allow you to define complex musical phrases,
+                drum loops, or chord progressions once and trigger them anywhere in your project using the
+                <code>&lt;play /&gt;</code> element.</p>
+
+            <h3>Defining a Pattern</h3>
+            <p>All patterns must be defined inside the top-level <code>&lt;patterns&gt;</code> container. Each pattern
+                requires a unique <code>id</code>.</p>
+            <pre><code>&lt;patterns&gt;
+  &lt;pattern id="drum_beat"&gt;
+    &lt;note pitch="C2" start="0" duration="0.5" velocity="1.0" /&gt; &lt;!-- Kick --&gt;
+    &lt;note pitch="D4" start="1" duration="0.5" velocity="0.8" /&gt; &lt;!-- Snare --&gt;
+    &lt;note pitch="C2" start="2" duration="0.5" velocity="1.0" /&gt;
+    &lt;note pitch="D4" start="3" duration="0.5" velocity="0.8" /&gt;
+  &lt;/pattern&gt;
+&lt;/patterns&gt;</code></pre>
+
+            <h3>Invoking Patterns (Macros)</h3>
+            <p>Trigger a pattern inside a <code>&lt;track&gt;</code>. The <code>start</code> attribute on the
+                <code>&lt;play&gt;</code> element acts as a time offset for all notes inside that pattern.</p>
+            <pre><code>&lt;track instrument="drums" name="Drums Section"&gt;
+  &lt;play pattern="drum_beat" start="0" /&gt;
+  &lt;play pattern="drum_beat" start="4" /&gt;
+  &lt;play pattern="drum_beat" start="8" /&gt;
+&lt;/track&gt;</code></pre>
+
+            <div class="tip-box">
+                <strong>Nesting Patterns:</strong> AXML supports nested patterns. You can call a
+                <code>&lt;play /&gt;</code> inside a <code>&lt;pattern&gt;</code> to build even more complex
+                hierarchical structures (e.g. a <strong>Verse</strong> pattern that calls multiple <strong>Bar</strong>
+                patterns).
+            </div>
+        </section>
+
+        <section id="shortcuts" class="doc-section">
+            <h2><i class="material-icons">keyboard</i> Keyboard Shortcuts</h2>
+            <p>Speed up your sound design workflow in the Studio:</p>
+            <ul>
+                <li><kbd class="kbd">Space</kbd> : Play / Stop Current Project</li>
+                <li><kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">S</kbd> : Save to Local Storage</li>
+                <li><kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">I</kbd> : Auto-Format XML Code</li>
+                <li><kbd class="kbd">Tab</kbd> : Indent Code (2 spaces)</li>
+            </ul>
+        </section>
+
+        <section id="mastering" class="doc-section">
+            <h2><i class="material-icons">tune</i> Master Dynamic Chain</h2>
+            <p>The AXML Engine doesn't just play tracks; it passes everything through a high-end master chain:</p>
+            <ol>
+                <li><strong>Track Gains:</strong> Individual volume control for each track.</li>
+                <li><strong>Master Gain:</strong> Global volume control.</li>
+                <li><strong>Dynamics Compressor/Limiter:</strong> Prevents clipping and adds "glue" to the mix.
+                    Threshold set at <code>-1.0 dB</code>.</li>
+                <li><strong>Real-time Analyser:</strong> 512-band FFT for the visualizer engines.</li>
+            </ol>
+        </section>
+    </main>
+</body>
+
+</html>

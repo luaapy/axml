@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<axml version="1.0">
+  <metadata>
+    <title>Neon Dreams</title>
+    <artist>Claude</artist>
+    <tempo>120</tempo>
+    <time-signature>4/4</time-signature>
+    <key>C</key>
+    <duration>120</duration>
+  </metadata>
+  
+  <instruments>
+    <instrument id="lead" type="sine" volume="0.6" attack="0.05" decay="0.2" sustain="0.6" release="0.4" cutoff="5000" reverb="0.3" />
+    <instrument id="bass" type="sawtooth" volume="0.5" attack="0.01" decay="0.1" sustain="0.8" release="0.2" cutoff="800" distortion="0.4" />
+    <instrument id="pad" type="triangle" volume="0.4" attack="1.5" decay="0.5" sustain="0.7" release="2.0" cutoff="2000" reverb="0.6" pan="-0.5" />
+    <instrument id="arp" type="square" volume="0.3" attack="0.01" decay="0.1" sustain="0.3" release="0.1" cutoff="3000" reverb="0.4" pan="0.5" />
+    <instrument id="melody2" type="synth" volume="0.5" attack="0.1" decay="0.3" sustain="0.5" release="0.6" cutoff="4000" reverb="0.5" />
+  </instruments>
+  
+  <tracks>
+    <!-- INTRO SECTION (0-16 beats) -->
+    <track instrument="pad" name="Intro Pad">
+      <note pitch="C4" duration="whole" start="0"/>
+      <note pitch="E4" duration="whole" start="0"/>
+      <note pitch="G4" duration="whole" start="0"/>
+      
+      <note pitch="A3" duration="whole" start="4"/>
+      <note pitch="C4" duration="whole" start="4"/>
+      <note pitch="E4" duration="whole" start="4"/>
+      
+      <note pitch="F3" duration="whole" start="8"/>
+      <note pitch="A3" duration="whole" start="8"/>
+      <note pitch="C4" duration="whole" start="8"/>
+      
+      <note pitch="G3" duration="whole" start="12"/>
+      <note pitch="B3" duration="whole" start="12"/>
+      <note pitch="D4" duration="whole" start="12"/>
+    </track>
+    
+    <!-- VERSE 1 (16-48 beats) -->
+    <track instrument="lead" name="Main Melody">
+      <!-- Phrase 1 (16-24) -->
+      <note pitch="E5" duration="quarter" start="16"/>
+      <note pitch="D5" duration="quarter"/>
+      <note pitch="C5" duration="quarter"/>
+      <note pitch="D5" duration="quarter"/>
+      <note pitch="E5" duration="half"/>
+      <note pitch="G5" duration="half"/>
+      
+      <!-- Phrase 2 (24-32) -->
+      <note pitch="A5" duration="quarter" start="24"/>
+      <note pitch="G5" duration="eighth"/>
+      <note pitch="F5" duration="eighth"/>
+      <note pitch="E5" duration="quarter"/>
+      <note pitch="D5" duration="quarter"/>
+      <note pitch="C5" duration="half"/>
+      <note pitch="E5" duration="half"/>
+      
+      <!-- Phrase 3 (32-40) -->
+      <note pitch="D5" duration="quarter" start="32"/>
+      <note pitch="E5" duration="quarter"/>
+      <note pitch="F5" duration="quarter"/>
+      <note pitch="G5" duration="quarter"/>
+      <note pitch="A5" duration="quarter"/>
+      <note pitch="G5" duration="quarter"/>
+      <note pitch="F5" duration="half"/>
+      
+      <!-- Phrase 4 (40-48) -->
+      <note pitch="E5" duration="quarter" start="40"/>
+      <note pitch="G5" duration="quarter"/>
+      <note pitch="C6" duration="quarter"/>
+      <note pitch="B5" duration="quarter"/>
+      <note pitch="A5" duration="quarter"/>
+      <note pitch="G5" duration="quarter"/>
+      <note pitch="E5" duration="half"/>
+    </track>
+    
+    <track instrument="bass" name="Bass Line">
+      <!-- Intro -->
+      <note pitch="C2" duration="whole" start="0"/>
+      <note pitch="A2" duration="whole" start="4"/>
+      <note pitch="F2" duration="whole" start="8"/>
+      <note pitch="G2" duration="whole" start="12"/>
+      
+      <!-- Verse 1 -->
+      <note pitch="C2" duration="half" start="16"/>
+      <note pitch="C2" duration="half"/>
+      <note pitch="A2" duration="half"/>
+      <note pitch="A2" duration="half"/>
+      <note pitch="F2" duration="half"/>
+      <note pitch="F2" duration="half"/>
+      <note pitch="G2" duration="half"/>
+      <note pitch="G2" duration="half"/>
+      
+      <note pitch="C2" duration="half" start="32"/>
+      <note pitch="C2" duration="half"/>
+      <note pitch="A2" duration="half"/>
+      <note pitch="A2" duration="half"/>
+      <note pitch="F2" duration="half"/>
+      <note pitch="F2" duration="half"/>
+      <note pitch="G2" duration="half"/>
+      <note pitch="G2" duration="half"/>
+    </track>
+    
+    <track instrument="arp" name="Arpeggio">
+      <!-- Verse 1 arpeggios -->
+      <note pitch="C4" duration="eighth" start="16"/>
+      <note pitch="E4" duration="eighth"/>
+      <note pitch="G4" duration="eighth"/>
+      <note pitch="C5" duration="eighth"/>
+      <note pitch="G4" duration="eighth"/>
+      <note pitch="E4" duration="eighth"/>
+      <note pitch="C4" duration="eighth"/>
+      <note pitch="E4" duration="eighth"/>
+      
+      <note pitch="A3" duration="eighth" start="20"/>
+      <note pitch="C4" duration="eighth"/>
+      <note pitch="E4" duration="eighth"/>
+      <note pitch="A4" duration="eighth"/>
+      <note pitch="E4" duration="eighth"/>
+      <note pitch="C4" duration="eighth"/>
+      <note pitch="A3" duration="eighth"/>
+      <note pitch="C4" duration="eighth"/>
+      
+      <note pitch="F3" duration="eighth" start="24"/>
+      <note pitch="A3" duration="eighth"/>
+      <note pitch="C4" duration="eighth"/>
+      <note pitch="F4" duration="eighth"/>
+      <note pitch="C4" duration="eighth"/>
+      <note pitch="A3" duration="eighth"/>
+      <note pitch="F3" duration="eighth"/>
+      <note pitch="A3" duration="eighth"/>
+      
+      <note pitch="G3" duration="eighth" start="28"/>
+      <note pitch="B3" duration="eighth"/>
+      <note pitch="D4" duration="eighth"/>
+      <note pitch="G4" duration="eighth"/>
+      <note pitch="D4" duration="eighth"/>
+      <note pitch="B3" duration="eighth"/>
+      <note pitch="G3" duration="eighth"/>
+      <note pitch="B3" duration="eighth"/>
+      
+      <!-- Continue pattern -->
+      <note pitch="C4" duration="eighth" start="32"/>
+      <note pitch="E4" duration="eighth"/>
+      <note pitch="G4" duration="eighth"/>
+      <note pitch="C5" duration="eighth"/>
+      <note pitch="G4" duration="eighth"/>
+      <note pitch="E4" duration="eighth"/>
+      <note pitch="C4" duration="eighth"/>
+      <note pitch="E4" duration="eighth"/>
+      
+      <note pitch="A3" duration="eighth" start="36"/>
+      <note pitch="C4" duration="eighth"/>
+      <note pitch="E4" duration="eighth"/>
+      <note pitch="A4" duration="eighth"/>
+      <note pitch="E4" duration="eighth"/>
+      <note pitch="C4" duration="eighth"/>
+      <note pitch="A3" duration="eighth"/>
+      <note pitch="C4" duration="eighth"/>
+      
+      <note pitch="F3" duration="eighth" start="40"/>
+      <note pitch="A3" duration="eighth"/>
+      <note pitch="C4" duration="eighth"/>
+      <note pitch="F4" duration="eighth"/>
+      <note pitch="C4" duration="eighth"/>
+      <note pitch="A3" duration="eighth"/>
+      <note pitch="F3" duration="eighth"/>
+      <note pitch="A3" duration="eighth"/>
+      
+      <note pitch="G3" duration="eighth" start="44"/>
+      <note pitch="B3" duration="eighth"/>
+      <note pitch="D4" duration="eighth"/>
+      <note pitch="G4" duration="eighth"/>
+      <note pitch="D4" duration="eighth"/>
+      <note pitch="B3" duration="eighth"/>
+      <note pitch="G3" duration="eighth"/>
+      <note pitch="B3" duration="eighth"/>
+    </track>
+    
+    <!-- CHORUS (48-80 beats) -->
+    <track instrument="melody2" name="Chorus Melody">
+      <!-- Chorus phrase 1 (48-56) -->
+      <note pitch="C5" duration="quarter" start="48"/>
+      <note pitch="E5" duration="quarter"/>
+      <note pitch="G5" duration="quarter"/>
+      <note pitch="E5" duration="quarter"/>
+      <note pitch="A5" duration="half"/>
+      <note pitch="G5" duration="half"/>
+      
+      <!-- Chorus phrase 2 (56-64) -->
+      <note pitch="F5" duration="quarter" start="56"/>
+      <note pitch="E5" duration="quarter"/>
+      <note pitch="D5" duration="quarter"/>
+      <note pitch="C5" duration="quarter"/>
+      <note pitch="D5" duration="whole"/>
+      
+      <!-- Chorus phrase 3 (64-72) -->
+      <note pitch="E5" duration="quarter" start="64"/>
+      <note pitch="G5" duration="quarter"/>
+      <note pitch="C6" duration="quarter"/>
+      <note pitch="B5" duration="quarter"/>
+      <note pitch="A5" duration="half"/>
+      <note pitch="G5" duration="half"/>
+      
+      <!-- Chorus phrase 4 (72-80) -->
+      <note pitch="F5" duration="quarter" start="72"/>
+      <note pitch="A5" duration="quarter"/>
+      <note pitch="G5" duration="quarter"/>
+      <note pitch="E5" duration="quarter"/>
+      <note pitch="C5" duration="whole"/>
+    </track>
+    
+    <track instrument="pad" name="Chorus Chords">
+      <note pitch="C4" duration="whole" start="48"/>
+      <note pitch="E4" duration="whole" start="48"/>
+      <note pitch="G4" duration="whole" start="48"/>
+      
+      <note pitch="A3" duration="whole" start="52"/>
+      <note pitch="C4" duration="whole" start="52"/>
+      <note pitch="E4" duration="whole" start="52"/>
+      
+      <note pitch="F3" duration="whole" start="56"/>
+      <note pitch="A3" duration="whole" start="56"/>
+      <note pitch="C4" duration="whole" start="56"/>
+      
+      <note pitch="G3" duration="whole" start="60"/>
+      <note pitch="B3" duration="whole" start="60"/>
+      <note pitch="D4" duration="whole" start="60"/>
+      
+      <note pitch="C4" duration="whole" start="64"/>
+      <note pitch="E4" duration="whole" start="64"/>
+      <note pitch="G4" duration="whole" start="64"/>
+      
+      <note pitch="A3" duration="whole" start="68"/>
+      <note pitch="C4" duration="whole" start="68"/>
+      <note pitch="E4" duration="whole" start="68"/>
+      
+      <note pitch="F3" duration="whole" start="72"/>
+      <note pitch="A3" duration="whole" start="72"/>
+      <note pitch="C4" duration="whole" start="72"/>
+      
+      <note pitch="C4" duration="whole" start="76"/>
+      <note pitch="E4" duration="whole" start="76"/>
+      <note pitch="G4" duration="whole" start="76"/>
+    </track>
+    
+    <!-- VERSE 2 (80-112 beats) -->
+    <track instrument="lead" name="Verse 2 Melody">
+      <!-- Variation of main melody -->
+      <note pitch="G5" duration="quarter" start="80"/>
+      <note pitch="E5" duration="quarter"/>
+      <note pitch="C5" duration="quarter"/>
+      <note pitch="D5" duration="quarter"/>
+      <note pitch="E5" duration="quarter"/>
+      <note pitch="F5" duration="quarter"/>
+      <note pitch="G5" duration="half"/>
+      
+      <note pitch="A5" duration="quarter" start="88"/>
+      <note pitch="G5" duration="quarter"/>
+      <note pitch="F5" duration="quarter"/>
+      <note pitch="E5" duration="quarter"/>
+      <note pitch="D5" duration="quarter"/>
+      <note pitch="C5" duration="quarter"/>
+      <note pitch="E5" duration="half"/>
+      
+      <note pitch="C5" duration="eighth" start="96"/>
+      <note pitch="D5" duration="eighth"/>
+      <note pitch="E5" duration="quarter"/>
+      <note pitch="F5" duration="quarter"/>
+      <note pitch="G5" duration="quarter"/>
+      <note pitch="A5" duration="half"/>
+      <note pitch="G5" duration="half"/>
+      
+      <note pitch="F5" duration="quarter" start="104"/>
+      <note pitch="E5" duration="quarter"/>
+      <note pitch="D5" duration="quarter"/>
+      <note pitch="E5" duration="quarter"/>
+      <note pitch="C5" duration="whole"/>
+    </track>
+    
+    <!-- BRIDGE (112-128 beats) -->
+    <track instrument="melody2" name="Bridge">
+      <note pitch="E5" duration="half" start="112"/>
+      <note pitch="G5" duration="half"/>
+      <note pitch="C6" duration="half"/>
+      <note pitch="B5" duration="half"/>
+      
+      <note pitch="A5" duration="quarter" start="120"/>
+      <note pitch="G5" duration="quarter"/>
+      <note pitch="F5" duration="quarter"/>
+      <note pitch="E5" duration="quarter"/>
+      <note pitch="D5" duration="whole"/>
+    </track>
+    
+    <!-- FINAL CHORUS (128-160 beats) -->
+    <track instrument="lead" name="Final Chorus Lead">
+      <note pitch="C5" duration="quarter" start="128"/>
+      <note pitch="E5" duration="quarter"/>
+      <note pitch="G5" duration="quarter"/>
+      <note pitch="C6" duration="quarter"/>
+      <note pitch="B5" duration="quarter"/>
+      <note pitch="A5" duration="quarter"/>
+      <note pitch="G5" duration="half"/>
+      
+      <note pitch="F5" duration="quarter" start="136"/>
+      <note pitch="E5" duration="quarter"/>
+      <note pitch="D5" duration="quarter"/>
+      <note pitch="C5" duration="quarter"/>
+      <note pitch="E5" duration="half"/>
+      <note pitch="D5" duration="half"/>
+      
+      <note pitch="C5" duration="quarter" start="144"/>
+      <note pitch="E5" duration="quarter"/>
+      <note pitch="G5" duration="quarter"/>
+      <note pitch="E5" duration="quarter"/>
+      <note pitch="C6" duration="half"/>
+      <note pitch="G5" duration="half"/>
+      
+      <note pitch="E5" duration="quarter" start="152"/>
+      <note pitch="D5" duration="quarter"/>
+      <note pitch="C5" duration="quarter"/>
+      <note pitch="G4" duration="quarter"/>
+      <note pitch="C5" duration="whole"/>
+    </track>
+    
+    <track instrument="pad" name="Final Chords">
+      <note pitch="C4" duration="whole" start="128"/>
+      <note pitch="E4" duration="whole" start="128"/>
+      <note pitch="G4" duration="whole" start="128"/>
+      
+      <note pitch="A3" duration="whole" start="132"/>
+      <note pitch="C4" duration="whole" start="132"/>
+      <note pitch="E4" duration="whole" start="132"/>
+      
+      <note pitch="F3" duration="whole" start="136"/>
+      <note pitch="A3" duration="whole" start="136"/>
+      <note pitch="C4" duration="whole" start="136"/>
+      
+      <note pitch="G3" duration="whole" start="140"/>
+      <note pitch="B3" duration="whole" start="140"/>
+      <note pitch="D4" duration="whole" start="140"/>
+      
+      <note pitch="C4" duration="whole" start="144"/>
+      <note pitch="E4" duration="whole" start="144"/>
+      <note pitch="G4" duration="whole" start="144"/>
+      
+      <note pitch="A3" duration="whole" start="148"/>
+      <note pitch="C4" duration="whole" start="148"/>
+      <note pitch="E4" duration="whole" start="148"/>
+      
+      <note pitch="F3" duration="whole" start="152"/>
+      <note pitch="A3" duration="whole" start="152"/>
+      <note pitch="C4" duration="whole" start="152"/>
+      
+      <note pitch="C3" duration="whole" start="156"/>
+      <note pitch="E3" duration="whole" start="156"/>
+      <note pitch="G3" duration="whole" start="156"/>
+      <note pitch="C4" duration="whole" start="156"/>
+    </track>
+    
+    <!-- OUTRO (160-180 beats) -->
+    <track instrument="lead" name="Outro">
+      <note pitch="C5" duration="half" start="160"/>
+      <note pitch="E5" duration="half"/>
+      <note pitch="G5" duration="half"/>
+      <note pitch="E5" duration="half"/>
+      
+      <note pitch="C5" duration="whole" start="168"/>
+      <note pitch="rest" duration="whole"/>
+    </track>
+    
+    <track instrument="bass" name="Bass Outro">
+      <note pitch="C2" duration="whole" start="160"/>
+      <note pitch="C2" duration="half" start="164"/>
+      <note pitch="rest" duration="half"/>
+      <note pitch="C2" duration="whole" start="168"/>
+      <note pitch="C1" duration="whole" start="172"/>
+    </track>
+  </tracks>
+</axml>

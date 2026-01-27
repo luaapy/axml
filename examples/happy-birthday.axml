@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<axml version="1.0">
+  <metadata>
+    <title>Happy Birthday Song</title>
+    <artist>Traditional</artist>
+    <tempo>120</tempo>
+    <time-signature>3/4</time-signature>
+    <key>C</key>
+  </metadata>
+  
+  <instruments>
+    <instrument id="piano" type="sine" volume="0.7"/>
+  </instruments>
+  
+  <tracks>
+    <track instrument="piano" name="Melody">
+      <!-- Happy Birthday to You -->
+      <note pitch="G3" duration="eighth"/>
+      <note pitch="G3" duration="eighth"/>
+      <note pitch="A3" duration="quarter"/>
+      <note pitch="G3" duration="quarter"/>
+      
+      <note pitch="C4" duration="quarter"/>
+      <note pitch="B3" duration="half"/>
+      
+      <!-- Happy Birthday to You -->
+      <note pitch="G3" duration="eighth"/>
+      <note pitch="G3" duration="eighth"/>
+      <note pitch="A3" duration="quarter"/>
+      <note pitch="G3" duration="quarter"/>
+      
+      <note pitch="D4" duration="quarter"/>
+      <note pitch="C4" duration="half"/>
+      
+      <!-- Happy Birthday Dear [Name] -->
+      <note pitch="G3" duration="eighth"/>
+      <note pitch="G3" duration="eighth"/>
+      <note pitch="G4" duration="quarter"/>
+      <note pitch="E4" duration="quarter"/>
+      
+      <note pitch="C4" duration="quarter"/>
+      <note pitch="B3" duration="quarter"/>
+      <note pitch="A3" duration="quarter"/>
+      
+      <!-- Happy Birthday to You -->
+      <note pitch="F4" duration="eighth"/>
+      <note pitch="F4" duration="eighth"/>
+      <note pitch="E4" duration="quarter"/>
+      <note pitch="C4" duration="quarter"/>
+      
+      <note pitch="D4" duration="quarter"/>
+      <note pitch="C4" duration="half"/>
+    </track>
+  </tracks>
+</axml>

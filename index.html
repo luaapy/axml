@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AXML STUDIO v2.0 - The Sound Engine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;500&family=Orbitron:wght@600;800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="app-shell">
+        <header>
+            <div class="logo-area">
+                <i class="material-icons logo-icon">blur_on</i>
+                <div class="logo-text">
+                    <h1>AXML STUDIO <span>v2.0</span></h1>
+                </div>
+            </div>
+            <div class="header-actions" style="display:flex; gap:12px; align-items:center;">
+                <nav class="studio-nav"
+                    style="display:flex; gap:15px; margin-right:20px; font-size: 0.8rem; font-weight: 600;">
+                    <a href="landing.html" style="color:var(--text-muted); text-decoration:none;">HOME</a>
+                    <a href="gallery.html" style="color:var(--text-muted); text-decoration:none;">EXPLORE</a>
+                    <a href="docs.html" style="color:var(--text-muted); text-decoration:none;">DOCS</a>
+                </nav>
+                <div id="status-badge" class="status-badge">ENGINE IDLE</div>
+                <button class="btn-mini" onclick="openSequencer()" title="Sequencer Tool"><i class="material-icons"
+                        style="font-size:16px;">grid_view</i></button>
+                <button class="btn-mini" onclick="shareProject()" title="Share Project"><i class="material-icons"
+                        style="font-size:16px;">share</i></button>
+                <button class="btn-mini" onclick="toggleTheme()" style="min-width: 40px;"><i class="material-icons"
+                        style="font-size:16px;">settings</i></button>
+            </div>
+        </header>
+
+        <main class="main-container">
+            <!-- Left: Project Manager & Mixer -->
+            <aside class="sidebar section">
+                <div class="tabs-header">
+                    <button class="tab-btn active" onclick="showTab('projects')">LIBRARY</button>
+                    <button class="tab-btn" onclick="showTab('presets')">PRESETS</button>
+                    <button class="tab-btn" onclick="showTab('help')">HELP</button>
+                </div>
+
+                <div id="tab-projects" class="tab-content active">
+                    <div id="project-list" class="project-list"></div>
+                </div>
+
+                <div id="tab-presets" class="tab-content" style="display:none;">
+                    <div id="preset-list" class="project-list"></div>
+                </div>
+
+                <div id="tab-help" class="tab-content" style="display:none;">
+                    <div id="help-content" class="project-list documentation">
+                        <!-- Documentation will be loaded here -->
+                    </div>
+                </div>
+
+                <div class="mixer-area">
+                    <div class="pane-header">
+                        <span>VIRTUAL MIXER & FX</span>
+                        <div class="header-tools">
+                            <i class="material-icons" onclick="toggleMixerMode('mixer')" title="Mixer Mode">tune</i>
+                            <i class="material-icons" onclick="toggleMixerMode('fx')" title="FX Mode">graphic_eq</i>
+                        </div>
+                    </div>
+                    <!-- Mixer View -->
+                    <div class="mixer-grid" id="mixer-grid"></div>
+                    <!-- FX Dashboard View (Hidden by default) -->
+                    <div id="fx-dashboard" class="fx-grid" style="display:none;">
+                        <div class="fx-knob-container">
+                            <label title="Filter Cutoff (Hz)">CUTOFF</label>
+                            <input type="range" min="20" max="20000" value="20000" class="v-slider" id="fx-cutoff">
+                        </div>
+                        <div class="fx-knob-container">
+                            <label title="Filter Resonance (Q)">RES</label>
+                            <input type="range" min="0" max="20" value="1" class="v-slider" id="fx-reson">
+                        </div>
+                        <div class="fx-knob-container" title="Global Reverb Dry/Wet">
+                            <label>REVERB</label>
+                            <input type="range" min="0" max="1" step="0.01" value="0" class="v-slider" id="fx-reverb">
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Center: Advanced Code Editor -->
+            <section class="editor-main section">
+                <div class="pane-header">
+                    <span id="current-filename">UNTITLED_PROJECT.axml</span>
+                    <div style="display:flex; gap:8px;">
+                        <button class="btn-mini" onclick="formatCode(parser)"><i class="material-icons"
+                                style="font-size:12px; vertical-align:middle;">code</i> Format</button>
+                        <button class="btn-mini" onclick="saveToLocal()"><i class="material-icons"
+                                style="font-size:12px; vertical-align:middle;">save</i> Save</button>
+                    </div>
+                </div>
+                <div class="editor-wrapper">
+                    <textarea id="code-editor" spellcheck="false" placeholder="Write your AXML code here..."></textarea>
+                </div>
+                <div class="editor-footer">
+                    <span>Format: AXML 2.0</span>
+                    <span id="cursor-pos">Ln 1, Col 1</span>
+                </div>
+            </section>
+
+            <!-- Right: Monitor & Controls -->
+            <aside class="monitor">
+                <div class="card visualizer-box">
+                    <canvas id="canvas"></canvas>
+                    <div class="visualizer-tools">
+                        <i class="material-icons" onclick="setVizMode('bars')" title="Bars">bar_chart</i>
+                        <i class="material-icons" onclick="setVizMode('wave')" title="Oscilloscope">show_chart</i>
+                        <i class="material-icons" onclick="setVizMode('circular')"
+                            title="Circular">slow_motion_video</i>
+                    </div>
+                    <div class="time-overlay" id="timer">00:00 / 00:00</div>
+                </div>
+
+                <div class="card control-strip">
+                    <button id="btn-play" class="btn-play-large">
+                        <i class="material-icons">play_circle_filled</i> PLAY PROJECT
+                    </button>
+                    <div class="secondary-actions">
+                        <button id="btn-stop" class="btn-mini"><i class="material-icons"
+                                style="font-size:14px;">stop</i> STOP</button>
+                        <button id="btn-export" class="btn-mini"><i class="material-icons"
+                                style="font-size:14px;">download</i> WAV</button>
+                    </div>
+                </div>
+
+                <div class="card info-card">
+                    <div class="meta-grid">
+                        <div class="meta-box"><label>Title</label><span id="meta-title">-</span></div>
+                        <div class="meta-box"><label>Artist</label><span id="meta-artist">-</span></div>
+                        <div class="meta-box"><label>Tempo</label><span id="meta-tempo">-</span></div>
+                        <div class="meta-box"><label>Key</label><span id="meta-key">-</span></div>
+                    </div>
+                </div>
+
+                <div class="card console-card" style="flex:1; display:flex; flex-direction:column;">
+                    <div class="pane-header" style="background:transparent; padding:0 0 8px 0;">
+                        <span>CONSOLE LOG</span>
+                        <i class="material-icons" style="font-size:14px; cursor:pointer;"
+                            onclick="clearLog()">delete_sweep</i>
+                    </div>
+                    <div id="log" class="log-panel"></div>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <!-- Core Libs -->
+    <script src="src/axml.js"></script>
+    <script src="src/examples.js"></script>
+
+    <!-- Studio Modules -->
+    <script src="src/studio-ui.js"></script>
+    <script src="src/studio-mixer.js"></script>
+    <script src="src/studio-visualizer.js"></script>
+    <script src="src/studio-presets.js"></script>
+    <script src="src/studio-sequencer.js"></script>
+    <script src="src/app.js"></script>
+</body>
+
+</html>

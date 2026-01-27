@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<axml version="1.0">
+  <metadata>
+    <title>Infinity Funk Odyssey</title>
+    <artist>AXML Master</artist>
+    <tempo>115</tempo>
+    <key>F#m</key>
+  </metadata>
+
+  <instruments>
+    <!-- Punchy Drum Kit -->
+    <instrument id="funk_kick" type="kick" volume="1.0" attack="0.005" release="0.12" />
+    <instrument id="funk_snare" type="snare" volume="0.8" attack="0.005" release="0.1" cutoff="1800" bitcrush="0.1" />
+    <instrument id="funk_hat" type="hihat" volume="0.4" attack="0.005" release="0.05" cutoff="9000" />
+    
+    <!-- The Heavy Bass -->
+    <instrument id="heavy_bass" type="sawtooth" volume="0.75" attack="0.01" decay="0.2" sustain="0.5" release="0.2" 
+                cutoff="700" resonance="10" distortion="0.4" />
+    
+    <!-- Digital Bit-Lead -->
+    <instrument id="bit_lead" type="square" volume="0.45" attack="0.01" decay="0.1" sustain="0.4" release="0.3" 
+                cutoff="3000" bitcrush="0.5" chorus="0.6" reverb="0.4" />
+    
+    <!-- Percussive Clav -->
+    <instrument id="clav" type="square" volume="0.5" attack="0.01" decay="0.08" sustain="0" release="0.1" 
+                cutoff="2000" resonance="15" />
+    
+    <!-- Lush Chorus Pad -->
+    <instrument id="pad" type="triangle" volume="0.4" attack="1.5" sustain="0.8" release="2.0" 
+                cutoff="1000" chorus="0.8" reverb="0.8" />
+                
+    <!-- Brass Section (Stabs) -->
+    <instrument id="horns" type="sawtooth" volume="0.6" attack="0.04" decay="0.1" sustain="0.2" release="0.2" 
+                cutoff="3500" resonance="5" reverb="0.5" />
+  </instruments>
+
+  <patterns>
+    <!-- 4 Bar Main Drum Pattern -->
+    <pattern id="drums_main">
+      <note pitch="C2" start="0" duration="q" /><note pitch="C2" start="0.75" duration="s" />
+      <note pitch="D2" start="1" duration="q" />
+      <note pitch="C2" start="2" duration="q" />
+      <note pitch="D2" start="3" duration="q" /><note pitch="C2" start="3.5" duration="e" />
+      <note pitch="F#2" start="0.25" duration="s" /><note pitch="F#2" start="0.75" duration="s" />
+      <note pitch="F#2" start="1.25" duration="s" /><note pitch="F#2" start="1.75" duration="s" />
+      <note pitch="F#2" start="2.25" duration="s" /><note pitch="F#2" start="2.75" duration="s" />
+      <note pitch="F#2" start="3.25" duration="s" /><note pitch="F#2" start="3.75" duration="s" />
+    </pattern>
+
+    <!-- Funk Bassline -->
+    <pattern id="bass_a">
+      <note pitch="F#1" start="0" duration="e" /><note pitch="F#1" start="0.5" duration="e" />
+      <note pitch="A1" start="1" duration="e" /><note pitch="B1" start="1.5" duration="e" />
+      <note pitch="F#1" start="2" duration="e" /><note pitch="E2" start="2.5" duration="e" />
+      <note pitch="C#2" start="3.25" duration="e" />
+    </pattern>
+
+    <!-- Clavinet Rhythm -->
+    <pattern id="clav_rhythm">
+      <note pitch="A3" start="0.25" duration="s" /><note pitch="A3" start="0.75" duration="s" />
+      <note pitch="B3" start="1.5" duration="e" />
+      <note pitch="E4" start="2.25" duration="s" /><note pitch="F#4" start="3.5" duration="e" />
+    </pattern>
+
+    <!-- Brass Hit -->
+    <pattern id="horn_hit">
+      <chord start="0" duration="q"><note pitch="F#4"/><note pitch="A4"/><note pitch="C#5"/></chord>
+    </pattern>
+
+    <!-- Bit-Lead Solo Line -->
+    <pattern id="bit_melody">
+      <note pitch="F#4" start="0" duration="e" /><note pitch="A4" start="0.5" duration="e" />
+      <note pitch="B4" start="1" duration="q" /><note pitch="C#5" start="2" duration="e" />
+      <note pitch="E5" start="2.5" duration="e" /><note pitch="F#5" start="3" duration="h" />
+    </pattern>
+  </patterns>
+
+  <tracks>
+    <!-- DRUMS (3 Minutes = 345 Beats) -->
+    <track instrument="funk_kick" name="Beat">
+      <play pattern="drums_main" start="0" /><play pattern="drums_main" start="4" />
+      <play pattern="drums_main" start="8" /><play pattern="drums_main" start="12" />
+      <play pattern="drums_main" start="16" /><play pattern="drums_main" start="20" />
+      <play pattern="drums_main" start="24" /><play pattern="drums_main" start="28" />
+      <play pattern="drums_main" start="32" /><play pattern="drums_main" start="40" />
+      <play pattern="drums_main" start="48" /><play pattern="drums_main" start="56" />
+      <play pattern="drums_main" start="64" /><play pattern="drums_main" start="72" />
+      <play pattern="drums_main" start="80" /><play pattern="drums_main" start="88" />
+      <play pattern="drums_main" start="96" /><play pattern="drums_main" start="104" />
+      <play pattern="drums_main" start="112" /><play pattern="drums_main" start="120" />
+      <play pattern="drums_main" start="128" /><play pattern="drums_main" start="136" />
+      <play pattern="drums_main" start="144" /><play pattern="drums_main" start="152" />
+      <play pattern="drums_main" start="160" /><play pattern="drums_main" start="168" />
+      <play pattern="drums_main" start="176" /><play pattern="drums_main" start="184" />
+      <play pattern="drums_main" start="192" /><play pattern="drums_main" start="200" />
+      <play pattern="drums_main" start="208" /><play pattern="drums_main" start="216" />
+      <play pattern="drums_main" start="224" /><play pattern="drums_main" start="232" />
+      <play pattern="drums_main" start="240" /><play pattern="drums_main" start="248" />
+      <play pattern="drums_main" start="256" /><play pattern="drums_main" start="264" />
+      <play pattern="drums_main" start="272" /><play pattern="drums_main" start="280" />
+      <play pattern="drums_main" start="288" /><play pattern="drums_main" start="300" />
+      <play pattern="drums_main" start="312" /><play pattern="drums_main" start="324" />
+      <play pattern="drums_main" start="336" />
+    </track>
+
+    <!-- BASS (Heavy Funk) -->
+    <track instrument="heavy_bass" name="Bass">
+      <play pattern="bass_a" start="8" /><play pattern="bass_a" start="12" />
+      <play pattern="bass_a" start="16" /><play pattern="bass_a" start="20" />
+      <play pattern="bass_a" start="32" /><play pattern="bass_a" start="36" />
+      <play pattern="bass_a" start="48" /><play pattern="bass_a" start="52" />
+      <play pattern="bass_a" start="64" /><play pattern="bass_a" start="68" />
+      <play pattern="bass_a" start="80" /><play pattern="bass_a" start="84" />
+      <play pattern="bass_a" start="96" /><play pattern="bass_a" start="100" />
+      <play pattern="bass_a" start="128" /><play pattern="bass_a" start="132" />
+      <play pattern="bass_a" start="144" /><play pattern="bass_a" start="148" />
+      <play pattern="bass_a" start="160" /><play pattern="bass_a" start="164" />
+      <play pattern="bass_a" start="176" /><play pattern="bass_a" start="180" />
+      <play pattern="bass_a" start="200" /><play pattern="bass_a" start="204" />
+      <play pattern="bass_a" start="256" /><play pattern="bass_a" start="260" />
+      <play pattern="bass_a" start="288" /><play pattern="bass_a" start="292" />
+      <play pattern="bass_a" start="320" /><play pattern="bass_a" start="324" />
+    </track>
+
+    <!-- CLAVINET (The Groove) -->
+    <track instrument="clav" name="Clavinet">
+      <play pattern="clav_rhythm" start="16" /><play pattern="clav_rhythm" start="20" />
+      <play pattern="clav_rhythm" start="48" /><play pattern="clav_rhythm" start="52" />
+      <play pattern="clav_rhythm" start="80" /><play pattern="clav_rhythm" start="84" />
+      <play pattern="clav_rhythm" start="112" /><play pattern="clav_rhythm" start="116" />
+      <play pattern="clav_rhythm" start="144" /><play pattern="clav_rhythm" start="148" />
+      <play pattern="clav_rhythm" start="256" /><play pattern="clav_rhythm" start="260" />
+      <play pattern="clav_rhythm" start="288" /><play pattern="clav_rhythm" start="292" />
+    </track>
+
+    <!-- BIT-LEAD (Digital/8-bit elements) -->
+    <track instrument="bit_lead" name="Digital">
+      <play pattern="bit_melody" start="64" /><play pattern="bit_melody" start="72" />
+      <play pattern="bit_melody" start="160" /><play pattern="bit_melody" start="168" />
+      <play pattern="bit_melody" start="272" /><play pattern="bit_melody" start="280" />
+      <play pattern="bit_melody" start="300" /><play pattern="bit_melody" start="308" />
+    </track>
+
+    <!-- CHORUS HORNS -->
+    <track instrument="horns" name="Brass">
+      <play pattern="horn_hit" start="31.75" />
+      <play pattern="horn_hit" start="63.75" />
+      <play pattern="horn_hit" start="95.75" />
+      <play pattern="horn_hit" start="127.75" />
+      <play pattern="horn_hit" start="191.75" />
+      <play pattern="horn_hit" start="255.75" />
+      <play pattern="horn_hit" start="319.75" />
+    </track>
+
+    <!-- ATMOSPHERIC PAD -->
+    <track instrument="pad" name="Ambience">
+      <note pitch="F#3" start="0" duration="w" />
+      <note pitch="C#4" start="32" duration="w" />
+      <note pitch="F#3" start="128" duration="w" />
+      <note pitch="A3" start="192" duration="w" />
+      <note pitch="F#3" start="256" duration="w" />
+    </track>
+  </tracks>
+
+</axml>
