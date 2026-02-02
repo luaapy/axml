@@ -118,12 +118,3 @@ body::before {
     pointer-events: none;
     opacity: 0.3;
 }
-
-.studio-nav a {
-    transition: var(--transition);
-}
-
-.studio-nav a:hover {
-    color: var(--primary) !important;
-    text-shadow: 0 0 10px var(--primary-glow);
-}

@@ -195,3 +195,10 @@
     font-size: 0.65rem;
     color: var(--text-muted);
 }
+
+@media (max-width: 600px) {
+    #code-editor {
+        padding: 16px;
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dokumentasi Utama AXML | Standar v2.0</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;500&family=Orbitron:wght@600;800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/theme.css">
+    <style>
+        body {
+            margin: 0;
+            background: var(--bg-dark);
+            color: var(--text-main);
+            font-family: var(--font-ui);
+            display: flex;
+            scroll-behavior: smooth;
+        }
+
+        .side-nav {
+            width: 320px;
+            height: 100vh;
+            background: var(--bg-panel);
+            border-right: 1px solid var(--glass-border);
+            position: fixed;
+            padding: 40px 24px;
+            box-sizing: border-box;
+            overflow-y: auto;
+            z-index: 100;
+        }
+
+        .side-nav h2 {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-group {
+            margin-bottom: 32px;
+        }
+
+        .nav-group h4 {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            margin-bottom: 12px;
+            border-left: 2px solid var(--primary);
+            padding-left: 10px;
+        }
+
+        .nav-group ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-group li a {
+            color: var(--text-main);
+            text-decoration: none;
+            display: block;
+            padding: 10px 0;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            opacity: 0.75;
+        }
+
+        .nav-group li a:hover {
+            color: var(--primary);
+            padding-left: 8px;
+            opacity: 1;
+        }
+
+        main {
+            margin-left: 320px;
+            padding: 80px 120px;
+            max-width: 1000px;
+            box-sizing: border-box;
+            flex: 1;
+        }
+
+        .doc-section {
+            margin-bottom: 120px;
+            animation: fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes fade-up {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-family: var(--font-display);
+            font-size: 4rem;
+            margin-bottom: 24px;
+            background: linear-gradient(to right, var(--primary), var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h2 {
+            font-family: var(--font-display);
+            font-size: 2.2rem;
+            margin: 60px 0 24px;
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        h2 i {
+            color: var(--primary);
+        }
+
+        h3 {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-top: 40px;
+            margin-bottom: 16px;
+        }
+
+        p {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: var(--text-main);
+            opacity: 0.9;
+        }
+
+        pre {
+            background: #000;
+            padding: 24px;
+            border-radius: 12px;
+            border: 1px solid var(--glass-border);
+            overflow-x: auto;
+            font-family: var(--font-code);
+            line-height: 1.6;
+            color: #d1d5db;
+            margin: 20px 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        .attr-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 32px 0;
+            background: var(--bg-panel);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+        }
+
+        .attr-table th,
+        .attr-table td {
+            text-align: left;
+            padding: 16px;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .attr-table th {
+            color: var(--primary);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        code {
+            background: rgba(0, 242, 255, 0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: var(--font-code);
+            color: var(--primary);
+            font-size: 0.95em;
+        }
+
+        .back-btn {
+            position: fixed;
+            top: 30px;
+            right: 40px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            color: var(--text-main);
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            border: 1px solid var(--glass-border);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: var(--transition);
+            z-index: 1001;
+            font-weight: 600;
+        }
+
+        .back-btn:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px var(--primary-glow);
+        }
+
+        .tip-box {
+            background: rgba(189, 0, 255, 0.05);
+            border-left: 4px solid var(--secondary);
+            padding: 24px;
+            margin: 40px 0;
+            border-radius: 4px 16px 16px 4px;
+        }
+
+        .kbd {
+            background: #333;
+            border: 1px solid #555;
+            border-bottom: 3px solid #111;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-family: var(--font-code);
+            color: white;
+            margin: 0 4px;
+        }
+
+        .version-badge {
+            background: var(--accent);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+
+        .lang-switcher {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .lang-btn {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            border: 1px solid var(--glass-border);
+            padding: 4px 8px;
+            border-radius: 4px;
+            transition: 0.2s;
+        }
+
+        .lang-btn.active {
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        /* Responsive */
+        @media (max-width: 1100px) {
+            main {
+                padding: 60px 40px;
+            }
+
+            h1 {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 850px) {
+            body {
+                flex-direction: column;
+            }
+
+            .side-nav {
+                width: 100%;
+                height: auto;
+                position: relative;
+                padding: 40px 20px;
+                border-right: none;
+                border-bottom: 1px solid var(--glass-border);
+            }
+
+            main {
+                margin-left: 0;
+                padding: 40px 20px;
+                width: 100%;
+            }
+
+            .back-btn {
+                position: static;
+                margin: 20px;
+                display: inline-flex;
+                width: fit-content;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="../index" class="back-btn"><i class="material-icons">keyboard_return</i> Ke Studio</a>
+
+    <aside class="side-nav">
+        <h2><i class="material-icons">menu_book</i> PANDUAN AXML</h2>
+
+        <div class="lang-switcher">
+            <a href="../en/docs" class="lang-btn">EN</a>
+            <a href="../id/docs" class="lang-btn active">ID</a>
+        </div>
+
+        <div class="nav-group" style="margin-top: 20px;">
+            <h4>Dasar</h4>
+            <ul>
+                <li><a href="#intro">Pendahuluan</a></li>
+                <li><a href="#hierarchy">Struktur AXML</a></li>
+                <li><a href="#metadata">Metadata Global</a></li>
+            </ul>
+        </div>
+
+        <div class="nav-group">
+            <h4>Sumber Suara</h4>
+            <ul>
+                <li><a href="#instrument-types">Tipe Osilator</a></li>
+                <li><a href="#samples">Sampel Audio</a></li>
+                <li><a href="#adsr">ADSR Envelope</a></li>
+            </ul>
+        </div>
+
+        <div class="nav-group">
+            <h4>DSP & Modulasi</h4>
+            <ul>
+                <li><a href="#filters">Logic Filter</a></li>
+                <li><a href="#effects">Rak Efek (FX)</a></li>
+                <li><a href="#lfo">Sistem LFO</a></li>
+            </ul>
+        </div>
+
+        <div class="nav-group">
+            <h4>Komposisi</h4>
+            <ul>
+                <li><a href="#notation">Notasi Ilmiah</a></li>
+                <li><a href="#tempo">Durasi & Beat</a></li>
+                <li><a href="#chords">Chord & Polifoni</a></li>
+                <li><a href="#patterns">Pattern & Makro</a></li>
+            </ul>
+        </div>
+
+        <div class="nav-group">
+            <h4>Workflow</h4>
+            <ul>
+                <li><a href="#shortcuts">Shortcut Keyboard</a></li>
+                <li><a href="#mastering">Master Chain</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <main>
+        <section id="intro" class="doc-section">
+            <h1>Referensi Lengkap <span class="version-badge">v2.0</span></h1>
+            <p>Selamat datang di panduan utama untuk <strong>Audio XML (AXML)</strong>. Spesifikasi ini mendefinisikan
+                format berbasis teks yang kuat untuk sintesis dan komposisi musik di web.</p>
+            <p>Apakah Anda seorang desainer suara yang memahat synth melalui kode atau seorang komposer yang membangun
+                aransemen kompleks, AXML memberi Anda kendali presisi atas setiap frekuensi dan ketukan.</p>
+        </section>
+
+        <section id="hierarchy" class="doc-section">
+            <h2><i class="material-icons">account_tree</i> Hierarki Root</h2>
+            <p>File AXML yang valid harus mengikuti urutan elemen yang tepat ini. Engine memprosesnya secara berurutan
+                untuk membangun graf audio.</p>
+            <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;axml version="1.0"&gt;
+  &lt;metadata&gt; ... &lt;/metadata&gt;
+  &lt;instruments&gt; ... &lt;/instruments&gt;
+  &lt;patterns&gt; ... &lt;/patterns&gt;
+  &lt;tracks&gt; ... &lt;/tracks&gt;
+&lt;/axml&gt;
+</code></pre>
+        </section>
+
+        <section id="metadata" class="doc-section">
+            <h2><i class="material-icons">info</i> Metadata Global</h2>
+            <p>Metadata mendefinisikan konteks proyek. <code>tempo</code> sangat penting karena mendefinisikan bagaimana
+                beat diterjemahkan ke detik.</p>
+            <table class="attr-table">
+                <thead>
+                    <tr>
+                        <th>Elemen</th>
+                        <th>Deskripsi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>&lt;title&gt;</code></td>
+                        <td>Nama tampilan proyek.</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;artist&gt;</code></td>
+                        <td>Pembuat proyek atau desainer suara.</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;tempo&gt;</code></td>
+                        <td>Beats Per Minute (60.0 - 250.0). Rata-rata: 120.</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;key&gt;</code></td>
+                        <td>Nada dasar musik (misalnya, C, Am, F#m).</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;time-signature&gt;</code></td>
+                        <td>Struktur ritme (misalnya, 4/4, 3/4).</td>
+                    </tr>
+                </tbody>
+            </table>
+            <pre><code>&lt;metadata&gt;
+  &lt;title&gt;Cyberpunk City&lt;/title&gt;
+  &lt;artist&gt;AXML Master&lt;/artist&gt;
+  &lt;tempo&gt;128&lt;/tempo&gt;
+  &lt;key&gt;Am&lt;/key&gt;
+&lt;/metadata&gt;</code></pre>
+        </section>
+
+        <section id="instrument-types" class="doc-section">
+            <h2><i class="material-icons">waves</i> Tipe Osilator</h2>
+            <p>Atribut <code>type</code> pada <code>&lt;instrument&gt;</code> menentukan bentuk gelombang dasar. AXML
+                saat ini mendukung 11 tipe berbeda:</p>
+            <table class="attr-table">
+                <thead>
+                    <tr>
+                        <th>Nama Tipe</th>
+                        <th>Gelombang Matematis / Model Fisik</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>sine</code></td>
+                        <td>Gelombang sinus murni (Hanya frekuensi fundamental).</td>
+                    </tr>
+                    <tr>
+                        <td><code>square</code></td>
+                        <td>Gelombang kotak (Kaya akan harmonik ganjil).</td>
+                    </tr>
+                    <tr>
+                        <td><code>sawtooth</code></td>
+                        <td>Gelombang gigi gergaji (Semua harmonik, sangat terang).</td>
+                    </tr>
+                    <tr>
+                        <td><code>triangle</code></td>
+                        <td>Gelombang segitiga (Harmonik lembut).</td>
+                    </tr>
+                    <tr>
+                        <td><code>kick</code></td>
+                        <td>Model fisik: Sapuan sinus + Peluruhan eksponensial cepat.</td>
+                    </tr>
+                    <tr>
+                        <td><code>snare</code></td>
+                        <td>Model fisik: White noise + Lowpass filter pada 1.2kHz.</td>
+                    </tr>
+                    <tr>
+                        <td><code>hihat</code></td>
+                        <td>Model fisik: White noise + Highpass filter pada 8kHz.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="adsr" class="doc-section">
+            <h2><i class="material-icons">gesture</i> Envelope ADSR</h2>
+            <p>Envelope volume sangat penting untuk mendefinisikan "bentuk" suara. Semua nilai dalam
+                <strong>detik</strong>, kecuali sustain (0.0 hingga 1.0).</p>
+            <table class="attr-table">
+                <thead>
+                    <tr>
+                        <th>Atribut</th>
+                        <th>Nama Lengkap</th>
+                        <th>Perilaku</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>attack</code></td>
+                        <td>Attack Time</td>
+                        <td>Detik untuk mencapai volume puncak.</td>
+                    </tr>
+                    <tr>
+                        <td><code>decay</code></td>
+                        <td>Decay Time</td>
+                        <td>Detik untuk turun ke level sustain.</td>
+                    </tr>
+                    <tr>
+                        <td><code>sustain</code></td>
+                        <td>Sustain Level</td>
+                        <td>Faktor volume (0-1) yang ditahan selama nada aktif.</td>
+                    </tr>
+                    <tr>
+                        <td><code>release</code></td>
+                        <td>Release Time</td>
+                        <td>Detik untuk memudar ke hening setelah nada berakhir.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="effects" class="doc-section">
+            <h2><i class="material-icons">auto_fix_high</i> Rak Efek (FX)</h2>
+            <p>AXML Studio v2.0 memiliki rak efek yang dapat dirangkai untuk setiap instrumen.</p>
+            <table class="attr-table">
+                <thead>
+                    <tr>
+                        <th>Efek</th>
+                        <th>Atribut</th>
+                        <th>Rentang</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Pan</strong></td>
+                        <td><code>pan</code></td>
+                        <td>-1.0 (Kiri) hingga 1.0 (Kanan)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Distortion</strong></td>
+                        <td><code>distortion</code></td>
+                        <td>0.0 hingga 1.0</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Chorus</strong></td>
+                        <td><code>chorus</code></td>
+                        <td>0.0 hingga 1.0</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bitcrush</strong></td>
+                        <td><code>bitcrush</code></td>
+                        <td>0.0 hingga 1.0</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Reverb</strong></td>
+                        <td><code>reverb</code></td>
+                        <td>0.0 hingga 1.0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="shortcuts" class="doc-section">
+            <h2><i class="material-icons">keyboard</i> Shortcut Keyboard</h2>
+            <p>Percepat workflow desain suara Anda di Studio:</p>
+            <ul>
+                <li><kbd class="kbd">Space</kbd> : Play / Stop Proyek Saat Ini</li>
+                <li><kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">S</kbd> : Simpan ke Penyimpanan Lokal</li>
+                <li><kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">I</kbd> : Format Otomatis Kode XML</li>
+                <li><kbd class="kbd">Tab</kbd> : Identasi Kode (2 spasi)</li>
+            </ul>
+        </section>
+
+        <p style="text-align:center; color:var(--text-muted); margin-top:50px;">Dokumentasi Lengkap dalam Bahasa
+            Indonesia sedang dalam pengembangan.</p>
+    </main>
+</body>
+
+</html>

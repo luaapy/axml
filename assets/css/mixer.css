@@ -16,6 +16,31 @@
     min-height: 180px;
 }
 
+@media (max-width: 600px) {
+    .mixer-area {
+        height: 280px;
+    }
+
+    .mixer-grid {
+        padding: 8px;
+        gap: 8px;
+    }
+
+    .mixer-channel {
+        width: 45px;
+    }
+
+    .fader-track {
+        height: 100px;
+    }
+
+    .fader-cap {
+        width: 24px;
+        height: 16px;
+        left: -9px;
+    }
+}
+
 .mixer-channel {
     width: 50px;
     display: flex;

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AXML - The Future of Music Coding</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Orbitron:wght@600;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/theme.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg-dark);
+            color: var(--text-main);
+            font-family: var(--font-ui);
+            overflow-x: hidden;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle at center, var(--secondary-glow) 0%, transparent 70%);
+            position: relative;
+        }
+
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: 5rem;
+            margin: 0;
+            letter-spacing: 10px;
+            background: linear-gradient(to right, var(--primary), var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 20px var(--primary-glow));
+            animation: hero-appear 1.5s ease-out;
+        }
+
+        @keyframes hero-appear {
+            from {
+                opacity: 0;
+                transform: translateY(30px) scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            margin: 20px 0 40px;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--bg-dark);
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-family: var(--font-display);
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.2rem;
+            box-shadow: 0 0 30px var(--primary-glow);
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 0 50px var(--primary);
+        }
+
+        .nav-bar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+            text-shadow: 0 0 10px var(--primary-glow);
+        }
+
+        .features {
+            padding: 100px 50px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: var(--bg-panel);
+            padding: 40px;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--glass-border);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .feature-card i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-family: var(--font-display);
+            margin: 0 0 15px;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .floating-blobs {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+            top: 0;
+            left: 0;
+        }
+
+        .blob {
+            position: absolute;
+            background: var(--secondary);
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.2;
+            animation: drift 20s infinite alternate;
+        }
+
+        @keyframes drift {
+            from {
+                transform: translate(0, 0);
+            }
+
+            to {
+                transform: translate(100px, 100px);
+            }
+        }
+
+        footer {
+            padding: 50px;
+            text-align: center;
+            border-top: 1px solid var(--glass-border);
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero h1 {
+                font-size: 4rem;
+            }
+
+            .features {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 60px 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-bar {
+                padding: 15px 20px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            /* Could add a hamburger menu if needed, but for now just hiding simple links */
+            .hero h1 {
+                font-size: 3rem;
+                letter-spacing: 5px;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+                padding: 0 20px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .btn-primary {
+                padding: 15px 30px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .logo-area span {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <div class="logo-area" style="display: flex; align-items: center; gap: 10px;">
+            <i class="material-icons" style="color: var(--primary); font-size: 32px;">blur_on</i>
+            <span style="font-family: var(--font-display); font-weight: 900; letter-spacing: 2px;">AXML STUDIO</span>
+        </div>
+        <div class="nav-links">
+            <a href="landing">Home</a>
+            <a href="gallery">Explore</a>
+            <a href="docs">Documentation</a>
+            <a href="../index"
+                style="color: var(--primary); border: 1px solid var(--primary); padding: 5px 15px; border-radius: 4px;">Launch
+                App</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="floating-blobs">
+            <div class="blob" style="width: 400px; height: 400px; top: 10%; left: 10%;"></div>
+            <div class="blob" style="width: 300px; height: 300px; bottom: 10%; right: 10%; background: var(--accent);">
+            </div>
+        </div>
+        <h1>CODE YOUR BEAT</h1>
+        <p>AXML is an XML-based markup for creating professional music through code. Synthesize, sequence, and sculpt
+            sound with the precision of programming.</p>
+        <a href="../index" class="btn-primary">Start Creating Now</a>
+    </div>
+
+    <section class="features">
+        <div class="feature-card">
+            <i class="material-icons">code</i>
+            <h3>Declarative Syntax</h3>
+            <p>Write music like you write HTML/SVG. Modular, readable, and version-control friendly.</p>
+        </div>
+        <div class="feature-card">
+            <i class="material-icons">graphic_eq</i>
+            <h3>Pro Synthesis</h3>
+            <p>Built-in ADSR envelopes, LFO modulations, and a full effects rack for cinematic sound design.</p>
+        </div>
+        <div class="feature-card">
+            <i class="material-icons">bolt</i>
+            <h3>Real-time Engine</h3>
+            <p>Ultra-low latency rendering with Web Audio API. See your music as you hear it through dynamic
+                visualizers.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 AXML Studio Pro. Built for the future of electronic music.</p>
+    </footer>
+</body>
+
+</html>

@@ -41,8 +41,15 @@ function initVisualizer(canvas, player) {
 
     function draw() {
         requestAnimationFrame(draw);
-        const w = canvas.width = canvas.offsetWidth;
-        const h = canvas.height = canvas.offsetHeight;
+
+        // Robust dimension tracking
+        const rect = canvas.getBoundingClientRect();
+        const w = rect.width || canvas.offsetWidth || 300;
+        const h = rect.height || canvas.offsetHeight || 150;
+
+        if (canvas.width !== w) canvas.width = w;
+        if (canvas.height !== h) canvas.height = h;
+
         ctx.clearRect(0, 0, w, h);
 
         if (!player.analyser) {

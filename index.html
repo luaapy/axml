@@ -23,20 +23,21 @@
                     <h1>AXML STUDIO <span>v2.0</span></h1>
                 </div>
             </div>
-            <div class="header-actions" style="display:flex; gap:12px; align-items:center;">
-                <nav class="studio-nav"
-                    style="display:flex; gap:15px; margin-right:20px; font-size: 0.8rem; font-weight: 600;">
-                    <a href="landing.html" style="color:var(--text-muted); text-decoration:none;">HOME</a>
-                    <a href="gallery.html" style="color:var(--text-muted); text-decoration:none;">EXPLORE</a>
-                    <a href="docs.html" style="color:var(--text-muted); text-decoration:none;">DOCS</a>
+            <div class="header-actions">
+                <nav class="studio-nav">
+                    <a href="en/landing">HOME</a>
+                    <a href="en/gallery">EXPLORE</a>
+                    <a href="en/docs">DOCS</a>
                 </nav>
                 <div id="status-badge" class="status-badge">ENGINE IDLE</div>
-                <button class="btn-mini" onclick="openSequencer()" title="Sequencer Tool"><i class="material-icons"
-                        style="font-size:16px;">grid_view</i></button>
-                <button class="btn-mini" onclick="shareProject()" title="Share Project"><i class="material-icons"
-                        style="font-size:16px;">share</i></button>
-                <button class="btn-mini" onclick="toggleTheme()" style="min-width: 40px;"><i class="material-icons"
-                        style="font-size:16px;">settings</i></button>
+                <div class="header-btns">
+                    <button class="btn-mini" onclick="openSequencer()" title="Sequencer Tool"><i class="material-icons"
+                            style="font-size:16px;">grid_view</i></button>
+                    <button class="btn-mini" onclick="shareProject()" title="Share Project"><i class="material-icons"
+                            style="font-size:16px;">share</i></button>
+                    <button class="btn-mini" onclick="toggleTheme()" style="min-width: 40px;"><i class="material-icons"
+                            style="font-size:16px;">settings</i></button>
+                </div>
             </div>
         </header>
 
@@ -124,6 +125,7 @@
                     <div class="time-overlay" id="timer">00:00 / 00:00</div>
                 </div>
 
+
                 <div class="card control-strip">
                     <button id="btn-play" class="btn-play-large">
                         <i class="material-icons">play_circle_filled</i> PLAY PROJECT
@@ -145,6 +147,7 @@
                     </div>
                 </div>
 
+
                 <div class="card console-card" style="flex:1; display:flex; flex-direction:column;">
                     <div class="pane-header" style="background:transparent; padding:0 0 8px 0;">
                         <span>CONSOLE LOG</span>
@@ -155,19 +158,135 @@
                 </div>
             </aside>
         </main>
-    </div>
+        <nav class="mobile-nav">
+            <button class="mobile-nav-item active" onclick="switchMobileView('sidebar', this)">
+                <i class="material-icons">library_music</i>
+                <span>Library</span>
+            </button>
+            <button class="mobile-nav-item" onclick="switchMobileView('editor', this)">
+                <i class="material-icons">code</i>
+                <span>Editor</span>
+            </button>
+            <button class="mobile-nav-item" onclick="switchMobileView('monitor', this)">
+                <i class="material-icons">play_circle_filled</i>
+                <span>Studio</span>
+            </button>
+        </nav>
 
-    <!-- Core Libs -->
-    <script src="src/axml.js"></script>
-    <script src="src/examples.js"></script>
+        <style>
+            .mobile-nav {
+                display: none;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background: var(--bg-panel);
+                border-top: 1px solid var(--glass-border);
+                z-index: 1000;
+                padding: 8px 0;
+                justify-content: space-around;
+                backdrop-filter: blur(10px);
+            }
 
-    <!-- Studio Modules -->
-    <script src="src/studio-ui.js"></script>
-    <script src="src/studio-mixer.js"></script>
-    <script src="src/studio-visualizer.js"></script>
-    <script src="src/studio-presets.js"></script>
-    <script src="src/studio-sequencer.js"></script>
-    <script src="src/app.js"></script>
+            .mobile-nav-item {
+                background: transparent;
+                border: none;
+                color: var(--text-muted);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 4px;
+                font-size: 0.6rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                cursor: pointer;
+                transition: 0.2s;
+                flex: 1;
+            }
+
+            .mobile-nav-item i {
+                font-size: 20px;
+            }
+
+            .mobile-nav-item.active {
+                color: var(--primary);
+            }
+
+            @media (max-width: 850px) {
+                .mobile-nav {
+                    display: flex;
+                }
+
+                .app-shell {
+                    padding-bottom: 60px;
+                }
+
+                /* Show only active section on mobile */
+                .main-container>aside,
+                .main-container>section {
+                    display: none !important;
+                }
+
+                .main-container>.active-view {
+                    display: flex !important;
+                }
+
+                .header-actions {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 12px;
+                }
+
+                .studio-nav {
+                    display: flex;
+                    gap: 15px;
+                    font-size: 0.7rem;
+                }
+
+                .studio-nav a {
+                    color: var(--text-muted);
+                    text-decoration: none;
+                }
+            }
+        </style>
+
+        <script>
+            function switchMobileView(view, btn) {
+                const sidebar = document.querySelector('.sidebar');
+                const editor = document.querySelector('.editor-main');
+                const monitor = document.querySelector('.monitor');
+
+                const sections = [sidebar, editor, monitor];
+                sections.forEach(s => s.classList.remove('active-view'));
+
+                if (view === 'sidebar') sidebar.classList.add('active-view');
+                if (view === 'editor') editor.classList.add('active-view');
+                if (view === 'monitor') monitor.classList.add('active-view');
+
+                document.querySelectorAll('.mobile-nav-item').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                window.scrollTo(0, 0);
+            }
+
+            // Initialize mobile view
+            if (window.innerWidth <= 850) {
+                document.querySelector('.sidebar').classList.add('active-view');
+            }
+        </script>
+
+        <!-- Core Libs -->
+        <script src="src/axml.js"></script>
+        <script src="src/examples.js"></script>
+
+        <!-- Studio Modules -->
+        <script src="src/studio-ui.js"></script>
+        <script src="src/studio-mixer.js"></script>
+        <script src="src/studio-visualizer.js"></script>
+        <script src="src/studio-presets.js"></script>
+        <script src="src/studio-sequencer.js"></script>
+        <script src="src/app.js"></script>
 </body>
 
 </html>
