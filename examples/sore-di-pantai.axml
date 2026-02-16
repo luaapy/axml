@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<axml version="1.0">
+  <metadata>
+    <title>Sore di Pantai (Extended)</title>
+    <artist>AXML Composer</artist>
+    <tempo>80</tempo>
+    <time-signature>4/4</time-signature>
+    <key>C</key>
+    <duration>120</duration>
+  </metadata>
+  
+  <instruments>
+    <instrument id="piano-lead" type="sine" volume="0.6"/>
+    <instrument id="piano-pad" type="triangle" volume="0.4"/>
+    <instrument id="bass" type="sine" volume="0.5"/>
+    <instrument id="melody-soft" type="triangle" volume="0.5"/>
+  </instruments>
+  
+  <tracks>
+    <!-- Melodi Utama -->
+    <track instrument="piano-lead" name="Melody">
+      <!-- INTRO - Bar 1-4 -->
+      <note pitch="E4" duration="half" velocity="0.7"/>
+      <note pitch="G4" duration="quarter" velocity="0.6"/>
+      <note pitch="A4" duration="quarter" velocity="0.7"/>
+      
+      <note pitch="G4" duration="half" velocity="0.6"/>
+      <note pitch="E4" duration="quarter" velocity="0.5"/>
+      <note pitch="D4" duration="quarter" velocity="0.6"/>
+      
+      <note pitch="C4" duration="half" velocity="0.7"/>
+      <note pitch="E4" duration="quarter" velocity="0.6"/>
+      <note pitch="G4" duration="quarter" velocity="0.7"/>
+      
+      <note pitch="A4" duration="whole" velocity="0.6"/>
+      
+      <!-- VERSE 1 - Bar 5-12 -->
+      <note pitch="G4" duration="half" velocity="0.7"/>
+      <note pitch="F4" duration="quarter" velocity="0.6"/>
+      <note pitch="E4" duration="quarter" velocity="0.7"/>
+      
+      <note pitch="D4" duration="half" velocity="0.6"/>
+      <note pitch="E4" duration="quarter" velocity="0.5"/>
+      <note pitch="F4" duration="quarter" velocity="0.6"/>
+      
+      <note pitch="E4" duration="half" velocity="0.7"/>
+      <note pitch="D4" duration="quarter" velocity="0.6"/>
+      <note pitch="C4" duration="quarter" velocity="0.7"/>
+      
+      <note pitch="C4" duration="whole" velocity="0.6"/>
+      
+      <!-- Variasi melodi -->
+      <note pitch="E4" duration="quarter" velocity="0.6"/>
+      <note pitch="F4" duration="quarter" velocity="0.6"/>
+      <note pitch="G4" duration="quarter" velocity="0.7"/>
+      <note pitch="A4" duration="quarter" velocity="0.7"/>
+      
+      <note pitch="G4" duration="half" velocity="0.7"/>
+      <note pitch="E4" duration="half" velocity="0.6"/>
+      
+      <note pitch="F4" duration="quarter" velocity="0.6"/>
+      <note pitch="E4" duration="quarter" velocity="0.6"/>
+      <note pitch="D4" duration="quarter" velocity="0.6"/>
+      <note pitch="E4" duration="quarter" velocity="0.7"/>
+      
+      <note pitch="C4" duration="whole" velocity="0.6"/>
+      
+      <!-- CHORUS - Bar 13-20 -->
+      <note pitch="C4" duration="quarter" velocity="0.7"/>
+      <note pitch="E4" duration="quarter" velocity="0.7"/>
+      <note pitch="G4" duration="quarter" velocity="0.8"/>
+      <note pitch="A4" duration="quarter" velocity="0.8"/>
+      
+      <note pitch="G4" duration="half" velocity="0.7"/>
+      <note pitch="F4" duration="quarter" velocity="0.6"/>
+      <note pitch="E4" duration="quarter" velocity="0.6"/>
+      
+      <note pitch="D4" duration="quarter" velocity="0.6"/>
+      <note pitch="E4" duration="quarter" velocity="0.7"/>
+      <note pitch="F4" duration="quarter" velocity="0.7"/>
+      <note pitch="G4" duration="quarter" velocity="0.7"/>
+      
+      <note pitch="A4" duration="whole" velocity="0.7"/>
+      
+      <note pitch="G4" duration="quarter" velocity="0.7"/>
+      <note pitch="A4" duration="quarter" velocity="0.7"/>
+      <note pitch="G4" duration="quarter" velocity="0.6"/>
+      <note pitch="E4" duration="quarter" velocity="0.6"/>
+      
+      <note pitch="F4" duration="half" velocity="0.7"/>
+      <note pitch="D4" duration="half" velocity="0.6"/>
+      
+      <note pitch="E4" duration="half" velocity="0.7"/>
+      <note pitch="C4" duration="quarter" velocity="0.6"/>
+      <note pitch="D4" duration="quarter" velocity="0.6"/>
+      
+      <note pitch="C4" duration="whole" velocity="0.6"/>
+      
+      <!-- BRIDGE - Bar 21-28 (lebih tenang) -->
+      <note pitch="rest" duration="whole"/>
+      
+      <note pitch="A3" duration="half" velocity="0.5"/>
+      <note pitch="C4" duration="quarter" velocity="0.5"/>
+      <note pitch="E4" duration="quarter" velocity="0.6"/>
+      
+      <note pitch="D4" duration="half" velocity="0.5"/>
+      <note pitch="C4" duration="half" velocity="0.5"/>
+      
+      <note pitch="E4" duration="quarter" velocity="0.6"/>
+      <note pitch="F4" duration="quarter" velocity="0.6"/>
+      <note pitch="G4" duration="half" velocity="0.6"/>
+      
+      <note pitch="A4" duration="half" velocity="0.6"/>
+      <note pitch="G4" duration="quarter" velocity="0.5"/>
+      <note pitch="F4" duration="quarter" velocity="0.5"/>
+      
+      <note pitch="E4" duration="whole" velocity="0.6"/>
+      
+      <note pitch="D4" duration="half" velocity="0.5"/>
+      <note pitch="E4" duration="half" velocity="0.5"/>
+      
+      <note pitch="C4" duration="whole" velocity="0.5"/>
+      
+      <!-- VERSE 2 - Bar 29-36 (kembali ke melodi awal) -->
+      <note pitch="E4" duration="half" velocity="0.7"/>
+      <note pitch="G4" duration="quarter" velocity="0.6"/>
+      <note pitch="A4" duration="quarter" velocity="0.7"/>
+      
+      <note pitch="G4" duration="half" velocity="0.6"/>
+      <note pitch="E4" duration="quarter" velocity="0.5"/>
+      <note pitch="D4" duration="quarter" velocity="0.6"/>
+      
+      <note pitch="C4" duration="half" velocity="0.7"/>
+      <note pitch="E4" duration="quarter" velocity="0.6"/>
+      <note pitch="G4" duration="quarter" velocity="0.7"/>
+      
+      <note pitch="A4" duration="whole" velocity="0.6"/>
+      
+      <note pitch="G4" duration="half" velocity="0.7"/>
+      <note pitch="F4" duration="quarter" velocity="0.6"/>
+      <note pitch="E4" duration="quarter" velocity="0.7"/>
+      
+      <note pitch="D4" duration="half" velocity="0.6"/>
+      <note pitch="E4" duration="quarter" velocity="0.5"/>
+      <note pitch="F4" duration="quarter" velocity="0.6"/>
+      
+      <note pitch="E4" duration="half" velocity="0.7"/>
+      <note pitch="D4" duration="quarter" velocity="0.6"/>
+      <note pitch="C4" duration="quarter" velocity="0.7"/>
+      
+      <note pitch="C4" duration="whole" velocity="0.6"/>
+      
+      <!-- OUTRO - Bar 37-40 (pelan dan fade) -->
+      <note pitch="G4" duration="half" velocity="0.6"/>
+      <note pitch="E4" duration="half" velocity="0.5"/>
+      
+      <note pitch="F4" duration="half" velocity="0.5"/>
+      <note pitch="D4" duration="half" velocity="0.5"/>
+      
+      <note pitch="E4" duration="half" velocity="0.5"/>
+      <note pitch="C4" duration="half" velocity="0.4"/>
+      
+      <note pitch="C4" duration="whole" velocity="0.3"/>
+    </track>
+    
+    <!-- Background Pad (Chord Progression) -->
+    <track instrument="piano-pad" name="Pad">
+      <!-- INTRO & VERSE 1: C - C - F - F - G - G - C - C (Bar 1-8) -->
+      <note pitch="C3" duration="whole" start="0" velocity="0.5"/>
+      <note pitch="E3" duration="whole" start="0" velocity="0.5"/>
+      <note pitch="G3" duration="whole" start="0" velocity="0.5"/>
+      
+      <note pitch="C3" duration="whole" start="4" velocity="0.5"/>
+      <note pitch="E3" duration="whole" start="4" velocity="0.5"/>
+      <note pitch="G3" duration="whole" start="4" velocity="0.5"/>
+      
+      <note pitch="F3" duration="whole" start="8" velocity="0.5"/>
+      <note pitch="A3" duration="whole" start="8" velocity="0.5"/>
+      <note pitch="C4" duration="whole" start="8" velocity="0.5"/>
+      
+      <note pitch="F3" duration="whole" start="12" velocity="0.5"/>
+      <note pitch="A3" duration="whole" start="12" velocity="0.5"/>
+      <note pitch="C4" duration="whole" start="12" velocity="0.5"/>
+      
+      <note pitch="G3" duration="whole" start="16" velocity="0.5"/>
+      <note pitch="B3" duration="whole" start="16" velocity="0.5"/>
+      <note pitch="D4" duration="whole" start="16" velocity="0.5"/>
+      
+      <note pitch="G3" duration="whole" start="20" velocity="0.5"/>
+      <note pitch="B3" duration="whole" start="20" velocity="0.5"/>
+      <note pitch="D4" duration="whole" start="20" velocity="0.5"/>
+      
+      <note pitch="C3" duration="whole" start="24" velocity="0.5"/>
+      <note pitch="E3" duration="whole" start="24" velocity="0.5"/>
+      <note pitch="G3" duration="whole" start="24" velocity="0.5"/>
+      
+      <note pitch="C3" duration="whole" start="28" velocity="0.5"/>
+      <note pitch="E3" duration="whole" start="28" velocity="0.5"/>
+      <note pitch="G3" duration="whole" start="28" velocity="0.5"/>
+      
+      <!-- VERSE 1 continuation: C - Am - F - C (Bar 9-12) -->
+      <note pitch="C3" duration="whole" start="32" velocity="0.5"/>
+      <note pitch="E3" duration="whole" start="32" velocity="0.5"/>
+      <note pitch="G3" duration="whole" start="32" velocity="0.5"/>
+      
+      <note pitch="A3" duration="whole" start="36" velocity="0.5"/>
+      <note pitch="C4" duration="whole" start="36" velocity="0.5"/>
+      <note pitch="E4" duration="whole" start="36" velocity="0.5"/>
+      
+      <note pitch="F3" duration="whole" start="40" velocity="0.5"/>
+      <note pitch="A3" duration="whole" start="40" velocity="0.5"/>
+      <note pitch="C4" duration="whole" start="40" velocity="0.5"/>
+      
+      <note pitch="C3" duration="whole" start="44" velocity="0.5"/>
+      <note pitch="E3" duration="whole" start="44" velocity="0.5"/>
+      <note pitch="G3" duration="whole" start="44" velocity="0.5"/>
+      
+      <!-- CHORUS: C - G - Am - F (Bar 13-20) -->
+      <note pitch="C3" duration="whole" start="48" velocity="0.5"/>
+      <note pitch="E3" duration="whole" start="48" velocity="0.5"/>
+      <note pitch="G3" duration="whole" start="48" velocity="0.5"/>
+      
+      <note pitch="G3" duration="whole" start="52" velocity="0.5"/>
+      <note pitch="B3" duration="whole" start="52" velocity="0.5"/>
+      <note pitch="D4" duration="whole" start="52" velocity="0.5"/>
+      
+      <note pitch="A3" duration="whole" start="56" velocity="0.5"/>
+      <note pitch="C4" duration="whole" start="56" velocity="0.5"/>
+      <note pitch="E4" duration="whole" start="56" velocity="0.5"/>
+      
+      <note pitch="F3" duration="whole" start="60" velocity="0.5"/>
+      <note pitch="A3" duration="whole" start="60" velocity="0.5"/>
+      <note pitch="C4" duration="whole" start="60" velocity="0.5"/>
+      
+      <note pitch="C3" duration="whole" start="64" velocity="0.5"/>
+      <note pitch="E3" duration="whole" start="64" velocity="0.5"/>
+      <note pitch="G3" duration="whole" start="64" velocity="0.5"/>
+      
+      <note pitch="G3" duration="whole" start="68" velocity="0.5"/>
+      <note pitch="B3" duration="whole" start="68" velocity="0.5"/>
+      <note pitch="D4" duration="whole" start="68" velocity="0.5"/>
+      
+      <note pitch="F3" duration="whole" start="72" velocity="0.5"/>
+      <note pitch="A3" duration="whole" start="72" velocity="0.5"/>
+      <note pitch="C4" duration="whole" start="72" velocity="0.5"/>
+      
+      <note pitch="C3" duration="whole" start="76" velocity="0.5"/>
+      <note pitch="E3" duration="whole" start="76" velocity="0.5"/>
+      <note pitch="G3" duration="whole" start="76" velocity="0.5"/>
+      
+      <!-- BRIDGE: Am - F - C - G (Bar 21-28) -->
+      <note pitch="A3" duration="whole" start="80" velocity="0.4"/>
+      <note pitch="C4" duration="whole" start="80" velocity="0.4"/>
+      <note pitch="E4" duration="whole" start="80" velocity="0.4"/>
+      
+      <note pitch="A3" duration="whole" start="84" velocity="0.4"/>
+      <note pitch="C4" duration="whole" start="84" velocity="0.4"/>
+      <note pitch="E4" duration="whole" start="84" velocity="0.4"/>
+      
+      <note pitch="F3" duration="whole" start="88" velocity="0.4"/>
+      <note pitch="A3" duration="whole" start="88" velocity="0.4"/>
+      <note pitch="C4" duration="whole" start="88" velocity="0.4"/>
+      
+      <note pitch="C3" duration="whole" start="92" velocity="0.4"/>
+      <note pitch="E3" duration="whole" start="92" velocity="0.4"/>
+      <note pitch="G3" duration="whole" start="92" velocity="0.4"/>
+      
+      <note pitch="G3" duration="whole" start="96" velocity="0.4"/>
+      <note pitch="B3" duration="whole" start="96" velocity="0.4"/>
+      <note pitch="D4" duration="whole" start="96" velocity="0.4"/>
+      
+      <note pitch="F3" duration="whole" start="100" velocity="0.4"/>
+      <note pitch="A3" duration="whole" start="100" velocity="0.4"/>
+      <note pitch="C4" duration="whole" start="100" velocity="0.4"/>
+      
+      <note pitch="C3" duration="whole" start="104" velocity="0.4"/>
+      <note pitch="E3" duration="whole" start="104" velocity="0.4"/>
+      <note pitch="G3" duration="whole" start="104" velocity="0.4"/>
+      
+      <note pitch="G3" duration="whole" start="108" velocity="0.4"/>
+      <note pitch="B3" duration="whole" start="108" velocity="0.4"/>
+      <note pitch="D4" duration="whole" start="108" velocity="0.4"/>
+      
+      <!-- VERSE 2: C - C - F - F - G - G - C - C (Bar 29-36) -->
+      <note pitch="C3" duration="whole" start="112" velocity="0.5"/>
+      <note pitch="E3" duration="whole" start="112" velocity="0.5"/>
+      <note pitch="G3" duration="whole" start="112" velocity="0.5"/>
+      
+      <note pitch="C3" duration="whole" start="116" velocity="0.5"/>
+      <note pitch="E3" duration="whole" start="116" velocity="0.5"/>
+      <note pitch="G3" duration="whole" start="116" velocity="0.5"/>
+      
+      <note pitch="F3" duration="whole" start="120" velocity="0.5"/>
+      <note pitch="A3" duration="whole" start="120" velocity="0.5"/>
+      <note pitch="C4" duration="whole" start="120" velocity="0.5"/>
+      
+      <note pitch="F3" duration="whole" start="124" velocity="0.5"/>
+      <note pitch="A3" duration="whole" start="124" velocity="0.5"/>
+      <note pitch="C4" duration="whole" start="124" velocity="0.5"/>
+      
+      <note pitch="G3" duration="whole" start="128" velocity="0.5"/>
+      <note pitch="B3" duration="whole" start="128" velocity="0.5"/>
+      <note pitch="D4" duration="whole" start="128" velocity="0.5"/>
+      
+      <note pitch="G3" duration="whole" start="132" velocity="0.5"/>
+      <note pitch="B3" duration="whole" start="132" velocity="0.5"/>
+      <note pitch="D4" duration="whole" start="132" velocity="0.5"/>
+      
+      <note pitch="C3" duration="whole" start="136" velocity="0.5"/>
+      <note pitch="E3" duration="whole" start="136" velocity="0.5"/>
+      <note pitch="G3" duration="whole" start="136" velocity="0.5"/>
+      
+      <note pitch="C3" duration="whole" start="140" velocity="0.5"/>
+      <note pitch="E3" duration="whole" start="140" velocity="0.5"/>
+      <note pitch="G3" duration="whole" start="140" velocity="0.5"/>
+      
+      <!-- OUTRO: F - G - C - C (Bar 37-40) -->
+      <note pitch="F3" duration="whole" start="144" velocity="0.4"/>
+      <note pitch="A3" duration="whole" start="144" velocity="0.4"/>
+      <note pitch="C4" duration="whole" start="144" velocity="0.4"/>
+      
+      <note pitch="G3" duration="whole" start="148" velocity="0.4"/>
+      <note pitch="B3" duration="whole" start="148" velocity="0.4"/>
+      <note pitch="D4" duration="whole" start="148" velocity="0.4"/>
+      
+      <note pitch="C3" duration="whole" start="152" velocity="0.3"/>
+      <note pitch="E3" duration="whole" start="152" velocity="0.3"/>
+      <note pitch="G3" duration="whole" start="152" velocity="0.3"/>
+      
+      <note pitch="C3" duration="whole" start="156" velocity="0.2"/>
+      <note pitch="E3" duration="whole" start="156" velocity="0.2"/>
+      <note pitch="G3" duration="whole" start="156" velocity="0.2"/>
+    </track>
+    
+    <!-- Bass Line -->
+    <track instrument="bass" name="Bass">
+      <!-- INTRO & VERSE 1 (Bar 1-8) -->
+      <note pitch="C2" duration="whole" start="0" velocity="0.6"/>
+      <note pitch="C2" duration="whole" start="4" velocity="0.6"/>
+      <note pitch="F2" duration="whole" start="8" velocity="0.6"/>
+      <note pitch="F2" duration="whole" start="12" velocity="0.6"/>
+      <note pitch="G2" duration="whole" start="16" velocity="0.6"/>
+      <note pitch="G2" duration="whole" start="20" velocity="0.6"/>
+      <note pitch="C2" duration="whole" start="24" velocity="0.6"/>
+      <note pitch="C2" duration="whole" start="28" velocity="0.6"/>
+      
+      <!-- VERSE 1 continuation (Bar 9-12) -->
+      <note pitch="C2" duration="whole" start="32" velocity="0.6"/>
+      <note pitch="A2" duration="whole" start="36" velocity="0.6"/>
+      <note pitch="F2" duration="whole" start="40" velocity="0.6"/>
+      <note pitch="C2" duration="whole" start="44" velocity="0.6"/>
+      
+      <!-- CHORUS (Bar 13-20) -->
+      <note pitch="C2" duration="whole" start="48" velocity="0.6"/>
+      <note pitch="G2" duration="whole" start="52" velocity="0.6"/>
+      <note pitch="A2" duration="whole" start="56" velocity="0.6"/>
+      <note pitch="F2" duration="whole" start="60" velocity="0.6"/>
+      <note pitch="C2" duration="whole" start="64" velocity="0.6"/>
+      <note pitch="G2" duration="whole" start="68" velocity="0.6"/>
+      <note pitch="F2" duration="whole" start="72" velocity="0.6"/>
+      <note pitch="C2" duration="whole" start="76" velocity="0.6"/>
+      
+      <!-- BRIDGE (Bar 21-28) -->
+      <note pitch="A2" duration="whole" start="80" velocity="0.5"/>
+      <note pitch="A2" duration="whole" start="84" velocity="0.5"/>
+      <note pitch="F2" duration="whole" start="88" velocity="0.5"/>
+      <note pitch="C2" duration="whole" start="92" velocity="0.5"/>
+      <note pitch="G2" duration="whole" start="96" velocity="0.5"/>
+      <note pitch="F2" duration="whole" start="100" velocity="0.5"/>
+      <note pitch="C2" duration="whole" start="104" velocity="0.5"/>
+      <note pitch="G2" duration="whole" start="108" velocity="0.5"/>
+      
+      <!-- VERSE 2 (Bar 29-36) -->
+      <note pitch="C2" duration="whole" start="112" velocity="0.6"/>
+      <note pitch="C2" duration="whole" start="116" velocity="0.6"/>
+      <note pitch="F2" duration="whole" start="120" velocity="0.6"/>
+      <note pitch="F2" duration="whole" start="124" velocity="0.6"/>
+      <note pitch="G2" duration="whole" start="128" velocity="0.6"/>
+      <note pitch="G2" duration="whole" start="132" velocity="0.6"/>
+      <note pitch="C2" duration="whole" start="136" velocity="0.6"/>
+      <note pitch="C2" duration="whole" start="140" velocity="0.6"/>
+      
+      <!-- OUTRO (Bar 37-40) -->
+      <note pitch="F2" duration="whole" start="144" velocity="0.5"/>
+      <note pitch="G2" duration="whole" start="148" velocity="0.4"/>
+      <note pitch="C2" duration="whole" start="152" velocity="0.3"/>
+      <note pitch="C2" duration="whole" start="156" velocity="0.2"/>
+    </track>
+    
+    <!-- Melodi Tambahan (Counter Melody) - mulai dari chorus -->
+    <track instrument="melody-soft" name="Counter Melody">
+      <!-- Diam di intro & verse 1 (Bar 1-12) -->
+      <note pitch="rest" duration="whole" start="0"/>
+      <note pitch="rest" duration="whole" start="4"/>
+      <note pitch="rest" duration="whole" start="8"/>
+      <note pitch="rest" duration="whole" start="12"/>
+      <note pitch="rest" duration="whole" start="16"/>
+      <note pitch="rest" duration="whole" start="20"/>
+      <note pitch="rest" duration="whole" start="24"/>
+      <note pitch="rest" duration="whole" start="28"/>
+      <note pitch="rest" duration="whole" start="32"/>
+      <note pitch="rest" duration="whole" start="36"/>
+      <note pitch="rest" duration="whole" start="40"/>
+      <note pitch="rest" duration="whole" start="44"/>
+      
+      <!-- CHORUS - harmoni tinggi (Bar 13-20) -->
+      <note pitch="G4" duration="half" start="48" velocity="0.4"/>
+      <note pitch="A4" duration="half" start="50" velocity="0.4"/>
+      
+      <note pitch="B4" duration="whole" start="52" velocity="0.4"/>
+      
+      <note pitch="C5" duration="half" start="56" velocity="0.4"/>
+      <note pitch="A4" duration="half" start="58" velocity="0.4"/>
+      
+      <note pitch="G4" duration="whole" start="60" velocity="0.4"/>
+      
+      <note pitch="E4" duration="half" start="64" velocity="0.4"/>
+      <note pitch="G4" duration="half" start="66" velocity="0.4"/>
+      
+      <note pitch="D4" duration="whole" start="68" velocity="0.4"/>
+      
+      <note pitch="C4" duration="half" start="72" velocity="0.4"/>
+      <note pitch="E4" duration="half" start="74" velocity="0.4"/>
+      
+      <note pitch="G4" duration="whole" start="76" velocity="0.4"/>
+      
+      <!-- BRIDGE - melodi lembut (Bar 21-28) -->
+      <note pitch="C5" duration="half" start="80" velocity="0.3"/>
+      <note pitch="A4" duration="half" start="82" velocity="0.3"/>
+      
+      <note pitch="E4" duration="whole" start="84" velocity="0.3"/>
+      
+      <note pitch="F4" duration="half" start="88" velocity="0.3"/>
+      <note pitch="A4" duration="half" start="90" velocity="0.3"/>
+      
+      <note pitch="G4" duration="whole" start="92" velocity="0.3"/>
+      
+      <note pitch="B4" duration="half" start="96" velocity="0.3"/>
+      <note pitch="D5" duration="half" start="98" velocity="0.3"/>
+      
+      <note pitch="C5" duration="whole" start="100" velocity="0.3"/>
+      
+      <note pitch="G4" duration="half" start="104" velocity="0.3"/>
+      <note pitch="E4" duration="half" start="106" velocity="0.3"/>
+      
+      <note pitch="D4" duration="whole" start="108" velocity="0.3"/>
+      
+      <!-- Diam di verse 2 (Bar 29-36) -->
+      <note pitch="rest" duration="whole" start="112"/>
+      <note pitch="rest" duration="whole" start="116"/>
+      <note pitch="rest" duration="whole" start="120"/>
+      <note pitch="rest" duration="whole" start="124"/>
+      <note pitch="rest" duration="whole" start="128"/>
+      <note pitch="rest" duration="whole" start="132"/>
+      <note pitch="rest" duration="whole" start="136"/>
+      <note pitch="rest" duration="whole" start="140"/>
+      
+      <!-- OUTRO - pelan (Bar 37-40) -->
+      <note pitch="A4" duration="half" start="144" velocity="0.3"/>
+      <note pitch="C5" duration="half" start="146" velocity="0.3"/>
+      
+      <note pitch="B4" duration="whole" start="148" velocity="0.2"/>
+      
+      <note pitch="G4" duration="half" start="152" velocity="0.2"/>
+      <note pitch="E4" duration="half" start="154" velocity="0.2"/>
+      
+      <note pitch="C4" duration="whole" start="156" velocity="0.1"/>
+    </track>
+  </tracks>
+</axml>
