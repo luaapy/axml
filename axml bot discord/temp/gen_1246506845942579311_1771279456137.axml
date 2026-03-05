@@ -1,0 +1,63 @@
+<axml version="1.0">
+  <metadata>
+    <title>Aggressive Brazilian Montagem Phonk</title>
+    <artist>AXML AI</artist>
+    <tempo>135</tempo>
+    <time-signature>4/4</time-signature>
+    <key>Emin</key>
+    <genre>Montagem Phonk</genre>
+  </metadata>
+  <instruments>
+    <instrument id="kick" type="drum_909" volume="1.0" pan="0"/>
+    <instrument id="bass" type="drum_808" volume="1.0" pan="0" attack="0.01" release="0.4" distortion="0.8"/>
+    <instrument id="vocal" type="sawtooth" volume="0.7" pan="0.2" attack="0.01" release="0.1" pitch-shift="-0.2"/>
+    <instrument id="snare" type="drum_909" volume="0.8" pan="0" attack="0.01" release="0.2"/>
+    <instrument id="perc" type="triangle" volume="0.5" pan="0.1" attack="0.01" release="0.1"/>
+  </instruments>
+  <tracks>
+    <track instrument="kick" name="Kick" repeat="34">
+      <note pitch="C2" duration="sixteenth" start="0.0" velocity="1.0"/>
+      <note pitch="C2" duration="sixteenth" start="0.25" velocity="1.0"/>
+      <note pitch="C2" duration="sixteenth" start="0.5" velocity="1.0"/>
+      <note pitch="C2" duration="sixteenth" start="0.75" velocity="1.0"/>
+      <note pitch="C2" duration="sixteenth" start="1.0" velocity="1.0"/>
+      <note pitch="C2" duration="sixteenth" start="1.25" velocity="1.0"/>
+      <note pitch="C2" duration="sixteenth" start="1.5" velocity="1.0"/>
+      <note pitch="C2" duration="sixteenth" start="1.75" velocity="1.0"/>
+    </track>
+    <track instrument="bass" name="808 Bass" repeat="34">
+      <note pitch="E1" duration="eighth" start="0.0" velocity="0.9"/>
+      <note pitch="E1" duration="sixteenth" start="0.5" velocity="0.8"/>
+      <note pitch="G1" duration="sixteenth" start="0.75" velocity="0.8"/>
+      <note pitch="E1" duration="eighth" start="1.0" velocity="0.9"/>
+      <note pitch="E1" duration="sixteenth" start="1.5" velocity="0.8"/>
+      <note pitch="G1" duration="sixteenth" start="1.75" velocity="0.8"/>
+    </track>
+    <track instrument="vocal" name="Chopped Vocals" repeat="34">
+      <note pitch="E3" duration="sixteenth" start="0.1" velocity="0.7"/>
+      <note pitch="G3" duration="sixteenth" start="0.3" velocity="0.6"/>
+      <note pitch="E3" duration="sixteenth" start="0.6" velocity="0.7"/>
+      <note pitch="G3" duration="sixteenth" start="0.8" velocity="0.6"/>
+      <note pitch="E3" duration="sixteenth" start="1.1" velocity="0.7"/>
+      <note pitch="G3" duration="sixteenth" start="1.3" velocity="0.6"/>
+      <note pitch="E3" duration="sixteenth" start="1.6" velocity="0.7"/>
+      <note pitch="G3" duration="sixteenth" start="1.8" velocity="0.6"/>
+    </track>
+    <track instrument="snare" name="Snare" repeat="34">
+      <note pitch="D2" duration="sixteenth" start="0.25" velocity="0.8"/>
+      <note pitch="D2" duration="sixteenth" start="0.75" velocity="0.8"/>
+      <note pitch="D2" duration="sixteenth" start="1.25" velocity="0.8"/>
+      <note pitch="D2" duration="sixteenth" start="1.75" velocity="0.8"/>
+    </track>
+    <track instrument="perc" name="Percussion" repeat="34">
+      <note pitch="F#4" duration="sixteenth" start="0.5" velocity="0.5"/>
+      <note pitch="F#4" duration="sixteenth" start="1.0" velocity="0.5"/>
+      <note pitch="F#4" duration="sixteenth" start="1.5" velocity="0.5"/>
+    </track>
+  </tracks>
+  <effects>
+    <reverb type="hall" mix="0.3" decay="2.5"/>
+    <delay type="pingpong" time="0.5" feedback="0.4" mix="0.2"/>
+    <filter type="lowpass" frequency="12000" resonance="0.2"/>
+  </effects>
+</axml>

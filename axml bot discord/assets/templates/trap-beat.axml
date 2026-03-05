@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<axml version="1.0">
+  <metadata>
+    <title>Street Knowledge</title>
+    <artist>AXML Studio</artist>
+    <tempo>140</tempo>
+    <time-signature>4/4</time-signature>
+    <key>C#m</key>
+    <genre>Trap</genre>
+    <description>Dark trap beat with rolling hi-hats and heavy 808s</description>
+  </metadata>
+  
+  <instruments>
+    <instrument id="sub" type="drum_808" volume="1.0" attack="0.01" release="0.5"/>
+    <instrument id="pluck" type="synth_saw" volume="0.6" attack="0.001" decay="0.2" sustain="0.1" release="0.1"/>
+    <instrument id="hats" type="noise" volume="0.4" attack="0.001" release="0.02"/>
+  </instruments>
+  
+  <tracks>
+    <track instrument="sub" name="Heavy 808">
+      <note pitch="C1" start="0" duration="half" velocity="1.0"/>
+      <note pitch="C1" start="0.75" duration="quarter" velocity="0.8"/>
+    </track>
+    
+    <track instrument="pluck" name="Dark Melody">
+      <note pitch="C#4" start="0" duration="eighth" velocity="0.7"/>
+      <note pitch="E4" start="0.5" duration="eighth" velocity="0.75"/>
+      <note pitch="F#4" start="1.0" duration="eighth" velocity="0.72"/>
+      <note pitch="G4" start="1.5" duration="eighth" velocity="0.68"/>
+    </track>
+  </tracks>
+</axml>

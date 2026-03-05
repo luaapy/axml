@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<axml version="1.0">
+  <metadata>
+    <title>Blue Note Evening</title>
+    <artist>AXML Studio</artist>
+    <tempo>110</tempo>
+    <time-signature>4/4</time-signature>
+    <key>Fm7</key>
+    <genre>Jazz</genre>
+    <description>Sophisticated jazz trio with walking bass and swing piano</description>
+  </metadata>
+  
+  <instruments>
+    <instrument id="piano" type="piano" volume="0.6" attack="0.02" release="0.4"/>
+    <instrument id="bass" type="bass" volume="0.8" attack="0.05" release="0.2"/>
+    <instrument id="drums" type="drum_909" volume="0.4" attack="0.001" release="0.05"/>
+  </instruments>
+  
+  <tracks>
+    <track instrument="piano" name="Jazz Piano">
+      <chord start="0" duration="half">
+        <note pitch="F3" velocity="0.6"/>
+        <note pitch="Ab3" velocity="0.55"/>
+        <note pitch="C4" velocity="0.58"/>
+        <note pitch="Eb4" velocity="0.62"/>
+      </chord>
+      <chord start="2" duration="half">
+        <note pitch="Bb2" velocity="0.6"/>
+        <note pitch="D3" velocity="0.55"/>
+        <note pitch="F3" velocity="0.58"/>
+        <note pitch="Ab3" velocity="0.62"/>
+      </chord>
+    </track>
+    
+    <track instrument="bass" name="Walking Bass">
+      <note pitch="F2" start="0" duration="quarter" velocity="0.75"/>
+      <note pitch="G2" start="1" duration="quarter" velocity="0.7"/>
+      <note pitch="Ab2" start="2" duration="quarter" velocity="0.72"/>
+      <note pitch="A2" start="3" duration="quarter" velocity="0.68"/>
+    </track>
+  </tracks>
+</axml>

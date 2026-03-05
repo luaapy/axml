@@ -1,0 +1,85 @@
+<axml version="1.0">
+  <metadata>
+    <title>Aggressive Brazilian Montagem Phonk</title>
+    <artist>AXML AI</artist>
+    <tempo>135</tempo>
+    <time-signature>4/4</time-signature>
+    <key>F#min</key>
+    <genre>Montagem Phonk</genre>
+  </metadata>
+  <instruments>
+    <instrument id="kick" type="drum_909" volume="1.0" pan="0"/>
+    <instrument id="bass" type="drum_808" volume="1.0" pan="0" attack="0.01" release="0.4" distortion="1.0"/>
+    <instrument id="vocals" type="synth" volume="0.8" pan="0.2" attack="0.01" release="0.2" pitch-shift="0.5"/>
+    <instrument id="snare" type="drum_909" volume="0.7" pan="0" attack="0.01" release="0.2"/>
+    <instrument id="hihat" type="drum_909" volume="0.5" pan="0" attack="0.01" release="0.1"/>
+  </instruments>
+  <tracks>
+    <track instrument="kick" name="Kick" repeat="68">
+      <note pitch="C2" duration="sixteenth" start="0.0" velocity="1.0"/>
+      <note pitch="C2" duration="sixteenth" start="0.25" velocity="1.0"/>
+      <note pitch="C2" duration="sixteenth" start="0.5" velocity="1.0"/>
+      <note pitch="C2" duration="sixteenth" start="0.75" velocity="1.0"/>
+      <note pitch="C2" duration="sixteenth" start="1.0" velocity="1.0"/>
+      <note pitch="C2" duration="sixteenth" start="1.25" velocity="1.0"/>
+      <note pitch="C2" duration="sixteenth" start="1.5" velocity="1.0"/>
+      <note pitch="C2" duration="sixteenth" start="1.75" velocity="1.0"/>
+      <note pitch="C2" duration="sixteenth" start="2.0" velocity="1.0"/>
+      <note pitch="C2" duration="sixteenth" start="2.25" velocity="1.0"/>
+      <note pitch="C2" duration="sixteenth" start="2.5" velocity="1.0"/>
+      <note pitch="C2" duration="sixteenth" start="2.75" velocity="1.0"/>
+      <note pitch="C2" duration="sixteenth" start="3.0" velocity="1.0"/>
+      <note pitch="C2" duration="sixteenth" start="3.25" velocity="1.0"/>
+      <note pitch="C2" duration="sixteenth" start="3.5" velocity="1.0"/>
+      <note pitch="C2" duration="sixteenth" start="3.75" velocity="1.0"/>
+    </track>
+    <track instrument="bass" name="808 Bass" repeat="68">
+      <note pitch="F#1" duration="eighth" start="0.0" velocity="0.9"/>
+      <note pitch="F#1" duration="eighth" start="0.5" velocity="0.9"/>
+      <note pitch="F#1" duration="eighth" start="1.0" velocity="0.9"/>
+      <note pitch="F#1" duration="eighth" start="1.5" velocity="0.9"/>
+      <note pitch="A1" duration="eighth" start="2.0" velocity="0.8"/>
+      <note pitch="A1" duration="eighth" start="2.5" velocity="0.8"/>
+      <note pitch="F#1" duration="eighth" start="3.0" velocity="0.9"/>
+      <note pitch="F#1" duration="eighth" start="3.5" velocity="0.9"/>
+    </track>
+    <track instrument="vocals" name="Chopped Vocals" repeat="68">
+      <note pitch="F#2" duration="sixteenth" start="0.25" velocity="0.8"/>
+      <note pitch="F#2" duration="sixteenth" start="0.75" velocity="0.8"/>
+      <note pitch="F#2" duration="sixteenth" start="1.25" velocity="0.8"/>
+      <note pitch="F#2" duration="sixteenth" start="1.75" velocity="0.8"/>
+      <note pitch="A2" duration="sixteenth" start="2.25" velocity="0.7"/>
+      <note pitch="A2" duration="sixteenth" start="2.75" velocity="0.7"/>
+      <note pitch="F#2" duration="sixteenth" start="3.25" velocity="0.8"/>
+      <note pitch="F#2" duration="sixteenth" start="3.75" velocity="0.8"/>
+    </track>
+    <track instrument="snare" name="Snare" repeat="68">
+      <note pitch="C2" duration="sixteenth" start="0.5" velocity="0.7"/>
+      <note pitch="C2" duration="sixteenth" start="1.5" velocity="0.7"/>
+      <note pitch="C2" duration="sixteenth" start="2.5" velocity="0.7"/>
+      <note pitch="C2" duration="sixteenth" start="3.5" velocity="0.7"/>
+    </track>
+    <track instrument="hihat" name="Hihat" repeat="68">
+      <note pitch="C3" duration="sixteenth" start="0.0" velocity="0.5"/>
+      <note pitch="C3" duration="sixteenth" start="0.25" velocity="0.5"/>
+      <note pitch="C3" duration="sixteenth" start="0.5" velocity="0.5"/>
+      <note pitch="C3" duration="sixteenth" start="0.75" velocity="0.5"/>
+      <note pitch="C3" duration="sixteenth" start="1.0" velocity="0.5"/>
+      <note pitch="C3" duration="sixteenth" start="1.25" velocity="0.5"/>
+      <note pitch="C3" duration="sixteenth" start="1.5" velocity="0.5"/>
+      <note pitch="C3" duration="sixteenth" start="1.75" velocity="0.5"/>
+      <note pitch="C3" duration="sixteenth" start="2.0" velocity="0.5"/>
+      <note pitch="C3" duration="sixteenth" start="2.25" velocity="0.5"/>
+      <note pitch="C3" duration="sixteenth" start="2.5" velocity="0.5"/>
+      <note pitch="C3" duration="sixteenth" start="2.75" velocity="0.5"/>
+      <note pitch="C3" duration="sixteenth" start="3.0" velocity="0.5"/>
+      <note pitch="C3" duration="sixteenth" start="3.25" velocity="0.5"/>
+      <note pitch="C3" duration="sixteenth" start="3.5" velocity="0.5"/>
+      <note pitch="C3" duration="sixteenth" start="3.75" velocity="0.5"/>
+    </track>
+  </tracks>
+  <effects>
+    <reverb type="hall" mix="0.3" decay="2.5"/>
+    <filter type="lowpass" frequency="1500" resonance="0.2"/>
+  </effects>
+</axml>

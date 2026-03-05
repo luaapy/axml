@@ -1,0 +1,31 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="paint0_linear" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00FFFF"/>
+      <stop offset="1" stop-color="#008080"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <!-- Background Circle -->
+  <circle cx="256" cy="256" r="240" stroke="url(#paint0_linear)" stroke-width="8" fill="#0A0A0A"/>
+  
+  <!-- Waveform / Piano Key Elements -->
+  <g filter="url(#glow)">
+    <rect x="180" y="300" width="30" height="80" rx="4" fill="url(#paint0_linear)"/>
+    <rect x="220" y="280" width="30" height="100" rx="4" fill="url(#paint0_linear)"/>
+    <rect x="260" y="260" width="30" height="120" rx="4" fill="url(#paint0_linear)"/>
+    <rect x="300" y="290" width="30" height="90" rx="4" fill="url(#paint0_linear)"/>
+    
+    <!-- Stylized AXML Text / Icon -->
+    <path d="M150 200L256 100L362 200" stroke="url(#paint0_linear)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M180 220H332" stroke="url(#paint0_linear)" stroke-width="8" stroke-linecap="round"/>
+    
+    <!-- Musical Note Tail -->
+    <path d="M350 150V350C350 370 330 380 310 380" stroke="url(#paint0_linear)" stroke-width="12" stroke-linecap="round" fill="none"/>
+  </g>
+  
+  <text x="50%" y="460" text-anchor="middle" fill="url(#paint0_linear)" style="font-family: Arial, sans-serif; font-weight: bold; font-size: 40px; letter-spacing: 4px;">AXML</text>
+</svg>

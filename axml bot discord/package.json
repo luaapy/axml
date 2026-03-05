@@ -1,0 +1,63 @@
+{
+  "name": "axml-studio-pro",
+  "version": "4.0.0",
+  "description": "Advanced AI-powered Discord music production bot using AXML standard",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"No tests specified\" && exit 0",
+    "lint": "eslint .",
+    "format": "prettier --write \"**/*.js\"",
+    "deploy": "node deploy-commands.js",
+    "clean": "node scripts/cleanup.js",
+    "backup": "node scripts/backup.js"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "music",
+    "axml",
+    "ai",
+    "audio",
+    "synthesis",
+    "groq",
+    "daw"
+  ],
+  "author": "AXML Studio",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/voice": "^0.16.1",
+    "@napi-rs/canvas": "^0.1.44",
+    "axios": "^1.6.5",
+    "chalk": "^4.1.2",
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "ffmpeg-static": "^5.2.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "libsodium-wrappers": "^0.7.11",
+    "moment": "^2.30.1",
+    "opusscript": "^0.0.8",
+    "sodium-native": "^5.0.10",
+    "winston": "^3.11.0",
+    "xml2js": "^0.6.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "nodemon": "^3.0.2",
+    "prettier": "^3.1.1"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/axml-studio-pro"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/axml-studio-pro/issues"
+  },
+  "homepage": "https://luaapy.github.io/axml/"
+}

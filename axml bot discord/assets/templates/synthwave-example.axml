@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<axml version="1.0">
+  <metadata>
+    <title>Neon Highways</title>
+    <artist>AXML Studio</artist>
+    <tempo>128</tempo>
+    <time-signature>4/4</time-signature>
+    <key>Am</key>
+    <genre>Synthwave</genre>
+    <description>Dark cyberpunk composition with heavy bass and atmospheric pads</description>
+  </metadata>
+  
+  <instruments>
+    <instrument id="lead_synth" type="sawtooth" volume="0.8" attack="0.01" decay="0.1" sustain="0.7" release="0.2" detune="7"/>
+    <instrument id="bass_line" type="sine" volume="0.9" attack="0.005" decay="0.05" sustain="0.8" release="0.1" octave="-1"/>
+    <instrument id="drums" type="drum_808" volume="0.85" attack="0.001" release="0.15"/>
+    <instrument id="ambient_pad" type="pad" volume="0.6" attack="0.3" decay="0.2" sustain="0.9" release="1.0"/>
+  </instruments>
+  
+  <tracks>
+    <track instrument="lead_synth" name="Lead Melody">
+      <note pitch="A4" duration="quarter" velocity="0.9"/>
+      <note pitch="C5" duration="eighth" velocity="0.85"/>
+      <note pitch="B4" duration="eighth" velocity="0.85"/>
+      <note pitch="A4" duration="quarter" velocity="0.8"/>
+      <note pitch="G4" duration="quarter" velocity="0.75"/>
+      <note pitch="A4" duration="half" velocity="0.9"/>
+      
+      <note pitch="E5" duration="quarter" velocity="0.95"/>
+      <note pitch="D5" duration="eighth" velocity="0.85"/>
+      <note pitch="C5" duration="eighth" velocity="0.85"/>
+      <note pitch="B4" duration="quarter" velocity="0.8"/>
+      <note pitch="A4" duration="quarter" velocity="0.75"/>
+      <note pitch="rest" duration="half"/>
+    </track>
+    
+    <track instrument="bass_line" name="Bass">
+      <note pitch="A2" duration="half" velocity="0.95"/>
+      <note pitch="A2" duration="quarter" velocity="0.9"/>
+      <note pitch="G2" duration="quarter" velocity="0.9"/>
+      
+      <note pitch="F2" duration="half" velocity="0.95"/>
+      <note pitch="F2" duration="quarter" velocity="0.9"/>
+      <note pitch="E2" duration="quarter" velocity="0.9"/>
+      
+      <note pitch="C2" duration="half" velocity="0.95"/>
+      <note pitch="C2" duration="quarter" velocity="0.9"/>
+      <note pitch="D2" duration="quarter" velocity="0.9"/>
+      
+      <note pitch="E2" duration="whole" velocity="0.95"/>
+    </track>
+    
+    <track instrument="drums" name="Drums">
+      <note pitch="C4" duration="quarter" velocity="1.0"/>
+      <note pitch="rest" duration="quarter"/>
+      <note pitch="D4" duration="quarter" velocity="0.9"/>
+      <note pitch="rest" duration="quarter"/>
+      
+      <note pitch="C4" duration="quarter" velocity="1.0"/>
+      <note pitch="C4" duration="eighth" velocity="0.7"/>
+      <note pitch="rest" duration="eighth"/>
+      <note pitch="D4" duration="quarter" velocity="0.9"/>
+      <note pitch="rest" duration="quarter"/>
+      
+      <note pitch="C4" duration="quarter" velocity="1.0"/>
+      <note pitch="rest" duration="quarter"/>
+      <note pitch="D4" duration="quarter" velocity="0.9"/>
+      <note pitch="C4" duration="eighth" velocity="0.85"/>
+      <note pitch="C4" duration="eighth" velocity="0.85"/>
+      
+      <note pitch="C4" duration="quarter" velocity="1.0"/>
+      <note pitch="rest" duration="quarter"/>
+      <note pitch="D4" duration="quarter" velocity="0.9"/>
+      <note pitch="rest" duration="quarter"/>
+    </track>
+    
+    <track instrument="ambient_pad" name="Atmosphere">
+      <chord start="0">
+        <note pitch="A3" duration="whole" velocity="0.6"/>
+        <note pitch="C4" duration="whole" velocity="0.6"/>
+        <note pitch="E4" duration="whole" velocity="0.6"/>
+      </chord>
+      
+      <chord start="4">
+        <note pitch="F3" duration="whole" velocity="0.6"/>
+        <note pitch="A3" duration="whole" velocity="0.6"/>
+        <note pitch="C4" duration="whole" velocity="0.6"/>
+      </chord>
+      
+      <chord start="8">
+        <note pitch="C3" duration="whole" velocity="0.6"/>
+        <note pitch="E3" duration="whole" velocity="0.6"/>
+        <note pitch="G3" duration="whole" velocity="0.6"/>
+      </chord>
+      
+      <chord start="12">
+        <note pitch="E3" duration="whole" velocity="0.6"/>
+        <note pitch="G3" duration="whole" velocity="0.6"/>
+        <note pitch="B3" duration="whole" velocity="0.6"/>
+      </chord>
+    </track>
+  </tracks>
+  
+  <effects>
+    <reverb type="hall" mix="0.3" decay="2.5"/>
+    <filter type="lowpass" frequency="8000" resonance="0.3"/>
+  </effects>
+</axml>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<axml version="1.0">
+  <metadata>
+    <title>Neon Overdrive</title>
+    <artist>AXML Studio</artist>
+    <tempo>128</tempo>
+    <time-signature>4/4</time-signature>
+    <key>Em</key>
+    <genre>Cyberpunk Industrial</genre>
+    <description>Aggressive industrial electronic with gritty bass and glitchy percussion</description>
+  </metadata>
+  
+  <instruments>
+    <instrument id="gritty" type="sawtooth" volume="0.8" attack="0.05" sustain="0.8" release="0.2"/>
+    <instrument id="lead" type="square" volume="0.6" attack="0.01" decay="0.1" sustain="0.4" release="0.1"/>
+    <instrument id="glitch" type="noise" volume="0.5" attack="0.001" release="0.05"/>
+  </instruments>
+  
+  <tracks>
+    <track instrument="gritty" name="Gritty Bass">
+      <note pitch="E2" start="0" duration="half" velocity="0.9"/>
+      <note pitch="E2" start="2" duration="half" velocity="0.85"/>
+    </track>
+    
+    <track instrument="lead" name="Glitch Lead">
+      <note pitch="E5" start="0" duration="sixteenth" velocity="0.8"/>
+      <note pitch="G5" start="0.25" duration="sixteenth" velocity="0.75"/>
+      <note pitch="A5" start="0.5" duration="sixteenth" velocity="0.82"/>
+      <note pitch="B5" start="0.75" duration="sixteenth" velocity="0.9"/>
+    </track>
+  </tracks>
+</axml>

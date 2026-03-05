@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<axml version="1.0">
+  <metadata>
+    <title>Rise of the Titans</title>
+    <artist>AXML Studio</artist>
+    <tempo>90</tempo>
+    <time-signature>4/4</time-signature>
+    <key>Dm</key>
+    <genre>Cinematic Orchestral</genre>
+    <description>Epic orchestral score with soaring strings and booming percussion</description>
+  </metadata>
+  
+  <instruments>
+    <instrument id="strings" type="strings" volume="0.8" attack="0.5" decay="0.3" sustain="0.9" release="1.5"/>
+    <instrument id="brass" type="sawtooth" volume="0.6" attack="0.1" decay="0.2" sustain="0.8" release="0.5" detune="5"/>
+    <instrument id="perc" type="drum_808" volume="0.9" attack="0.001" release="0.1"/>
+    <instrument id="choir" type="pad" volume="0.5" attack="1.0" decay="0.5" sustain="0.9" release="2.5"/>
+  </instruments>
+  
+  <tracks>
+    <track instrument="strings" name="Epic Strings">
+      <chord start="0">
+        <note pitch="D4" duration="whole" velocity="0.8"/>
+        <note pitch="F4" duration="whole" velocity="0.75"/>
+        <note pitch="A4" duration="whole" velocity="0.78"/>
+      </chord>
+      <chord start="4">
+        <note pitch="Bb3" duration="whole" velocity="0.82"/>
+        <note pitch="D4" duration="whole" velocity="0.77"/>
+        <note pitch="F4" duration="whole" velocity="0.79"/>
+      </chord>
+      <chord start="8">
+        <note pitch="C4" duration="whole" velocity="0.85"/>
+        <note pitch="E4" duration="whole" velocity="0.8"/>
+        <note pitch="G4" duration="whole" velocity="0.83"/>
+      </chord>
+      <chord start="12">
+        <note pitch="A3" duration="whole" velocity="0.9"/>
+        <note pitch="C#4" duration="whole" velocity="0.85"/>
+        <note pitch="E4" duration="whole" velocity="0.88"/>
+      </chord>
+    </track>
+    
+    <track instrument="perc" name="Cinematic Impacts">
+      <note pitch="C1" start="0" duration="half" velocity="1.0"/>
+      <note pitch="C1" start="4" duration="half" velocity="0.95"/>
+      <note pitch="C1" start="8" duration="half" velocity="0.98"/>
+      <note pitch="C1" start="12" duration="half" velocity="1.0"/>
+    </track>
+  </tracks>
+  
+  <effects>
+    <reverb type="hall" mix="0.5" decay="3.5"/>
+  </effects>
+</axml>

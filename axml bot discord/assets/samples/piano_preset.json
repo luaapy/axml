@@ -1,0 +1,25 @@
+{
+    "name": "Lo-Fi Grand Piano",
+    "type": "piano",
+    "version": "1.0",
+    "parameters": {
+        "volume": 0.65,
+        "attack": 0.12,
+        "decay": 0.35,
+        "sustain": 0.55,
+        "release": 1.2,
+        "detune": -5,
+        "pan": -0.2
+    },
+    "effects": [
+        {
+            "type": "reverb",
+            "mix": 0.4,
+            "decay": 2.5
+        },
+        {
+            "type": "lowpass",
+            "frequency": 2400
+        }
+    ]
+}

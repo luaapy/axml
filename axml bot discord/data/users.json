@@ -1,0 +1,20 @@
+{
+  "1246506845942579311": {
+    "id": "1246506845942579311",
+    "createdAt": 1771257861932,
+    "stats": {
+      "generationsTotal": 0,
+      "rendersTotal": 0,
+      "exportsTotal": 0,
+      "playtimeSeconds": 0
+    },
+    "preferences": {
+      "defaultTempo": 120,
+      "defaultKey": "C",
+      "defaultInstrument": "piano",
+      "autoVisualize": false
+    },
+    "projects": [],
+    "favorites": []
+  }
+}

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<axml version="1.0">
+  <metadata>
+    <title>Ethereal Dreams</title>
+    <artist>AXML Studio</artist>
+    <tempo>60</tempo>
+    <time-signature>4/4</time-signature>
+    <key>Em</key>
+    <genre>Ambient</genre>
+    <description>Peaceful ambient soundscape with evolving pads and subtle melodies</description>
+  </metadata>
+  
+  <instruments>
+    <instrument id="pad1" type="pad" volume="0.5" attack="2.0" decay="1.0" sustain="0.9" release="3.0" pan="-0.3"/>
+    <instrument id="pad2" type="pad" volume="0.4" attack="1.5" decay="0.8" sustain="0.85" release="2.5" pan="0.3"/>
+    <instrument id="strings" type="strings" volume="0.35" attack="0.8" decay="0.5" sustain="0.8" release="2.0"/>
+    <instrument id="bell" type="sine" volume="0.3" attack="0.01" decay="1.5" sustain="0.2" release="2.0"/>
+  </instruments>
+  
+  <tracks>
+    <track instrument="pad1" name="Deep Pad">
+      <chord start="0">
+        <note pitch="E2" duration="whole" velocity="0.4"/>
+        <note pitch="G2" duration="whole" velocity="0.35"/>
+        <note pitch="B2" duration="whole" velocity="0.38"/>
+      </chord>
+      
+      <chord start="8">
+        <note pitch="C3" duration="whole" velocity="0.42"/>
+        <note pitch="E3" duration="whole" velocity="0.37"/>
+        <note pitch="G3" duration="whole" velocity="0.39"/>
+      </chord>
+    </track>
+    
+    <track instrument="pad2" name="High Pad">
+      <chord start="2">
+        <note pitch="B3" duration="whole" velocity="0.35"/>
+        <note pitch="E4" duration="whole" velocity="0.3"/>
+        <note pitch="G4" duration="whole" velocity="0.32"/>
+      </chord>
+      
+      <chord start="10">
+        <note pitch="C4" duration="whole" velocity="0.36"/>
+        <note pitch="E4" duration="whole" velocity="0.31"/>
+        <note pitch="G4" duration="whole" velocity="0.33"/>
+      </chord>
+    </track>
+    
+    <track instrument="strings" name="String Wash">
+      <chord start="4">
+        <note pitch="E3" duration="whole" velocity="0.3"/>
+        <note pitch="B3" duration="whole" velocity="0.28"/>
+        <note pitch="D4" duration="whole" velocity="0.29"/>
+      </chord>
+      
+      <chord start="12">
+        <note pitch="G3" duration="whole" velocity="0.31"/>
+        <note pitch="C4" duration="whole" velocity="0.27"/>
+        <note pitch="E4" duration="whole" velocity="0.3"/>
+      </chord>
+    </track>
+    
+    <track instrument="bell" name="Subtle Bells">
+      <note pitch="E5" duration="whole" velocity="0.25"/>
+      <note pitch="rest" duration="half"/>
+      <note pitch="B5" duration="half" velocity="0.22"/>
+      <note pitch="rest" duration="whole"/>
+      
+      <note pitch="G5" duration="half" velocity="0.24"/>
+      <note pitch="rest" duration="half"/>
+      <note pitch="D5" duration="whole" velocity="0.21"/>
+      <note pitch="rest" duration="whole"/>
+    </track>
+  </tracks>
+  
+  <effects>
+    <reverb type="hall" mix="0.6" decay="4.0"/>
+    <delay time="0.5" feedback="0.3" mix="0.2"/>
+  </effects>
+</axml>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<axml version="1.0">
+  <metadata>
+    <title>8-Bit Adventure</title>
+    <artist>AXML Studio</artist>
+    <tempo>160</tempo>
+    <time-signature>4/4</time-signature>
+    <key>C</key>
+    <genre>Chiptune</genre>
+    <description>Retro 8-bit game soundtrack with fast arpeggios</description>
+  </metadata>
+  
+  <instruments>
+    <instrument id="lead" type="square" volume="0.8" attack="0.001" decay="0.05" sustain="0.6" release="0.1"/>
+    <instrument id="arp" type="square" volume="0.6" attack="0.001" decay="0.02" sustain="0.4" release="0.05"/>
+    <instrument id="bass" type="triangle" volume="0.9" attack="0.001" decay="0.05" sustain="0.8" release="0.1"/>
+    <instrument id="drums" type="noise" volume="0.7" attack="0.001" release="0.05"/>
+  </instruments>
+  
+  <tracks>
+    <track instrument="lead" name="Lead Melody">
+      <note pitch="C5" duration="eighth" velocity="0.95"/>
+      <note pitch="E5" duration="eighth" velocity="0.9"/>
+      <note pitch="G5" duration="eighth" velocity="0.92"/>
+      <note pitch="C6" duration="eighth" velocity="1.0"/>
+      <note pitch="G5" duration="eighth" velocity="0.88"/>
+      <note pitch="E5" duration="eighth" velocity="0.85"/>
+      <note pitch="G5" duration="quarter" velocity="0.9"/>
+      
+      <note pitch="D5" duration="eighth" velocity="0.93"/>
+      <note pitch="F5" duration="eighth" velocity="0.88"/>
+      <note pitch="A5" duration="eighth" velocity="0.9"/>
+      <note pitch="D6" duration="eighth" velocity="0.98"/>
+      <note pitch="A5" duration="eighth" velocity="0.86"/>
+      <note pitch="F5" duration="eighth" velocity="0.83"/>
+      <note pitch="A5" duration="quarter" velocity="0.88"/>
+    </track>
+    
+    <track instrument="arp" name="Arpeggio">
+      <note pitch="C4" duration="sixteenth" velocity="0.7"/>
+      <note pitch="E4" duration="sixteenth" velocity="0.68"/>
+      <note pitch="G4" duration="sixteenth" velocity="0.72"/>
+      <note pitch="C5" duration="sixteenth" velocity="0.75"/>
+      <note pitch="C4" duration="sixteenth" velocity="0.7"/>
+      <note pitch="E4" duration="sixteenth" velocity="0.68"/>
+      <note pitch="G4" duration="sixteenth" velocity="0.72"/>
+      <note pitch="C5" duration="sixteenth" velocity="0.75"/>
+      
+      <note pitch="C4" duration="sixteenth" velocity="0.7"/>
+      <note pitch="E4" duration="sixteenth" velocity="0.68"/>
+      <note pitch="G4" duration="sixteenth" velocity="0.72"/>
+      <note pitch="C5" duration="sixteenth" velocity="0.75"/>
+      <note pitch="C4" duration="sixteenth" velocity="0.7"/>
+      <note pitch="E4" duration="sixteenth" velocity="0.68"/>
+      <note pitch="G4" duration="sixteenth" velocity="0.72"/>
+      <note pitch="C5" duration="sixteenth" velocity="0.75"/>
+    </track>
+    
+    <track instrument="bass" name="Bass">
+      <note pitch="C2" duration="quarter" velocity="0.95"/>
+      <note pitch="C2" duration="quarter" velocity="0.9"/>
+      <note pitch="C2" duration="quarter" velocity="0.92"/>
+      <note pitch="C2" duration="quarter" velocity="0.88"/>
+      
+      <note pitch="D2" duration="quarter" velocity="0.93"/>
+      <note pitch="D2" duration="quarter" velocity="0.9"/>
+      <note pitch="D2" duration="quarter" velocity="0.91"/>
+      <note pitch="D2" duration="quarter" velocity="0.87"/>
+    </track>
+    
+    <track instrument="drums" name="Noise Percussion">
+      <note pitch="C4" duration="eighth" velocity="0.9"/>
+      <note pitch="rest" duration="eighth"/>
+      <note pitch="D4" duration="eighth" velocity="0.95"/>
+      <note pitch="rest" duration="eighth"/>
+      <note pitch="C4" duration="eighth" velocity="0.88"/>
+      <note pitch="C4" duration="sixteenth" velocity="0.7"/>
+      <note pitch="C4" duration="sixteenth" velocity="0.72"/>
+      <note pitch="D4" duration="eighth" velocity="0.92"/>
+      <note pitch="rest" duration="eighth"/>
+      
+      <note pitch="C4" duration="eighth" velocity="0.91"/>
+      <note pitch="rest" duration="eighth"/>
+      <note pitch="D4" duration="eighth" velocity="0.96"/>
+      <note pitch="rest" duration="eighth"/>
+      <note pitch="C4" duration="eighth" velocity="0.87"/>
+      <note pitch="C4" duration="sixteenth" velocity="0.71"/>
+      <note pitch="C4" duration="sixteenth" velocity="0.73"/>
+      <note pitch="D4" duration="eighth" velocity="0.93"/>
+      <note pitch="C4" duration="eighth" velocity="0.85"/>
+    </track>
+  </tracks>
+</axml>

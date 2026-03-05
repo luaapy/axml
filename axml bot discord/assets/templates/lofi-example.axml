@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<axml version="1.0">
+  <metadata>
+    <title>Midnight Study Session</title>
+    <artist>AXML Studio</artist>
+    <tempo>75</tempo>
+    <time-signature>4/4</time-signature>
+    <key>Am</key>
+    <genre>Lo-Fi</genre>
+    <description>Relaxing lo-fi hip-hop beat for studying and chilling</description>
+  </metadata>
+  
+  <instruments>
+    <instrument id="piano" type="piano" volume="0.6" attack="0.05" decay="0.2" sustain="0.6" release="0.8"/>
+    <instrument id="bass" type="bass" volume="0.7" attack="0.01" decay="0.1" sustain="0.9" release="0.2"/>
+    <instrument id="drums" type="drum_909" volume="0.5" attack="0.001" release="0.1"/>
+    <instrument id="pad" type="pad" volume="0.4" attack="0.8" decay="0.5" sustain="0.95" release="2.0"/>
+  </instruments>
+  
+  <tracks>
+    <track instrument="piano" name="Lo-Fi Piano">
+      <note pitch="A4" duration="quarter" velocity="0.6"/>
+      <note pitch="C5" duration="eighth" velocity="0.55"/>
+      <note pitch="E5" duration="eighth" velocity="0.6"/>
+      <note pitch="D5" duration="quarter" velocity="0.58"/>
+      <note pitch="C5" duration="quarter" velocity="0.62"/>
+      <note pitch="A4" duration="half" velocity="0.57"/>
+      
+      <note pitch="G4" duration="quarter" velocity="0.6"/>
+      <note pitch="B4" duration="eighth" velocity="0.55"/>
+      <note pitch="D5" duration="eighth" velocity="0.58"/>
+      <note pitch="C5" duration="quarter" velocity="0.6"/>
+      <note pitch="B4" duration="quarter" velocity="0.56"/>
+      <note pitch="G4" duration="half" velocity="0.59"/>
+    </track>
+    
+    <track instrument="bass" name="Bass Line">
+      <note pitch="A2" duration="whole" velocity="0.8"/>
+      <note pitch="F2" duration="whole" velocity="0.78"/>
+      <note pitch="C2" duration="whole" velocity="0.82"/>
+      <note pitch="G2" duration="whole" velocity="0.8"/>
+    </track>
+    
+    <track instrument="drums" name="Lo-Fi Drums">
+      <note pitch="C4" duration="quarter" velocity="0.7"/>
+      <note pitch="rest" duration="eighth"/>
+      <note pitch="C4" duration="eighth" velocity="0.5"/>
+      <note pitch="D4" duration="quarter" velocity="0.75"/>
+      <note pitch="rest" duration="quarter"/>
+      
+      <note pitch="C4" duration="quarter" velocity="0.72"/>
+      <note pitch="rest" duration="eighth"/>
+      <note pitch="C4" duration="eighth" velocity="0.48"/>
+      <note pitch="D4" duration="quarter" velocity="0.73"/>
+      <note pitch="C4" duration="eighth" velocity="0.6"/>
+      <note pitch="C4" duration="eighth" velocity="0.55"/>
+    </track>
+    
+    <track instrument="pad" name="Ambient Pad">
+      <chord start="0">
+        <note pitch="A3" duration="whole" velocity="0.45"/>
+        <note pitch="C4" duration="whole" velocity="0.4"/>
+        <note pitch="E4" duration="whole" velocity="0.42"/>
+      </chord>
+      
+      <chord start="4">
+        <note pitch="F3" duration="whole" velocity="0.45"/>
+        <note pitch="A3" duration="whole" velocity="0.4"/>
+        <note pitch="C4" duration="whole" velocity="0.43"/>
+      </chord>
+      
+      <chord start="8">
+        <note pitch="C3" duration="whole" velocity="0.44"/>
+        <note pitch="E3" duration="whole" velocity="0.4"/>
+        <note pitch="G3" duration="whole" velocity="0.42"/>
+      </chord>
+      
+      <chord start="12">
+        <note pitch="G3" duration="whole" velocity="0.46"/>
+        <note pitch="B3" duration="whole" velocity="0.41"/>
+        <note pitch="D4" duration="whole" velocity="0.43"/>
+      </chord>
+    </track>
+  </tracks>
+  
+  <effects>
+    <reverb type="room" mix="0.25" decay="1.5"/>
+    <filter type="lowpass" frequency="6000" resonance="0.2"/>
+  </effects>
+</axml>
